@@ -17,6 +17,7 @@ namespace BigGame
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            //update by tangni
         }
     }
 }
