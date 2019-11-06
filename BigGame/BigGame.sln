@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigGame", "BigGame\BigGame.csproj", "{60E14EB6-EC9B-419E-9327-CABFF4125983}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60E14EB6-EC9B-419E-9327-CABFF4125983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E14EB6-EC9B-419E-9327-CABFF4125983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E14EB6-EC9B-419E-9327-CABFF4125983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E14EB6-EC9B-419E-9327-CABFF4125983}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD8672D5-69AA-4FD2-96E8-3D58CADF4537}
+	EndGlobalSection
+EndGlobal
