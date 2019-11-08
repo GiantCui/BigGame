@@ -20,6 +20,7 @@ namespace BigGame
         private void Form1_Load(object sender, EventArgs e)
         {
             //测试
+            SingleObject.GetSingle().test();
         }
     }
 }
