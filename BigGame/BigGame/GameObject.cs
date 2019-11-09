@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BigGame
 {
-    class GameObject
+    abstract class GameObject
     {
         //初始化构造函数
         public GameObject(int x, int y, Bitmap image, int height, int width)
@@ -32,5 +32,8 @@ namespace BigGame
         {
             return new Rectangle(this.X, this.Y, this.Width, this.Height);
         }
+
+        public abstract void Draw(Graphics g);
+        
     }
 }

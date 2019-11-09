@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BigGame.Map;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +32,22 @@ namespace BigGame
             MessageBox.Show("this is a test");
         }
 
+        //背景对象
+        public BackGround BG { get; set; }
+        
+        //添加游戏对象
+        public void AddGameObject(GameObject go)
+        {
+            if(go is BackGround)
+            {
+                BG = go as BackGround;
+            }
+        }
 
+        //绘制游戏对象
+        public void Draw(Graphics g)
+        {
+            BG.Draw(g);
+        }
     }
 }
