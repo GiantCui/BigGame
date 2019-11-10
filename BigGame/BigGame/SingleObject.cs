@@ -1,4 +1,5 @@
 ﻿using BigGame.Map;
+using BigGame.Role;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -34,6 +35,8 @@ namespace BigGame
 
         //背景对象
         public BackGround BG { get; set; }
+        //测试游戏对象
+        public TestPlayer testPlayer { get; set; }
         
         //添加游戏对象
         public void AddGameObject(GameObject go)
@@ -42,12 +45,17 @@ namespace BigGame
             {
                 BG = go as BackGround;
             }
+            if(go is TestPlayer)
+            {
+                testPlayer = go as TestPlayer;
+            }
         }
 
         //绘制游戏对象
         public void Draw(Graphics g)
         {
             BG.Draw(g);
+            testPlayer.Draw(g);
         }
     }
 }
