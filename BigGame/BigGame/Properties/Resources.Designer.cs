@@ -83,6 +83,16 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background4 {
+            get {
+                object obj = ResourceManager.GetObject("background4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BG {
             get {
                 object obj = ResourceManager.GetObject("BG", resourceCulture);
@@ -93,9 +103,9 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crouch {
+        internal static System.Drawing.Bitmap walk_1 {
             get {
-                object obj = ResourceManager.GetObject("crouch", resourceCulture);
+                object obj = ResourceManager.GetObject("walk_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +113,9 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap death {
+        internal static System.Drawing.Bitmap walk_2 {
             get {
-                object obj = ResourceManager.GetObject("death", resourceCulture);
+                object obj = ResourceManager.GetObject("walk_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,9 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap draw_gun {
+        internal static System.Drawing.Bitmap walk_3 {
             get {
-                object obj = ResourceManager.GetObject("draw_gun", resourceCulture);
+                object obj = ResourceManager.GetObject("walk_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +133,9 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gun_walk {
+        internal static System.Drawing.Bitmap walk_4 {
             get {
-                object obj = ResourceManager.GetObject("gun_walk", resourceCulture);
+                object obj = ResourceManager.GetObject("walk_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +143,9 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap punch {
+        internal static System.Drawing.Bitmap walk_5 {
             get {
-                object obj = ResourceManager.GetObject("punch", resourceCulture);
+                object obj = ResourceManager.GetObject("walk_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,19 +153,9 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shot {
+        internal static System.Drawing.Bitmap walk_6 {
             get {
-                object obj = ResourceManager.GetObject("shot", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap walk {
-            get {
-                object obj = ResourceManager.GetObject("walk", resourceCulture);
+                object obj = ResourceManager.GetObject("walk_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

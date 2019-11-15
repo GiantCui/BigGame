@@ -58,8 +58,11 @@
     <Compile Include="Map\BackGround.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role\HERO\Hero.cs" />
-    <Compile Include="Role\HERO\Heroine.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -67,14 +70,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,25 +96,25 @@
     <None Include="Resources\2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\crouch.gif" />
+    <None Include="Resources\walk-1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\death.gif" />
+    <None Include="Resources\walk-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\draw-gun.gif" />
+    <None Include="Resources\walk-3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\gun-walk.gif" />
+    <None Include="Resources\walk-4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\punch.gif" />
+    <None Include="Resources\walk-5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\shot.gif" />
+    <None Include="Resources\walk-6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\walk.gif" />
+    <None Include="Resources\background4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
