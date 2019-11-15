@@ -25,7 +25,7 @@ namespace BigGame.Role
         public long last_frame_time = 0;    //记录上一帧时间
         public long frame_internal = 500; //记录两帧间隔
 
-        public monster(int x,int y, int width, int height,int hp):base(int x, int y, int width, int height)
+        public monster(int x,int y, int hp):base(x, y, image[0].Width, image[0].Height)
         {
 
         }
