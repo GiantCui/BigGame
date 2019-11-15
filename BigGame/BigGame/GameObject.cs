@@ -7,24 +7,24 @@ using System.Threading.Tasks;
 
 namespace BigGame
 {
-    abstract class GameObject
+    public abstract class GameObject
     {
         //初始化构造函数
-        public GameObject(int x, int y, Bitmap image, int height, int width)
+        public GameObject(int x, int y, int width,int height)
         {
             X = x;
             Y = y;
-            Image = image;
             Height = height;
             Width = width;
+            Index = 0;     //保存图片的当前状态
         }
 
         #region 横坐标，纵坐标，图片，高度，宽度
         public int X { get; set; }
         public int Y { get; set; }
-        public Bitmap Image { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
+        public int Index { get; private set; }
         #endregion
 
         //返回对象矩阵
@@ -32,6 +32,9 @@ namespace BigGame
         {
             return new Rectangle(this.X, this.Y, this.Width, this.Height);
         }
+
+        public abstract void InitializeImages();
+
 
         public abstract void Draw(Graphics g);
         
