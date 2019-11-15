@@ -16,7 +16,7 @@ namespace BigGame
             Y = y;
             Height = height;
             Width = width;
-            Index = 0;     //保存图片的当前状态
+            InitializeImages();
         }
 
         #region 横坐标，纵坐标，图片，高度，宽度
@@ -24,7 +24,6 @@ namespace BigGame
         public int Y { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
-        public int Index { get; private set; }
         #endregion
 
         //返回对象矩阵
