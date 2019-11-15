@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BigGame;
+using BigGame.Role;
 
 namespace BigGame
 {
@@ -24,6 +25,8 @@ namespace BigGame
         {
             //加载背景图片
             SingleObject.GetSingle().AddGameObject(new BackGround(-10, -10, 20));
+            //加载测试游戏对象
+            SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,15 +52,15 @@ namespace BigGame
             }
             if(e.KeyCode == Keys.A)
             {
-                SingleObject.GetSingle().BG.Move(GC.horizontal, (int)GC.Direction.up);
+                SingleObject.GetSingle().BG.Move(GC.horizontal, (int)GC.Direction.left);
             }
             if(e.KeyCode == Keys.S)
             {
-                SingleObject.GetSingle().BG.Move(GC.vertical, (int)GC.Direction.up);
+                SingleObject.GetSingle().BG.Move(GC.vertical, (int)GC.Direction.down);
             }
             if(e.KeyCode == Keys.D)
             {
-                SingleObject.GetSingle().BG.Move(GC.horizontal, (int)GC.Direction.up);
+                SingleObject.GetSingle().BG.Move(GC.horizontal, (int)GC.Direction.right);
             }
             
         }
