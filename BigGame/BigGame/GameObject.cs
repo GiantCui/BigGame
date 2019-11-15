@@ -9,6 +9,7 @@ namespace BigGame
 {
     public abstract class GameObject
     {
+        public Image[] img;
         //初始化构造函数
         public GameObject(int x, int y, int width, int height)
         {
