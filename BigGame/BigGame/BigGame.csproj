@@ -95,5 +95,26 @@
   <ItemGroup>
     <None Include="Resources\2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crouch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draw-gun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gun-walk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shot.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
