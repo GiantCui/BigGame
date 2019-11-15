@@ -63,6 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Role\monster.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -115,6 +116,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alien-enemy-flying8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -83,6 +83,86 @@ namespace BigGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying1 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying2 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying3 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying4 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying5 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying6 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying7 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_enemy_flying8 {
+            get {
+                object obj = ResourceManager.GetObject("alien_enemy_flying8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background4 {
             get {
                 object obj = ResourceManager.GetObject("background4", resourceCulture);
