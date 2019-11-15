@@ -37,7 +37,8 @@ namespace BigGame
         public BackGround BG { get; set; }
         //测试游戏对象
         public TestPlayer testPlayer { get; set; }
-        
+        //窗体框矩形信息
+        public Rectangle formRec { get; set; }
         //添加游戏对象
         public void AddGameObject(GameObject go)
         {
@@ -56,6 +57,11 @@ namespace BigGame
         {
             BG.Draw(g);
             testPlayer.Draw(g);
+        }
+
+        public void SetformRec(int x, int y, int width, int height)
+        {
+            this.formRec = new Rectangle(x, y, width, height);
         }
     }
 }

@@ -12,10 +12,10 @@ namespace BigGame
         public const bool vertical = false;
         public enum Direction
         {
-            up = 1,
-            down = -1,
-            left = 1,
-            right = -1
+            up = -1,
+            down = 1,
+            left = -1,
+            right = 1
         }
     }
 }

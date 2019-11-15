@@ -23,6 +23,8 @@ namespace BigGame
 
         public void InitialGame()
         {
+            //记录窗体信息
+            SingleObject.
             //加载背景图片
             SingleObject.GetSingle().AddGameObject(new BackGround(-10, -10, 20));
             //加载测试游戏对象
@@ -48,19 +50,19 @@ namespace BigGame
         {
             if(e.KeyCode == Keys.W)
             {
-                SingleObject.GetSingle().BG.Move(GC.vertical, (int)GC.Direction.up);
+                SingleObject.GetSingle().testPlayer.Move(GC.vertical, (int)GC.Direction.up);
             }
             if(e.KeyCode == Keys.A)
             {
-                SingleObject.GetSingle().BG.Move(GC.horizontal, (int)GC.Direction.left);
+                SingleObject.GetSingle().testPlayer.Move(GC.horizontal, (int)GC.Direction.left);
             }
             if(e.KeyCode == Keys.S)
             {
-                SingleObject.GetSingle().BG.Move(GC.vertical, (int)GC.Direction.down);
+                SingleObject.GetSingle().testPlayer.Move(GC.vertical, (int)GC.Direction.down);
             }
             if(e.KeyCode == Keys.D)
             {
-                SingleObject.GetSingle().BG.Move(GC.horizontal, (int)GC.Direction.right);
+                SingleObject.GetSingle().testPlayer.Move(GC.horizontal, (int)GC.Direction.right);
             }
             
         }
