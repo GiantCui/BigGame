@@ -10,7 +10,7 @@ namespace BigGame
     public abstract class GameObject
     {
         //初始化构造函数
-        public GameObject(int x, int y, int width,int height)
+        public GameObject(int x, int y, int width, int height)
         {
             X = x;
             Y = y;
@@ -37,6 +37,6 @@ namespace BigGame
 
 
         public abstract void Draw(Graphics g);
-        
+
     }
 }
