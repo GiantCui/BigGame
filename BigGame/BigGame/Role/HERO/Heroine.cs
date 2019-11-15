@@ -9,6 +9,9 @@ namespace BigGame.Role.HERO
 {
     public class Heroine : Hero
     {
+        public int anm_frame = 0;   //记录当前帧
+        public long last_frame_time = 0;    //记录上一帧时间
+        public long frame_internal = 500; //记录两帧间隔
         public Heroine(int x, int y, int width, int height, string name)
            : base(x, y, width, height, name)
         {
@@ -18,14 +21,27 @@ namespace BigGame.Role.HERO
 
         public override void InitializeImages()
         {
-            img = new Image[4];
-            img[0] = Properties.Resources;
-
+            img = new Image[7];
+            img[0] = Properties.Resources.walk_3;
+            img[1] = Properties.Resources.walk_4;
+            img[2] = Properties.Resources.walk_5;
+            img[3]= Properties.Resources.walk_2;
+            img[4]= Properties.Resources.walk_6;
+            img[5]= Properties.Resources.walk_1;
         }
 
         public override void draw(Graphics g)
         {
-            g.DrawImage(img[this.Index], this.X, this.Y, this.With, this.High);
+            if (comm.Time() - last_frame_time > frame_internal)
+            {
+                anm_frame++;
+                last_frame_time = comm.Time();
+                if (anm_frame == img.Length)
+                {
+                    anm_frame = 0;
+                }
+            }
+            g.DrawImage(img[anm_frame], this.X, this.Y, this.With, this.High);
         }
     }
 }

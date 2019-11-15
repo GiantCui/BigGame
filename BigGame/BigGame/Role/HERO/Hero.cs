@@ -14,7 +14,9 @@ namespace BigGame.Role.HERO
         {
             this.Name = name;
         }
+
         public string Name { get;  set; }
+
         public void key_ctrl(KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
