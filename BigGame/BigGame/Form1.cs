@@ -50,29 +50,27 @@ namespace BigGame
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //if(e.KeyCode == Keys.W)
-           // {
-           //     SingleObject.GetSingle().testPlayer.Move(GC.vertical, (int)GC.Direction.up);
-          //  }
-          //  if(e.KeyCode == Keys.A)
-          //  {
-          //      SingleObject.GetSingle().testPlayer.Move(GC.horizontal, (int)GC.Direction.left);
-           // }
-           // if(e.KeyCode == Keys.S)
-          //  {
-         //       SingleObject.GetSingle().testPlayer.Move(GC.vertical, (int)GC.Direction.down);
-         //   }
-        //    if(e.KeyCode == Keys.D)
-        //    {
-        //        SingleObject.GetSingle().testPlayer.Move(GC.horizontal, (int)GC.Direction.right);
-       //     }
-            
             h.key_ctrl(e);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Invalidate();
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            h.index = 0;
+       //     if (h.face == 1)
+       //     {
+       //         h.overturn();
+       //         h.face = 1;
+       //     }
+       ////     else 
+       // //    {
+       // //        h.overturn();
+       ////         h.face = 0;
+       ////     }
         }
     }
 }
