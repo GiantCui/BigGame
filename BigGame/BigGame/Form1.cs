@@ -24,7 +24,6 @@ namespace BigGame
         public void InitialGame()
         {
             //记录窗体信息
-            SingleObject.
             //加载背景图片
             SingleObject.GetSingle().AddGameObject(new BackGround(-10, -10, 20));
             //加载测试游戏对象

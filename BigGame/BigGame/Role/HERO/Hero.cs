@@ -9,6 +9,7 @@ namespace BigGame.Role.HERO
 {
     public abstract class Hero : GameObject
     {
+        public int speed = 5;
         public Hero(int x, int y, int width, int height, string name)
               : base(x, y, width, height)
         {
