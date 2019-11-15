@@ -63,6 +63,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Role\Hero.cs" />
+    <Compile Include="Role\Heroine.cs" />
     <Compile Include="Role\monster.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />

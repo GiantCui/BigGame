@@ -1,5 +1,6 @@
 ﻿using BigGame.Map;
 using BigGame.Role;
+using BigGame.Role.HERO;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -36,7 +37,7 @@ namespace BigGame
         //背景对象
         public BackGround BG { get; set; }
         //测试游戏对象
-        public TestPlayer testPlayer { get; set; }
+        public Hero hero { get; set; }
         //窗体框矩形信息
         public Rectangle formRec { get; set; }
         //添加游戏对象
@@ -46,9 +47,9 @@ namespace BigGame
             {
                 BG = go as BackGround;
             }
-            if(go is TestPlayer)
+            if(go is Hero)
             {
-                testPlayer = go as TestPlayer;
+                hero = go as Hero;
             }
         }
 
@@ -56,7 +57,7 @@ namespace BigGame
         public void Draw(Graphics g)
         {
             BG.Draw(g);
-            testPlayer.Draw(g);
+            hero.Draw(g);
         }
 
         public void SetformRec(int x, int y, int width, int height)

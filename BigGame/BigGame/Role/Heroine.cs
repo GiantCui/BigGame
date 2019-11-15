@@ -28,7 +28,7 @@ namespace BigGame.Role.HERO
             img[5]= Properties.Resources.walk_1;
         }
 
-        public override void draw(Graphics g)
+        public override void Draw(Graphics g)
         {
             if (comm.Time() - last_frame_time > frame_internal)
             {
@@ -39,7 +39,7 @@ namespace BigGame.Role.HERO
                     anm_frame = 0;
                 }
             }
-            g.DrawImage(img[anm_frame], this.X, this.Y, this.With, this.High);
+            g.DrawImage(img[anm_frame], this.X, this.Y, this.Width, this.Height);
         }
     }
 }
