@@ -65,7 +65,8 @@
     </Compile>
     <Compile Include="Role\Hero.cs" />
     <Compile Include="Role\Heroine.cs" />
-    <Compile Include="Role\monster.cs" />
+    <Compile Include="Role\Monster.cs" />
+    <Compile Include="Role\monsterFly.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
     <EmbeddedResource Include="Form1.resx">

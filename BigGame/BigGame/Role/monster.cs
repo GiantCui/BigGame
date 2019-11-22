@@ -4,38 +4,35 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BigGame.Role
 {
-    class monster:GameObject
+    public abstract class Monster : GameObject
     {
-        static Bitmap[] image =
-        {
-            Properties.Resources.alien_enemy_flying1,
-            Properties.Resources.alien_enemy_flying2,
-            Properties.Resources.alien_enemy_flying3,
-            Properties.Resources.alien_enemy_flying4,
-            Properties.Resources.alien_enemy_flying5,
-            Properties.Resources.alien_enemy_flying6,
-            Properties.Resources.alien_enemy_flying7,
-            Properties.Resources.alien_enemy_flying8
-        };
-
+        public int speed = 5;   //怪物移动的速度
         public int anm_frame = 0;   //记录当前帧
         public long last_frame_time = 0;    //记录上一帧时间
-        public long frame_internal = 500; //记录两帧间隔
+        public long frame_internal = 100; //记录两帧间隔
 
-        public monster(int x,int y, int hp):base(x, y, image[0].Width, image[0].Height)
+        public Monster(int x, int y, int width, int height, string name, int hp) : base(x, y, width, height)
         {
+            this.Name = name;
+            this.Hp = hp;
+        }
 
-        }
-        public override void InitializeImages()
+        public string Name { get; set; }
+        public int Hp { get; set; }
+
+        public void overturn(Image[] img)   //使怪物的图片翻转，达到转身的效果。
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < img.Length; i++)
+            {
+                img[i].RotateFlip(RotateFlipType.RotateNoneFlipX);
+            }
         }
-        public override void Draw(Graphics g)
-        {
-            throw new NotImplementedException();
-        }
+
+        public abstract void Move();
+        public abstract bool Die();
     }
 }

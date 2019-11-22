@@ -39,6 +39,8 @@ namespace BigGame
         //测试游戏对象
         public Hero hero { get; set; }
         //添加游戏对象
+        public Monster monster { get; set; }
+        //添加苍蝇怪
         public void AddGameObject(GameObject go)
         {
             if(go is BackGround)
@@ -49,6 +51,10 @@ namespace BigGame
             {
                 hero = go as Hero;
             }
+            if(go is Monster)
+            {
+                monster = go as Monster;
+            }
         }
 
         //绘制游戏对象
@@ -56,6 +62,7 @@ namespace BigGame
         {
             BG.Draw(g);
             //hero.Draw(g);
+            monster.Draw(g);
         }
     }
 }

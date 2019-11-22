@@ -17,6 +17,7 @@ namespace BigGame
     public partial class Form1 : Form
     {
         Heroine h=new Heroine(2000,150,150,150,"唐妮");
+        monsterFly fly = new monsterFly(300, 180, 100, 100, "苍蝇怪", 100, 200, 400);
         public Form1()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace BigGame
           //  SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
             SingleObject.GetSingle().AddGameObject(h );
             SingleObject.GetSingle().BG.TP = h;
+            SingleObject.GetSingle().AddGameObject(fly);
         }
 
         private void Form1_Load(object sender, EventArgs e)
