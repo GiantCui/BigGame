@@ -55,7 +55,7 @@ namespace BigGame
         public void Draw(Graphics g)
         {
             BG.Draw(g);
-            hero.Draw(g);
+            //hero.Draw(g);
         }
     }
 }
