@@ -25,7 +25,7 @@ namespace BigGame.Map
         }
         public override void Draw(Graphics g)
         {
-            g.DrawImage(BGImage, this.X, this.Y);
+            g.DrawImage(BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
             if(TP.X < Camera.Width / 2)
             {
                 this.X = 0;
@@ -38,7 +38,7 @@ namespace BigGame.Map
             {
                 this.X = (Camera.Width / 2) - TP.X;
             }
-            TP.map = new Rectangle(this.X, this.Y, BGImage.Width - 1000, BGImage.Height);
+            TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
             TP.Draw(g);
         }
 

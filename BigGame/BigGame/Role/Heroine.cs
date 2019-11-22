@@ -58,7 +58,7 @@ namespace BigGame.Role.HERO
             {
                 this.Y = this.Y - speed;
             }
-            else if (e.KeyCode == Keys.Left)
+            else if (e.KeyCode == Keys.Left && this.X > map.X)
             {
                 if (guntag == 0)
                 {
@@ -71,7 +71,7 @@ namespace BigGame.Role.HERO
                 }
                 this.X = this.X - speed;
             }
-            else if (e.KeyCode == Keys.Right && this.X < map.Width)
+            else if (e.KeyCode == Keys.Right && this.X < map.Width - 100)
             {
                 if (guntag == 0)
                 {
