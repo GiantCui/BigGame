@@ -73,5 +73,10 @@ namespace BigGame
        ////         h.face = 0;
        ////     }
         }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //h.KeyPress(e);
+        }
     }
 }
