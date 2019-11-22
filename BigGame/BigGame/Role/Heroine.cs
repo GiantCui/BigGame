@@ -41,16 +41,10 @@ namespace BigGame.Role.HERO
         {
             if (e.KeyCode == Keys.J)
             {
-                index = 2;
                 anm_frame = 0;
-                guntag = 1;
+                index = 2;
             }
-            else
-            {
-                guntag = 0;
-            }
-
-            if (e.KeyCode == Keys.Down)
+            else if (e.KeyCode == Keys.Down)
             {
                 this.Y = this.Y + speed;
             }
@@ -58,12 +52,9 @@ namespace BigGame.Role.HERO
             {
                 this.Y = this.Y - speed;
             }
-            else if (e.KeyCode == Keys.Left && this.X > map.X)
-            {
-                if (guntag == 0)
-                {
-                    index = 1;
-                }
+            else if (e.KeyCode == Keys.Left)
+            {          
+                index = 1;
                 if (face != 1)
                 {
                     overturn();
@@ -71,12 +62,9 @@ namespace BigGame.Role.HERO
                 }
                 this.X = this.X - speed;
             }
-            else if (e.KeyCode == Keys.Right && this.X < map.Width - 100)
+            else if (e.KeyCode == Keys.Right && this.X < map.Width)
             {
-                if (guntag == 0)
-                {
-                    index = 1;
-                }
+                index = 1;
                 if (face != 0)
                 {
                     overturn();
@@ -86,10 +74,7 @@ namespace BigGame.Role.HERO
             }
             else
             {
-                if (guntag == 0)
-                {
-                    index = 0;
-                }  
+                  index = 0;
             }          
         }
 
@@ -121,5 +106,15 @@ namespace BigGame.Role.HERO
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
+
+        //public  void KeyPress(KeyPressEventArgs e)
+        //{
+        //    if(e.KeyChar=='j'|| e.KeyChar == 'J')
+        //    {
+        //        index = 2;
+        //        anm_frame = 0;
+        //        guntag = 1;
+        //    }
+        //}
     }
 }
