@@ -37,5 +37,7 @@ namespace BigGame
 
         public abstract void Draw(Graphics g);
 
+       // public abstract void Draw(Graphics g,int map_x,int map_y);
+
     }
 }

@@ -143,5 +143,17 @@
   <ItemGroup>
     <None Include="Resources\alien-enemy-flying8.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer-4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
