@@ -59,10 +59,10 @@ namespace BigGame.Role.HERO
                 {
                     overturn();
                     face = 1;
-                }         
+                }
                 this.X = this.X - speed;
             }
-            else if (e.KeyCode == Keys.Right)
+            else if (e.KeyCode == Keys.Right && this.X < map.Width)
             {
                 index = 1;
                 if (face != 0)
