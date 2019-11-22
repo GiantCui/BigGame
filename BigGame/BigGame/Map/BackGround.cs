@@ -26,6 +26,7 @@ namespace BigGame.Map
         public override void Draw(Graphics g)
         {
             g.DrawImage(BGImage, this.X, this.Y);
+            TP.map = new Point(this.X, this.Y);
             TP.Draw(g);
         }
 

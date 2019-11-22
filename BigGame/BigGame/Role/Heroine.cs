@@ -15,6 +15,7 @@ namespace BigGame.Role.HERO
         public int face = 0;    //face=0默认为右，face=1默认为左
         public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public int guntag = 0;  //记录拿枪状态
+       
         public Heroine(int x, int y, int width, int height, string name)
            : base(x, y, width, height, name)
         {
@@ -105,7 +106,7 @@ namespace BigGame.Role.HERO
         }
 
 
-        public void Draw(Graphics g,int map_x,int map_y)
+        public override void Draw(Graphics g)
         {
             if (comm.Time() - last_frame_time > frame_internal)
             {
@@ -118,12 +119,7 @@ namespace BigGame.Role.HERO
             }
 
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
-            g.DrawImage(img[index][anm_frame], this.X+ map_x, this.Y+ map_y, this.Width, this.Height);
-        }
-
-        public override void Draw(Graphics g)
-        {
-           
+            g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
     }
 }
