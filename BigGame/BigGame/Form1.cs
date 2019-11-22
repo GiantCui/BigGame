@@ -31,6 +31,7 @@ namespace BigGame
             //加载测试游戏对象
           //  SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
             SingleObject.GetSingle().AddGameObject(h );
+            SingleObject.GetSingle().BG.TP = h;
         }
 
         private void Form1_Load(object sender, EventArgs e)
