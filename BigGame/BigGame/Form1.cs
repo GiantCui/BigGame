@@ -25,9 +25,10 @@ namespace BigGame
 
         public void InitialGame()
         {
-            //记录窗体信息
             //加载背景图片
             SingleObject.GetSingle().AddGameObject(new BackGround(-10, -10, 20));
+            //获取窗体信息
+            SingleObject.GetSingle().BG.SetCamera(new Rectangle(this.Location, this.Size));
             //加载测试游戏对象
           //  SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
             SingleObject.GetSingle().AddGameObject(h );
@@ -50,6 +51,7 @@ namespace BigGame
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            
             //if(e.KeyCode == Keys.W)
            // {
            //     SingleObject.GetSingle().testPlayer.Move(GC.vertical, (int)GC.Direction.up);

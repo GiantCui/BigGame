@@ -13,11 +13,15 @@ namespace BigGame.Map
         private static Bitmap BGImage = Properties.Resources.background4;
         public int speed { get; set; }
         public TestPlayer TP { get; set; }
+        public Rectangle Camera { get; set; }
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
         {
             this.speed = speed;
         }
-
+        public void SetCamera(Rectangle rec)
+        {
+            this.Camera = rec;
+        }
         public override void Draw(Graphics g)
         {
             g.DrawImage(BGImage, this.X, this.Y);
