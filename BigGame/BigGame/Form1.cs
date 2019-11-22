@@ -16,7 +16,7 @@ namespace BigGame
 {
     public partial class Form1 : Form
     {
-        Heroine h=new Heroine(150,180,150,150,"唐妮");
+        Heroine h=new Heroine(440,180,150,150,"唐妮");
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +27,8 @@ namespace BigGame
         {
             //记录窗体信息
             //加载背景图片
-            SingleObject.GetSingle().AddGameObject(new BackGround(-10, -10, 20));
+            SingleObject.GetSingle().AddGameObject(new BackGround(0, 0, 20));
+            SingleObject.GetSingle().BG.SetCamera(new Rectangle(this.Location, this.Size));
             //加载测试游戏对象
           //  SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
             SingleObject.GetSingle().AddGameObject(h );

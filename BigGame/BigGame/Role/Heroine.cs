@@ -68,10 +68,10 @@ namespace BigGame.Role.HERO
                 {
                     overturn();
                     face = 1;
-                }         
+                }
                 this.X = this.X - speed;
             }
-            else if (e.KeyCode == Keys.Right)
+            else if (e.KeyCode == Keys.Right && this.X < map.Width)
             {
                 if (guntag == 0)
                 {
