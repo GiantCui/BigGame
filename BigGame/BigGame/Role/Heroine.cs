@@ -52,7 +52,7 @@ namespace BigGame.Role.HERO
             {
                 this.Y = this.Y - speed;
             }
-            else if (e.KeyCode == Keys.Left)
+            else if (e.KeyCode == Keys.Left && this.X > map.X - 30)
             {          
                 index = 1;
                 if (face != 1)
@@ -62,7 +62,7 @@ namespace BigGame.Role.HERO
                 }
                 this.X = this.X - speed;
             }
-            else if (e.KeyCode == Keys.Right && this.X < map.Width)
+            else if (e.KeyCode == Keys.Right && this.X < map.Width - 100)
             {
                 index = 1;
                 if (face != 0)
