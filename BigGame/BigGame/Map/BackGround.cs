@@ -46,14 +46,14 @@ namespace BigGame.Map
                 this.X = (Camera.Width / 2) - TP.X;
             }
             //人物遇到地图上边界
-            if (TP.Y < Camera.Width / 2)
+            if (TP.Y < Camera.Height / 2)
             {
                 this.Y = 0;
             }
             //人物遇到地图下边界
-            else if (TP.Y > BGImage.Width - (Camera.Height / 2))
+            else if (TP.Y > BGImage.Height - (Camera.Height / 2))
             {
-                this.Y = Camera.Height - BGImage.Height;
+                this.Y = Camera.Height - BGImage.Height - 40;
             }
             //人物在地图中间
             else
