@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BigGame.Map;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace BigGame.Role.HERO
 {
     public class Heroine : Hero
     {
-        public Image[][] img = new Image[3][];
+        public Image[][] img = new Image[3][];   
 
         public int face = 0;    //face=0默认为右，face=1默认为左
         public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
@@ -39,13 +40,26 @@ namespace BigGame.Role.HERO
 
         public override void key_ctrl(KeyEventArgs e)
         {
+            
+            if (e.KeyCode == Keys.S)
+            {
+                int b = BackGround.BGunder.GetPixel(this.X + map.X + 50, this.Y + map.Y + this.speed).B;
+                int d = map.X;
+                int a = this.X + map.X;
+                int c = this.Y + map.Y;
+                MessageBox.Show(
+                    "map.x=" + d.ToString() + "\n"
+                    + "x=" + a.ToString() + "\n"
+                    +"y=" + c.ToString() + "\n"
+                    + "B=" + b.ToString());
+            }
             if (e.KeyCode == Keys.J)
             {
                 anm_frame = 0;
                 index = 2;
             }
-            else if (e.KeyCode == Keys.Down && this.Y < map.Height - 170)
-            {
+            else if (e.KeyCode == Keys.Down && this.Y < map.Height - 120)
+            {   
                 this.Y = this.Y + speed;
             }
             else if (e.KeyCode == Keys.Up && this.Y > map.Y)

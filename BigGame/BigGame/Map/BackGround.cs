@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace BigGame.Map
 {
-    class BackGround:GameObject
+    public class BackGround:GameObject
     {
-        private static Bitmap BGImage = Properties.Resources.background4;
+        public static Bitmap BGImage = Properties.Resources.background4;
+        public static Bitmap BGunder = Properties.Resources.new4;
         public int speed { get; set; }
         public Hero TP { get; set; }
         //创建相机
@@ -26,7 +27,8 @@ namespace BigGame.Map
         }
         public override void Draw(Graphics g)
         {
-            g.DrawImage(BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
+            g.DrawImage(BGunder, this.X, this.Y, BGunder.Width, BGunder.Height);
+            //g.DrawImage(BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
             //人物遇到地图左边界
             if(TP.X < Camera.Width / 2)
             {
@@ -59,6 +61,7 @@ namespace BigGame.Map
             }
             //更新角色存储的地图信息
             TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
+            TP.BackGd = this;
             TP.Draw(g);
         }
 

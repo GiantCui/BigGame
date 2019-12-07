@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BigGame.Map;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace BigGame.Role.HERO
 {
     public abstract class Hero : GameObject
     {
-       
-        public int speed = 50;
+        public BackGround BackGd { get; set; }
+        public int speed = 10;
         public int anm_frame = 0;   //记录当前帧
         public long last_frame_time = 0;    //记录上一帧时间
         public long frame_internal = 150; //记录两帧间隔

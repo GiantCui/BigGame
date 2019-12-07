@@ -223,6 +223,16 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap new4 {
+            get {
+                object obj = ResourceManager.GetObject("new4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap walk_1 {
             get {
                 object obj = ResourceManager.GetObject("walk_1", resourceCulture);
