@@ -40,10 +40,10 @@ namespace BigGame.Role.HERO
 
         public override void key_ctrl(KeyEventArgs e)
         {
-            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y+20).B;
-            int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
-            int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
-            int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
+            int b_up = BackGround.BGunder.GetPixel(this.X + 10, this.Y+20).B;
+            int b_down = BackGround.BGunder.GetPixel(this.X + 10, this.Y + 90 + this.speed).B;
+            int b_left = BackGround.BGunder.GetPixel(this.X + 10 - this.speed, this.Y + 90 + this.speed).B;
+            int b_right = BackGround.BGunder.GetPixel(this.X + 10 + this.speed, this.Y + 90 + this.speed).B;
             if (e.KeyCode == Keys.S)
             {
                 int d = map.X;
