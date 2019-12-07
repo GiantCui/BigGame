@@ -57,7 +57,6 @@ namespace BigGame.Role
             g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
             if (in_attack())
             {
-                speed = 10;
                 attackHero();
             }
             else

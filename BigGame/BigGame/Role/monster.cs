@@ -34,7 +34,7 @@ namespace BigGame.Role
         public bool in_attack()  //英雄是否在怪物的攻击范围内
         {
             int hero_x = SingleObject.GetSingle().hero.X;
-            if(System.Math.Abs(this.X - hero_x) < 200)  //攻击范围为200
+            if(System.Math.Abs(this.X - hero_x) < 100)  //攻击范围为100
             {
                 return true;
             }
