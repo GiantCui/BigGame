@@ -14,6 +14,7 @@ namespace BigGame.Map
         private static Bitmap BGImage = Properties.Resources.background4;
         public int speed { get; set; }
         public Hero TP { get; set; }
+        //创建相机
         public Rectangle Camera { get; set; }
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
         {
@@ -26,18 +27,37 @@ namespace BigGame.Map
         public override void Draw(Graphics g)
         {
             g.DrawImage(BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
+            //人物遇到地图左边界
             if(TP.X < Camera.Width / 2)
             {
                 this.X = 0;
             }
+            //人物遇到地图右边界
             else if(TP.X > BGImage.Width - (Camera.Width / 2))
             {
                 this.X = Camera.Width - BGImage.Width;
             }
+            //人物在地图中间
             else
             {
                 this.X = (Camera.Width / 2) - TP.X;
             }
+            //人物遇到地图上边界
+            if (TP.Y < Camera.Width / 2)
+            {
+                this.Y = 0;
+            }
+            //人物遇到地图下边界
+            else if (TP.Y > BGImage.Width - (Camera.Height / 2))
+            {
+                this.Y = Camera.Height - BGImage.Height;
+            }
+            //人物在地图中间
+            else
+            {
+                this.Y = (Camera.Height / 2) - TP.Y;
+            }
+            //更新角色存储的地图信息
             TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
             TP.Draw(g);
         }

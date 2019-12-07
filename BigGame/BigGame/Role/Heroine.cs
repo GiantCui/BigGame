@@ -44,11 +44,11 @@ namespace BigGame.Role.HERO
                 anm_frame = 0;
                 index = 2;
             }
-            else if (e.KeyCode == Keys.Down)
+            else if (e.KeyCode == Keys.Down && this.Y < map.Height - 170)
             {
                 this.Y = this.Y + speed;
             }
-            else if (e.KeyCode == Keys.Up)
+            else if (e.KeyCode == Keys.Up && this.Y > map.Y)
             {
                 this.Y = this.Y - speed;
             }
