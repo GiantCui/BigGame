@@ -16,7 +16,7 @@ namespace BigGame
 {
     public partial class Form1 : Form
     {
-        Heroine h=new Heroine(0,0,100,100,"唐妮");
+        Heroine h=new Heroine(0,400,100,100,"唐妮");
         monsterFly fly = new monsterFly(300, 180, 100, 100, "苍蝇怪", 100, 200, 400);
         public Form1()
         {
