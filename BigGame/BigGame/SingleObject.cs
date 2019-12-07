@@ -62,7 +62,7 @@ namespace BigGame
         {
             BG.Draw(g);
             //hero.Draw(g);
-            monster.Draw(g);
+            //monster.Draw(g);
         }
     }
 }

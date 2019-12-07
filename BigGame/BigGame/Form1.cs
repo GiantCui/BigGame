@@ -35,6 +35,7 @@ namespace BigGame
             SingleObject.GetSingle().AddGameObject(h );
             SingleObject.GetSingle().BG.TP = h;
             SingleObject.GetSingle().AddGameObject(fly);
+            SingleObject.GetSingle().BG.MS = fly;
         }
 
         private void Form1_Load(object sender, EventArgs e)
