@@ -31,7 +31,19 @@ namespace BigGame.Role
                 img[i].RotateFlip(RotateFlipType.RotateNoneFlipX);
             }
         }
-
+        public bool in_attack()  //英雄是否在怪物的攻击范围内
+        {
+            int hero_x = SingleObject.GetSingle().hero.X;
+            if(System.Math.Abs(this.X - hero_x) < 200)  //攻击范围为200
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public abstract void attackHero();
         public abstract void Move();
         public abstract bool Die();
     }

@@ -55,9 +55,17 @@ namespace BigGame.Role
             }
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
-            if (anm_frame % 2 == 1)
+            if (in_attack())
             {
-                Move();
+                speed = 10;
+                attackHero();
+            }
+            else
+            {
+                if (anm_frame % 2 == 1)
+                {
+                    Move();
+                }
             }
         }
 
@@ -81,6 +89,21 @@ namespace BigGame.Role
             {
                 overturn(img);
                 face = 0;
+                this.X = this.X - speed;
+            }
+
+        }
+
+        public override void attackHero()
+        {
+            int offset = this.X-SingleObject.GetSingle().hero.X;
+            if (face == 1)
+            {
+                overturn(img);
+                face = 0;
+            }
+            if (offset > 0)
+            {
                 this.X = this.X - speed;
             }
 
