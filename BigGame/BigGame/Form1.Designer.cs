@@ -44,7 +44,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 453);
             this.KeyPreview = true;
-            this.MaximumSize = new System.Drawing.Size(1500, 550);
+            this.MaximumSize = new System.Drawing.Size(1500, 800);
             this.MinimumSize = new System.Drawing.Size(1000, 500);
             this.Name = "Form1";
             this.Text = "Form1";

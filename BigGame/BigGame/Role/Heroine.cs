@@ -61,12 +61,16 @@ namespace BigGame.Role.HERO
                 index = 2;
             }
             else if (e.KeyCode == Keys.Down && this.Y < map.Height - 120 && b_down > 250)
-            {   
+            {
+            
                 this.Y = this.Y + speed;
             }
             else if (e.KeyCode == Keys.Up && this.Y > map.Y && b_up > 250)
             {
-                this.Y = this.Y - speed;
+               
+                // this.Y = (int)(yVelocity);
+                //this.Y = this.Y - (int)(yVelocity);
+                 this.Y = this.Y - speed;
             }
             else if (e.KeyCode == Keys.Left && this.X > map.X - 30)
             {          
@@ -122,6 +126,12 @@ namespace BigGame.Role.HERO
             {
                
             }
+            float yVelocity = 0;
+            float jumpSpeed = 15.0f;
+            float gravity = 0.98f;
+            yVelocity = jumpSpeed;
+            yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
+            this.Y = this.Y + (int)(yVelocity);
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
