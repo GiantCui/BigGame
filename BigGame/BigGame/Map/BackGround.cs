@@ -14,6 +14,7 @@ namespace BigGame.Map
         private static Bitmap BGImage = Properties.Resources.background4;
         public int speed { get; set; }
         public Hero TP { get; set; }
+        public Monster MS { get; set; }
         //创建相机
         public Rectangle Camera { get; set; }
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
@@ -59,7 +60,9 @@ namespace BigGame.Map
             }
             //更新角色存储的地图信息
             TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
+            MS.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
             TP.Draw(g);
+            MS.Draw(g);
         }
 
         public override void InitializeImages()

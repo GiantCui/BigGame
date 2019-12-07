@@ -54,7 +54,7 @@ namespace BigGame.Role
                 anm_frame = 0;
             }
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
-            g.DrawImage(img[anm_frame], this.X, this.Y, this.Width, this.Height);
+            g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
             if (anm_frame % 2 == 1)
             {
                 Move();
