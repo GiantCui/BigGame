@@ -15,6 +15,7 @@ namespace BigGame.Map
         public static Bitmap BGunder = Properties.Resources.new4;
         public int speed { get; set; }
         public Hero TP { get; set; }
+        public Monster MS { get; set; }
         //创建相机
         public Rectangle Camera { get; set; }
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
@@ -28,7 +29,7 @@ namespace BigGame.Map
         public override void Draw(Graphics g)
         {
             g.DrawImage(BGunder, this.X, this.Y, BGunder.Width, BGunder.Height);
-            //g.DrawImage(BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
+            g.DrawImage(BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
             //人物遇到地图左边界
             if(TP.X < Camera.Width / 2)
             {
