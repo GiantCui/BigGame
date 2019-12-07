@@ -62,8 +62,10 @@ namespace BigGame.Map
             }
             //更新角色存储的地图信息
             TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
+            MS.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
             TP.BackGd = this;
             TP.Draw(g);
+            MS.Draw(g);
         }
 
         public override void InitializeImages()
