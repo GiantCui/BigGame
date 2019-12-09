@@ -21,8 +21,8 @@ namespace BigGame.Role
              : base(x, y, width, height)
         {
             this.Hero = ob;
-            this.X = p.X=ob.X+80;
-            this.Y =p.Y= ob.Y-36;
+            this.X = p.X=ob.X+60;
+            this.Y =p.Y= ob.Y+30;
         }
 
         public override void InitializeImages()
@@ -42,6 +42,7 @@ namespace BigGame.Role
                     if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.ListMonster[i].GetRectangle()))
                     {
                         SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
+                        SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
                         tag = 2;
                         break;
                     }                

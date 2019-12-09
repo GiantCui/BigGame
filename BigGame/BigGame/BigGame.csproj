@@ -183,5 +183,11 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

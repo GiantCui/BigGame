@@ -59,6 +59,8 @@ namespace BigGame.Role.HERO
             {
                 anm_frame = 0;
                 index = 2;
+                Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
+                SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
             else if (e.KeyCode == Keys.Down && this.Y < map.Height - 120 && b_down > 250)
             {
