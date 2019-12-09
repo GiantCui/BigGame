@@ -42,17 +42,6 @@ namespace BigGame.Role.HERO
             int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
             int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
             int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
-            if (e.KeyCode == Keys.S)
-            {
-                int d = map.X;
-                int a = this.X;
-                int c = this.Y;
-                MessageBox.Show(
-                    "map.x=" + d.ToString() + "\n"
-                    + "x=" + a.ToString() + "\n"
-                    +"y=" + c.ToString() + "\n"
-                    + "B=" + b_down.ToString());
-            }
             if (e.KeyCode == Keys.J)
             {
                 anm_frame = 0;
@@ -60,19 +49,19 @@ namespace BigGame.Role.HERO
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
-            else if (e.KeyCode == Keys.Down && this.Y < map.Height - 120 && b_down > 250)
+            else if (e.KeyCode == Keys.S && this.Y < map.Height - 120 && b_down > 250)
             {
             
                 this.Y = this.Y + speed;
             }
-            else if (e.KeyCode == Keys.Up && this.Y - 300 > map.Y && b_up > 250)
+            else if (e.KeyCode == Keys.W && this.Y - 300 > map.Y && b_up > 250)
             {
                
                 // this.Y = (int)(yVelocity);
                 //this.Y = this.Y - (int)(yVelocity);
                  this.Y = this.Y - 100;
             }
-            else if (e.KeyCode == Keys.Left && this.X > map.X - 30)
+            else if (e.KeyCode == Keys.A && this.X > map.X - 30)
             {          
                 index = 1;
                 if (face != 1)
@@ -82,7 +71,7 @@ namespace BigGame.Role.HERO
                 }
                 this.X = this.X - speed;
             }
-            else if (e.KeyCode == Keys.Right && this.X < map.Width - 100)
+            else if (e.KeyCode == Keys.D && this.X < map.Width - 100)
             {
                 index = 1;
                 if (face != 0)
