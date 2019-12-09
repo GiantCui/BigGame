@@ -128,7 +128,7 @@ namespace BigGame.Role.HERO
             }
             float yVelocity = 0;
             float jumpSpeed = 15.0f;
-
+             
             float gravity = 0.98f;
             yVelocity = jumpSpeed;
             yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
