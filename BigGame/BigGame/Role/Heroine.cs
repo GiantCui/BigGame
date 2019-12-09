@@ -41,33 +41,79 @@ namespace BigGame.Role.HERO
 
         public override void key_ctrl(KeyEventArgs e)
         {
-            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y+20).B;
+            if(e.KeyCode == Keys.J)
+            {
+                J_down = true;
+            }
+            else if(e.KeyCode == Keys.W)
+            {
+                W_down = true;
+            }
+            else if(e.KeyCode == Keys.A)
+            {
+                A_down = true;
+            }
+            else if(e.KeyCode == Keys.D)
+            {
+                D_down = true;
+            }
+            else
+            {
+                index = 0;
+            }
+                     
+        }
+
+        internal void key_upctrl(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.J)
+            {
+                J_down = false;
+            }
+            else if (e.KeyCode == Keys.W)
+            {
+                W_down = false;
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+                A_down = false;
+            }
+            else if (e.KeyCode == Keys.D)
+            {
+                D_down = false;
+            }
+          
+        }
+
+        public void move()
+        {
+            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 20).B;
             int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
             int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
             int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
-            
-            if (e.KeyCode == Keys.J)
+
+            if (J_down)
             {
-                
+
                 anm_frame = 0;
                 index = 2;
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
-            if (e.KeyCode == Keys.S && this.Y < map.Height - 120 && b_down > 250)
+            if (S_down && this.Y < map.Height - 120 && b_down > 250)
             {
-            
+
                 this.Y = this.Y + speed;
             }
-            else if (e.KeyCode == Keys.W && this.Y - 300 > map.Y && b_up > 250)
+            if (W_down && this.Y - 300 > map.Y && b_up > 250)
             {
-               
+
                 // this.Y = (int)(yVelocity);
                 //this.Y = this.Y - (int)(yVelocity);
-                 this.Y = this.Y - 100;
+                this.Y = this.Y - 100;
             }
-            else if (e.KeyCode == Keys.A && this.X > map.X - 30)
-            {          
+            if (A_down && this.X > map.X - 30)
+            {
                 index = 1;
                 if (face != 1)
                 {
@@ -76,25 +122,17 @@ namespace BigGame.Role.HERO
                 }
                 this.X = this.X - speed;
             }
-            else if (e.KeyCode == Keys.D && this.X < map.Width - 100)
+            if (D_down && this.X < map.Width - 100)
             {
                 index = 1;
                 if (face != 0)
                 {
                     overturn();
                     face = 0;
-                }            
+                }
                 this.X = this.X + speed;
             }
-            else
-            {
-                  index = 0;
-            }          
-        }
-
-        internal void key_upctrl(KeyEventArgs e)
-        {
-            MessageBox.Show(e.KeyData.ToString());
+            
         }
 
         public void overturn()
@@ -112,7 +150,7 @@ namespace BigGame.Role.HERO
 
         public override void Draw(Graphics g)
         {
-            
+            move();
             if (comm.Time() - last_frame_time > frame_internal)
             {
                 anm_frame++;
