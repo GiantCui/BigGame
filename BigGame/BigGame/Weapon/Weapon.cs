@@ -13,19 +13,21 @@ namespace BigGame.Role
     {
         public Image[] img = new Image[2];
         private int index = 0;  //记录图片下标
-        private bool Isexit = false;  //记录图片下标
+        private int isexit=0 ;  //记录图片下标
         public Rectangle map { get; set; }   //记录地图坐标
         private Hero hero;
         private Point p = new Point();   //记录子弹最初的位置
         public Hero Hero { get => hero; set => hero = value; }
+        public int Isexit { get => isexit; set => isexit = value; }
+
         public Weapon(int x, int y, int width, int height, Hero ob)
              : base(x, y, width, height)
         {
-            this.Hero = ob;
+            this.Hero = ob;       
             if (hero.face == 0)
             {
                 this.X = p.X = hero.X + 60;
-                this.Y = p.Y = hero.Y + 30;
+                this.Y = p.Y = hero.Y + 30;              
             }
             else
             {
@@ -47,8 +49,9 @@ namespace BigGame.Role
         public void IsAtMonster()
         {
             int tag = 0;
-            if (hero.face == 0&& Isexit==false)
-            {                
+            if ((hero.face == 0&& this.Isexit == 0 )||(this.Isexit == 1))
+            {
+                this.Isexit = 1;
                 if (this.X <= p.X + 200)
                 {
                     for (int i = 0; i < SingleObject.GetSingle().BG.ListMonster.Count(); i++)
@@ -57,8 +60,7 @@ namespace BigGame.Role
                         {
                             SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
                             SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
-                            tag = 2;
-                            Isexit = true;
+                            tag = 2;                          
                             break;
                         }
                     }
@@ -72,8 +74,9 @@ namespace BigGame.Role
                     SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
                 }
             }
-            else if(Isexit == false)
-            {         
+            else if((hero.face == 1 && this.Isexit == 0) || (this.Isexit == 2))
+            {
+                this.Isexit = 2;
                 if (this.X >= p.X - 200)
                 {
                     for (int i = 0; i < SingleObject.GetSingle().BG.ListMonster.Count(); i++)
@@ -82,8 +85,7 @@ namespace BigGame.Role
                         {
                             SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
                             SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
-                            tag = 2;
-                            Isexit = true;
+                            tag = 2;                       
                             break;
                         }
                     }
