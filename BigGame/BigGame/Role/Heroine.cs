@@ -11,9 +11,7 @@ namespace BigGame.Role.HERO
 {
     public class Heroine : Hero
     {
-        public Image[][] img = new Image[3][];   
-
-        public int face = 0;    //face=0默认为右，face=1默认为左
+        public Image[][] img = new Image[3][];           
         public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public int guntag = 0;  //记录拿枪状态
         public int g = 10;  //重力加速度

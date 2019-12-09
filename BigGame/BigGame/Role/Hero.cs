@@ -13,6 +13,7 @@ namespace BigGame.Role.HERO
     {
         public BackGround BackGd { get; set; }
         public int speed = 10;
+        public int face = 0;    //face=0默认为右，face=1默认为左
         public int origlife = 100;       //初始生命
         public int currentlife = 100;    //当前生命
         public int anm_frame = 0;   //记录当前帧

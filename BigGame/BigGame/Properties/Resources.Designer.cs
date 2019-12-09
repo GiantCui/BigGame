@@ -213,6 +213,26 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap bullet_l_1 {
+            get {
+                object obj = ResourceManager.GetObject("bullet_l_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap bullet_l_2 {
+            get {
+                object obj = ResourceManager.GetObject("bullet_l_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap Layer_1 {
             get {
                 object obj = ResourceManager.GetObject("Layer_1", resourceCulture);

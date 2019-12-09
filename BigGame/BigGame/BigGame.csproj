@@ -189,5 +189,11 @@
   <ItemGroup>
     <None Include="Resources\bullet_2.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_l_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_l_2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
