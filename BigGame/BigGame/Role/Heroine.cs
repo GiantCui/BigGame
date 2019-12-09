@@ -40,10 +40,10 @@ namespace BigGame.Role.HERO
 
         public override void key_ctrl(KeyEventArgs e)
         {
-            int b_up = BackGround.BGunder.GetPixel(this.X + 10, this.Y+20).B;
-            int b_down = BackGround.BGunder.GetPixel(this.X + 10, this.Y + 90 + this.speed).B;
-            int b_left = BackGround.BGunder.GetPixel(this.X + 10 - this.speed, this.Y + 90 + this.speed).B;
-            int b_right = BackGround.BGunder.GetPixel(this.X + 10 + this.speed, this.Y + 90 + this.speed).B;
+            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y+20).B;
+            int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
+            int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
+            int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
             if (e.KeyCode == Keys.S)
             {
                 int d = map.X;
@@ -70,7 +70,7 @@ namespace BigGame.Role.HERO
                
                 // this.Y = (int)(yVelocity);
                 //this.Y = this.Y - (int)(yVelocity);
-                 this.Y = this.Y - speed;
+                 this.Y = this.Y - 100;
             }
             else if (e.KeyCode == Keys.Left && this.X > map.X - 30)
             {          
@@ -113,6 +113,7 @@ namespace BigGame.Role.HERO
 
         public override void Draw(Graphics g)
         {
+            
             if (comm.Time() - last_frame_time > frame_internal)
             {
                 anm_frame++;
@@ -133,8 +134,24 @@ namespace BigGame.Role.HERO
             yVelocity = jumpSpeed;
             yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
             this.Y = this.Y + (int)(yVelocity);
+            this.OnMyValueChanged += WhenMove;
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+        }
+
+        private void WhenMove()
+        {
+            if(BackGround.BGunder.Height < this.Y + this.Height)
+            {
+                this.y = BackGround.BGunder.Height - this.Height - 1;
+            }
+            int asd = BackGround.BGunder.GetPixel(0, 0).B;
+            int val = BackGround.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
+            while (val < 10)
+            {
+                this.y--;
+                val = BackGround.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
+            }
         }
 
         //public  void KeyPress(KeyPressEventArgs e)

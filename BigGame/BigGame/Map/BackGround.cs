@@ -13,7 +13,7 @@ namespace BigGame.Map
     public class BackGround:GameObject
     {
         public static Bitmap BGImage = Properties.Resources.background4;
-        public static Bitmap BGunder = Properties.Resources.new4;
+        public static Bitmap BGunder = Properties.Resources._5;
         public int speed { get; set; }
         public Hero TP { get; set; }
         public List<Monster> ListMonster = new List<Monster>();  //怪物集合
@@ -46,21 +46,21 @@ namespace BigGame.Map
             {
                 this.X = (Camera.Width / 2) - TP.X;
             }
-            //人物遇到地图上边界
-            if (TP.Y < Camera.Height / 2)
-            {
-                this.Y = 0;
-            }
-            //人物遇到地图下边界
-            else if (TP.Y > BGImage.Height - (Camera.Height / 2))
-            {
-                this.Y = Camera.Height - BGImage.Height - 40;
-            }
-            //人物在地图中间
-            else
-            {
-                this.Y = (Camera.Height / 2) - TP.Y;
-            }
+            ////人物遇到地图上边界
+            //if (TP.Y < Camera.Height / 2)
+            //{
+            //    this.Y = 0;
+            //}
+            ////人物遇到地图下边界
+            //else if (TP.Y > BGImage.Height - (Camera.Height / 2))
+            //{
+            //    this.Y = Camera.Height - BGImage.Height - 40;
+            //}
+            ////人物在地图中间
+            //else
+            //{
+            //    this.Y = (Camera.Height / 2) - TP.Y;
+            //}
             //更新角色存储的地图信息
             TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
             TP.BackGd = this;
