@@ -68,6 +68,7 @@
     <Compile Include="Role\Monster.cs" />
     <Compile Include="Role\monsterFly.cs" />
     <Compile Include="Role\TestPlayer.cs" />
+    <Compile Include="Role\Weapon\Weapon.cs" />
     <Compile Include="SingleObject.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -158,6 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bullet_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bullet_2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
