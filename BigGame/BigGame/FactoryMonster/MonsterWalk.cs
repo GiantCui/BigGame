@@ -25,14 +25,19 @@ namespace BigGame.FactoryMonster
 
         public override void InitializeImages()
         {
-            start = this.X - 100;
-            end = this.X + 100;
+            updateRange();
             img[0] = Properties.Resources.walk1;
             img[1] = Properties.Resources.walk2;
             img[2] = Properties.Resources.walk3;
             img[3] = Properties.Resources.walk4;
             img[4] = Properties.Resources.walk5;
             img[5] = Properties.Resources.walk6;
+        }
+
+        public void updateRange()  //更新怪物的移动范围
+        {
+            start = this.X - 100;
+            end = this.X + 100;
         }
 
         public override bool Die()
@@ -56,6 +61,7 @@ namespace BigGame.FactoryMonster
             if (in_attack())
             {
                 attackHero();
+                updateRange();  //怪物追击英雄后，更新怪物的移动范围
             }
             else
             {
@@ -94,14 +100,23 @@ namespace BigGame.FactoryMonster
         public override void attackHero()
         {
             int offset = this.X - SingleObject.GetSingle().hero.X;
-            if (face == 1)
-            {
-                overturn(img);
-                face = 0;
-            }
             if (offset > 0)
             {
+                if (face == 1)
+                {
+                    overturn(img);
+                    face = 0;
+                }
                 this.X = this.X - speed;
+            }
+            if (offset < 0)
+            {
+                if (face == 0)
+                {
+                    overturn(img);
+                    face = 1;
+                }
+                this.X = this.X + speed;
             }
 
         }

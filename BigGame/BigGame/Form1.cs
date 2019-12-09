@@ -18,8 +18,8 @@ namespace BigGame
     public partial class Form1 : Form
     {
         Heroine h=new Heroine(0,400,100,100,"唐妮");
-        Monster fly = FactoryM.createMonster(200, "fly");
-        Monster walk = FactoryM.createMonster(400, "walk");
+        Monster fly = FactoryM.createMonster(300, "fly");
+       // Monster walk = FactoryM.createMonster(400, "walk");
 
         public Form1()
         {
@@ -38,9 +38,9 @@ namespace BigGame
             SingleObject.GetSingle().AddGameObject(h );
             SingleObject.GetSingle().BG.TP = h;
             SingleObject.GetSingle().AddGameObject(fly);
-            SingleObject.GetSingle().AddGameObject(walk);
+           // SingleObject.GetSingle().AddGameObject(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(fly);
-            SingleObject.GetSingle().BG.ListMonster.Add(walk);
+            //SingleObject.GetSingle().BG.ListMonster.Add(walk);
         }
 
         private void Form1_Load(object sender, EventArgs e)
