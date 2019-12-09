@@ -40,7 +40,7 @@ namespace BigGame
                     {
                         OnMyValueChanged();
                     }       
-                                      
+                                       
                 }                
             }
         }
