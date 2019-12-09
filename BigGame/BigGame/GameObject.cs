@@ -49,7 +49,7 @@ namespace BigGame
         #endregion
 
         //返回对象矩阵
-        public Rectangle GetRectangle()
+        public virtual Rectangle GetRectangle()
         {
             return new Rectangle(this.X, this.Y, this.Width, this.Height);
         }

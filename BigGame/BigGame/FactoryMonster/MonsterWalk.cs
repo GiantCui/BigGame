@@ -118,7 +118,14 @@ namespace BigGame.FactoryMonster
                 }
                 this.X = this.X + speed;
             }
-
+            if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
+            {
+                int life = SingleObject.GetSingle().hero.origlife;
+                if (life > 0)
+                {
+                    SingleObject.GetSingle().hero.origlife = life - 5;
+                }
+            }
         }
     }
 }
