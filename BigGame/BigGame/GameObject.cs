@@ -12,16 +12,38 @@ namespace BigGame
         //初始化构造函数
         public GameObject(int x, int y, int width, int height)
         {
-            X = x;
-            Y = y;
+            this.X = x;
+            this.y = y;
             Height = height;
             Width = width;
             InitializeImages();
         }
+        //定义时间委托
+        public delegate void MyValueChanged();
+
+        //与委托相关联的事件
+        public event MyValueChanged OnMyValueChanged;
 
         #region 横坐标，纵坐标，图片，高度，宽度
         public int X { get; set; }
-        public int Y { get; set; }
+        public int y;
+        public int Y
+        {
+            get { return this.y; }
+            set
+            {
+                //如果变量改变调用事件触发函数
+                if(value != this.y)
+                {
+                    this.y = value;
+                    if (OnMyValueChanged != null)
+                    {
+                        OnMyValueChanged();
+                    }       
+                                      
+                }                
+            }
+        }
         public int Height { get; set; }
         public int Width { get; set; }
         #endregion

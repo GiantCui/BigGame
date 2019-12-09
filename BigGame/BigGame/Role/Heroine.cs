@@ -16,7 +16,7 @@ namespace BigGame.Role.HERO
         public int face = 0;    //face=0默认为右，face=1默认为左
         public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public int guntag = 0;  //记录拿枪状态
-        public int g = 10;  //重力加速度     
+        public int g = 10;  //重力加速度
         public Heroine(int x, int y, int width, int height, string name)
            : base(x, y, width, height, name)
         {
@@ -40,10 +40,10 @@ namespace BigGame.Role.HERO
 
         public override void key_ctrl(KeyEventArgs e)
         {
-            int b_up = BackGround.BGunder.GetPixel(this.X + 10, this.Y+20).B;
-            int b_down = BackGround.BGunder.GetPixel(this.X + 10, this.Y + 90 + this.speed).B;
-            int b_left = BackGround.BGunder.GetPixel(this.X + 10 - this.speed, this.Y + 90 + this.speed).B;
-            int b_right = BackGround.BGunder.GetPixel(this.X + 10 + this.speed, this.Y + 90 + this.speed).B;
+            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y+20).B;
+            int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
+            int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
+            int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
             if (e.KeyCode == Keys.S)
             {
                 int d = map.X;
@@ -56,24 +56,21 @@ namespace BigGame.Role.HERO
                     + "B=" + b_down.ToString());
             }
             if (e.KeyCode == Keys.J)
-            {            
+            {
                 anm_frame = 0;
                 index = 2;
-                Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
-                SingleObject.GetSingle().AddGameObject(w);
-               SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
             else if (e.KeyCode == Keys.Down && this.Y < map.Height - 120 && b_down > 250)
             {
             
                 this.Y = this.Y + speed;
             }
-            else if (e.KeyCode == Keys.Up && this.Y > map.Y && b_up > 250)
+            else if (e.KeyCode == Keys.Up && this.Y - 300 > map.Y && b_up > 250)
             {
                
                 // this.Y = (int)(yVelocity);
                 //this.Y = this.Y - (int)(yVelocity);
-                 this.Y = this.Y - speed;
+                 this.Y = this.Y - 100;
             }
             else if (e.KeyCode == Keys.Left && this.X > map.X - 30)
             {          
@@ -115,7 +112,8 @@ namespace BigGame.Role.HERO
 
 
         public override void Draw(Graphics g)
-        {       
+        {
+            
             if (comm.Time() - last_frame_time > frame_internal)
             {
                 anm_frame++;
@@ -135,9 +133,35 @@ namespace BigGame.Role.HERO
             float gravity = 0.98f;
             yVelocity = jumpSpeed;
             yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
-         //   this.Y = this.Y + (int)(yVelocity);
+            this.Y = this.Y + (int)(yVelocity);
+            this.OnMyValueChanged += WhenMove;
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
+
+        private void WhenMove()
+        {
+            if(BackGround.BGunder.Height < this.Y + this.Height)
+            {
+                this.y = BackGround.BGunder.Height - this.Height - 1;
+            }
+            int asd = BackGround.BGunder.GetPixel(0, 0).B;
+            int val = BackGround.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
+            while (val < 10)
+            {
+                this.y--;
+                val = BackGround.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
+            }
+        }
+
+        //public  void KeyPress(KeyPressEventArgs e)
+        //{
+        //    if(e.KeyChar=='j'|| e.KeyChar == 'J')
+        //    {
+        //        index = 2;
+        //        anm_frame = 0;
+        //        guntag = 1;
+        //    }
+        //}
     }
 }
