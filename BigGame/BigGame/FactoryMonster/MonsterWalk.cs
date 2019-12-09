@@ -7,34 +7,32 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace BigGame.Role
+namespace BigGame.FactoryMonster
 {
-    class monsterFly : Monster
+    class MonsterWalk:Monster
     {
         public int face = 0;    //face=1默认为右，face=0默认为左
-        Image[] img = new Image[8]; //保存怪物的图像素材
-        public monsterFly(int x, int y, int width, int height, string name, int hp, int start, int end)
+        Image[] img = new Image[6]; //保存怪物的图像素材
+        public int start = 0;   //怪物的移动范围
+        public int end = 0;
+        public MonsterWalk(int x, int y, int width, int height, string name, int hp)
             : base(x, y, width, height, name, hp)
         {
             this.Name = name;
             this.Hp = hp;
-            this.Start = start;
-            this.End = end;
         }
 
-        public int End { get; set; }   //怪物在一定范围内移动
-        public int Start { get; set; }
 
         public override void InitializeImages()
         {
-            img[0] = Properties.Resources.alien_enemy_flying1;
-            img[1] = Properties.Resources.alien_enemy_flying2;
-            img[2] = Properties.Resources.alien_enemy_flying3;
-            img[3] = Properties.Resources.alien_enemy_flying4;
-            img[4] = Properties.Resources.alien_enemy_flying5;
-            img[5] = Properties.Resources.alien_enemy_flying6;
-            img[6] = Properties.Resources.alien_enemy_flying7;
-            img[7] = Properties.Resources.alien_enemy_flying8;
+            start = this.X - 100;
+            end = this.X + 100;
+            img[0] = Properties.Resources.walk1;
+            img[1] = Properties.Resources.walk2;
+            img[2] = Properties.Resources.walk3;
+            img[3] = Properties.Resources.walk4;
+            img[4] = Properties.Resources.walk5;
+            img[5] = Properties.Resources.walk6;
         }
 
         public override bool Die()
@@ -53,7 +51,7 @@ namespace BigGame.Role
             {
                 anm_frame = 0;
             }
-            // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
+            //img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
             if (in_attack())
             {
@@ -70,21 +68,21 @@ namespace BigGame.Role
 
         public override void Move()
         {
-            if (face == 0 && this.X > Start)
+            if (face == 0 && this.X > start)
             {
                 this.X = this.X - speed;
             }
-            if (face == 0 && this.X == Start)
+            if (face == 0 && this.X == start)
             {
                 overturn(img);
                 face = 1;
                 this.X = this.X + speed;
             }
-            if (face == 1 && this.X < End)
+            if (face == 1 && this.X < end)
             {
                 this.X = this.X + speed;
             }
-            if (face == 1 && this.X == End)
+            if (face == 1 && this.X == end)
             {
                 overturn(img);
                 face = 0;
@@ -95,7 +93,7 @@ namespace BigGame.Role
 
         public override void attackHero()
         {
-            int offset = this.X-SingleObject.GetSingle().hero.X;
+            int offset = this.X - SingleObject.GetSingle().hero.X;
             if (face == 1)
             {
                 overturn(img);
@@ -109,3 +107,4 @@ namespace BigGame.Role
         }
     }
 }
+
