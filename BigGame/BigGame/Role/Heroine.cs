@@ -17,6 +17,9 @@ namespace BigGame.Role.HERO
         public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public int guntag = 0;  //记录拿枪状态
         public int g = 10;  //重力加速度
+
+        bool A_down, S_down, D_down, W_down, J_down = false;
+
         public Heroine(int x, int y, int width, int height, string name)
            : base(x, y, width, height, name)
         {
@@ -44,14 +47,16 @@ namespace BigGame.Role.HERO
             int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
             int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
             int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
+            
             if (e.KeyCode == Keys.J)
             {
+                
                 anm_frame = 0;
                 index = 2;
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
-            else if (e.KeyCode == Keys.S && this.Y < map.Height - 120 && b_down > 250)
+            if (e.KeyCode == Keys.S && this.Y < map.Height - 120 && b_down > 250)
             {
             
                 this.Y = this.Y + speed;
@@ -87,6 +92,11 @@ namespace BigGame.Role.HERO
             {
                   index = 0;
             }          
+        }
+
+        internal void key_upctrl(KeyEventArgs e)
+        {
+            MessageBox.Show(e.KeyData.ToString());
         }
 
         public void overturn()
