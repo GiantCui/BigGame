@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="comm.cs" />
+    <Compile Include="FactoryMonster\FactoryMonster.cs" />
+    <Compile Include="FactoryMonster\MonsterWalk.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,8 +67,8 @@
     </Compile>
     <Compile Include="Role\Hero.cs" />
     <Compile Include="Role\Heroine.cs" />
-    <Compile Include="Role\Monster.cs" />
-    <Compile Include="Role\monsterFly.cs" />
+    <Compile Include="FactoryMonster\Monster.cs" />
+    <Compile Include="FactoryMonster\MonsterFly.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -158,6 +160,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

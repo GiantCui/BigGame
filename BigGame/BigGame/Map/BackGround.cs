@@ -1,5 +1,6 @@
 ﻿using BigGame.Role;
 using BigGame.Role.HERO;
+using BigGame.FactoryMonster;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -15,7 +16,7 @@ namespace BigGame.Map
         public static Bitmap BGunder = Properties.Resources.new4;
         public int speed { get; set; }
         public Hero TP { get; set; }
-        public Monster MS { get; set; }
+        public List<Monster> ListMonster = new List<Monster>();  //怪物集合
         //创建相机
         public Rectangle Camera { get; set; }
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
@@ -62,10 +63,13 @@ namespace BigGame.Map
             }
             //更新角色存储的地图信息
             TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
-            MS.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
             TP.BackGd = this;
             TP.Draw(g);
-            MS.Draw(g);
+            for(int i = 0; i < ListMonster.Count; i++)
+            {
+                ListMonster[i].map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
+                ListMonster[i].Draw(g);
+            }
         }
 
         public override void InitializeImages()
