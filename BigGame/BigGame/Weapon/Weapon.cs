@@ -31,7 +31,7 @@ namespace BigGame.Role
             }
             else
             {
-                this.X = p.X = hero.X - 60;
+                this.X = p.X = hero.X+10;
                 this.Y = p.Y = hero.Y + 30;
                 img[0] = Properties.Resources.bullet_l_1;
                 img[1] = Properties.Resources.bullet_l_2;
@@ -66,7 +66,7 @@ namespace BigGame.Role
                     }
                     if (tag == 0)
                     {
-                        this.X = this.X + 10;
+                        this.X = this.X + 30;
                     }
                 }
                 else if ((SingleObject.GetSingle().BG.ListWeapon.Count() != 0))
@@ -91,7 +91,7 @@ namespace BigGame.Role
                     }
                     if (tag == 0)
                     {
-                        this.X = this.X - 10;
+                        this.X = this.X - 30;
                     }
                 }
                 else if ((SingleObject.GetSingle().BG.ListWeapon.Count() != 0))
