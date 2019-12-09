@@ -46,5 +46,10 @@ namespace BigGame.FactoryMonster
         public abstract void attackHero(); //怪物攻击英雄
         public abstract void Move();    //怪物在一定范围内移动
         public abstract bool Die();     //怪物死亡
+
+        public override Rectangle GetRectangle()  //将矩阵缩小
+        {
+            return new Rectangle(this.X, this.Y, this.Width - 50, this.Height - 50);
+        }
     }
 }

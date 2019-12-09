@@ -31,6 +31,9 @@ namespace BigGame.Role.HERO
 
         public abstract void key_ctrl(KeyEventArgs e);
 
-
+        public override Rectangle GetRectangle()  //将矩阵缩小
+        {
+            return new Rectangle(this.X, this.Y, this.Width - 50, this.Height - 50);
+        }
     }
 }
