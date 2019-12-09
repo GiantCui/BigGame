@@ -71,16 +71,7 @@ namespace BigGame
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             h.index = 0;
-       //     if (h.face == 1)
-       //     {
-       //         h.overturn();
-       //         h.face = 1;
-       //     }
-       ////     else 
-       // //    {
-       // //        h.overturn();
-       ////         h.face = 0;
-       ////     }
+            h.key_upctrl(e);
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
