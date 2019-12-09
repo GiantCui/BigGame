@@ -179,5 +179,23 @@
   <ItemGroup>
     <None Include="Resources\walk6.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk6.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
