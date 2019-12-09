@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace BigGame.Role
 {
-    class monsterFly : Monster
+    public class monsterFly : Monster
     {
         public int face = 0;    //face=1默认为右，face=0默认为左
         Image[] img = new Image[8]; //保存怪物的图像素材
