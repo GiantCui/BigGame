@@ -18,8 +18,9 @@ namespace BigGame
     public partial class Form1 : Form
     {
         Heroine h=new Heroine(0,400,100,100,"唐妮");
-        MonsterFly fly = new MonsterFly(200, 180, 100, 100, "苍蝇怪", 100);
-        MonsterWalk walk=new MonsterWalk(400, 180, 100, 100, "螃蟹怪", 100);
+        Monster fly = FactoryM.createMonster(200, "fly");
+        Monster walk = FactoryM.createMonster(400, "walk");
+
         public Form1()
         {
             InitializeComponent();
