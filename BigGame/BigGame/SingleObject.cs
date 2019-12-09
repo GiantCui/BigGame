@@ -42,6 +42,8 @@ namespace BigGame
         //添加游戏对象
         public Monster monster { get; set; }
         public List<Monster> ListMonster = new List<Monster>();
+
+        public List<Weapon> ListWeapon = new List<Weapon>();
         //添加苍蝇怪
         public void AddGameObject(GameObject go)
         {
@@ -56,6 +58,10 @@ namespace BigGame
             if(go is Monster)
             {
                 ListMonster.Add(go as Monster);
+            }
+            if (go is Weapon)
+            {
+                ListWeapon.Add(go as Weapon);
             }
         }
 

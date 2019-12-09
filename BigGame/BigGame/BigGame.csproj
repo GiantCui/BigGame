@@ -71,6 +71,7 @@
     <Compile Include="FactoryMonster\MonsterFly.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
+    <Compile Include="Weapon\Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\walk6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,6 +17,7 @@ namespace BigGame.Map
         public int speed { get; set; }
         public Hero TP { get; set; }
         public List<Monster> ListMonster = new List<Monster>();  //怪物集合
+        public List<Weapon> ListWeapon = new List<Weapon>();
         //创建相机
         public Rectangle Camera { get; set; }
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
@@ -69,6 +70,11 @@ namespace BigGame.Map
             {
                 ListMonster[i].map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
                 ListMonster[i].Draw(g);
+            }
+            for (int i = 0; i < ListWeapon.Count; i++)
+            {
+                ListWeapon[i].map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
+                ListWeapon[i].Draw(g);
             }
         }
 

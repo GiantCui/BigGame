@@ -40,6 +40,7 @@ namespace BigGame
             SingleObject.GetSingle().AddGameObject(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(fly);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,6 +61,12 @@ namespace BigGame
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             h.key_ctrl(e);
+            /*
+            if (SingleObject.GetSingle().BG.ListWeapon.Count != 0)
+            {
+                SingleObject.GetSingle().BG.ListWeapon[0].key_ctrl(e);
+            }
+            */
         }
 
         private void timer1_Tick(object sender, EventArgs e)
