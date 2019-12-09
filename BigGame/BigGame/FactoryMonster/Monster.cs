@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BigGame.Role
+namespace BigGame.FactoryMonster
 {
     public abstract class Monster : GameObject
     {
@@ -43,8 +43,8 @@ namespace BigGame.Role
                 return false;
             }
         }
-        public abstract void attackHero();
-        public abstract void Move();
-        public abstract bool Die();
+        public abstract void attackHero(); //怪物攻击英雄
+        public abstract void Move();    //怪物在一定范围内移动
+        public abstract bool Die();     //怪物死亡
     }
 }

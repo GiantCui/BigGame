@@ -11,13 +11,15 @@ using System.Windows.Forms;
 using BigGame;
 using BigGame.Role;
 using BigGame.Role.HERO;
+using BigGame.FactoryMonster;
 
 namespace BigGame
 {
     public partial class Form1 : Form
     {
         Heroine h=new Heroine(0,400,100,100,"唐妮");
-        Monster fly = new monsterFly(300, 180, 100, 100, "苍蝇怪", 100, 200, 400);
+        MonsterFly fly = new MonsterFly(200, 180, 100, 100, "苍蝇怪", 100);
+        MonsterWalk walk=new MonsterWalk(400, 180, 100, 100, "螃蟹怪", 100);
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +37,9 @@ namespace BigGame
             SingleObject.GetSingle().AddGameObject(h );
             SingleObject.GetSingle().BG.TP = h;
             SingleObject.GetSingle().AddGameObject(fly);
-            SingleObject.GetSingle().BG.MS = fly;
+            SingleObject.GetSingle().AddGameObject(walk);
+            SingleObject.GetSingle().BG.ListMonster.Add(fly);
+            SingleObject.GetSingle().BG.ListMonster.Add(walk);
         }
 
         private void Form1_Load(object sender, EventArgs e)

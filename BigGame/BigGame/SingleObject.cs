@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BigGame.FactoryMonster;
 
 namespace BigGame
 {
@@ -40,6 +41,7 @@ namespace BigGame
         public Hero hero { get; set; }
         //添加游戏对象
         public Monster monster { get; set; }
+        public List<Monster> ListMonster = new List<Monster>();
         //添加苍蝇怪
         public void AddGameObject(GameObject go)
         {
@@ -53,7 +55,7 @@ namespace BigGame
             }
             if(go is Monster)
             {
-                monster = go as Monster;
+                ListMonster.Add(go as Monster);
             }
         }
 
