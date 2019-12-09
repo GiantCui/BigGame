@@ -65,7 +65,7 @@ namespace BigGame.Role.HERO
             
                 this.Y = this.Y + speed;
             }
-            else if (e.KeyCode == Keys.Up && this.Y > map.Y && b_up > 250)
+            else if (e.KeyCode == Keys.Up && this.Y - 300 > map.Y && b_up > 250)
             {
                
                 // this.Y = (int)(yVelocity);
