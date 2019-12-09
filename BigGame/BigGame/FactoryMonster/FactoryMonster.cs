@@ -17,7 +17,7 @@ namespace BigGame.FactoryMonster
             }
             else
             {
-                monster = new MonsterWalk(x, 400, 100, 100, "螃蟹怪", 100);
+                monster = new MonsterWalk(x, 515, 100, 100, "螃蟹怪", 100);
             }
             return monster;
         }
