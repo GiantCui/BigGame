@@ -43,7 +43,7 @@ namespace BigGame.Role
                     {
                         SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
                         SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
-                        tag = 2;
+                         tag = 2;
                         break;
                     }                
                 }
