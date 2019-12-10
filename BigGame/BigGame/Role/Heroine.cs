@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,10 +11,10 @@ namespace BigGame.Role.HERO
 {
     public class Heroine : Hero
     {
-        public Image[][] img = new Image[4][];
-        public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪,4是死亡状态
+        public Image[][] img = new Image[3][];           
+        public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public int guntag = 0;  //记录拿枪状态
-        public bool finish = false;
+        public int g = 10;  //重力加速度
 
         bool A_down, S_down, D_down, J_down, K_down, K_up, J_up = false;
 
@@ -38,12 +37,6 @@ namespace BigGame.Role.HERO
             img[1][4] = Properties.Resources.walk_1;
             img[2] = new Image[1];
             img[2][0] = Properties.Resources.Layer_4;
-            img[3] = new Image[5];
-            img[3][0] = Properties.Resources.dead_1;
-            img[3][1] = Properties.Resources.death2;
-            img[3][2] = Properties.Resources.death3;
-            img[3][3] = Properties.Resources.death4;
-            img[3][4] = Properties.Resources.death5;
         }
 
         public override void key_ctrl(KeyEventArgs e)
@@ -51,7 +44,8 @@ namespace BigGame.Role.HERO
             if(e.KeyCode == Keys.K && K_up)
             {
                 K_down = true;
-                K_up = false;             
+                K_up = false;
+                index = 2;
             }
             else if(e.KeyCode == Keys.J && J_up)
             {
@@ -61,10 +55,12 @@ namespace BigGame.Role.HERO
             else if(e.KeyCode == Keys.A)
             {
                 A_down = true;
+                index = 1;
             }
             else if(e.KeyCode == Keys.D)
             {
                 D_down = true;
+                index = 1;
             }
             else
             {
@@ -78,12 +74,29 @@ namespace BigGame.Role.HERO
             if (e.KeyCode == Keys.K)
             {
                 K_down = false;
-                K_up = true;               
+                K_up = true;
+                //index = 0;
+                if (A_down || D_down)
+                {
+                    index = 1;
+                }
+                else
+                {
+                    index = 0;
+                }
             }
             else if (e.KeyCode == Keys.J)
             {
                 J_down = false;
                 J_up = true;
+                if (A_down || D_down)
+                {
+                    index = 1;
+                }
+                else
+                {
+                    index = 0;
+                }
             }
             else if (e.KeyCode == Keys.A)
             {
@@ -107,7 +120,7 @@ namespace BigGame.Role.HERO
             {
                 K_down = false;
                 anm_frame = 0;
-                index = 2;
+                
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
@@ -119,11 +132,13 @@ namespace BigGame.Role.HERO
             if (J_down && this.Y - 300 > map.Y && b_up > 250)
             {
                 J_down = false;
+                // this.Y = (int)(yVelocity);
+                //this.Y = this.Y - (int)(yVelocity);
                 this.Y = this.Y - 100;
             }
             if (A_down && this.X > map.X - 30)
             {
-                index = 1;
+                //index = 1;
                 if (face != 1)
                 {
                     overturn();
@@ -133,7 +148,7 @@ namespace BigGame.Role.HERO
             }
             if (D_down && this.X < map.Width - 100)
             {
-                index = 1;
+                //index = 1;
                 if (face != 0)
                 {
                     overturn();
@@ -156,56 +171,32 @@ namespace BigGame.Role.HERO
             }   
         }
 
-        public bool Change_life()
-        {
-            if (this.currentlife == 0)
-            {
-                index = 3;
-                return false;
-            }
-            return true;
-        }
 
         public override void Draw(Graphics g)
         {
-            if (Change_life())   //还有生命才会进行这些操作
+            move();
+            if (comm.Time() - last_frame_time > frame_internal)
             {
-                move();
-                if (comm.Time() - last_frame_time > frame_internal)
-                {
-                    anm_frame++;
-                    last_frame_time = comm.Time();
-                }
-                if (anm_frame >= img[index].Length)
-                {
-                    anm_frame = 0;
-                }
-                if (this.Y < map.Height - 120)
-                {
-
-                }
-                float yVelocity = 0;
-                float jumpSpeed = 15.0f;
-                float gravity = 0.98f;
-                yVelocity = jumpSpeed;
-                yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
-                this.Y = this.Y + (int)(yVelocity);
-                this.OnMyValueChanged += WhenMove;
+                anm_frame++;
+                last_frame_time = comm.Time();
             }
-            else
+            if (anm_frame >= img[index].Length)
             {
-                if (comm.Time() - last_frame_time > frame_internal)
-                {
-                    anm_frame++;
-                    last_frame_time = comm.Time();
-                }
-                if (anm_frame >= img[index].Length)
-                {
-                    anm_frame = img[index].Length-1;
-                    Thread.Sleep(1000);
-                    finish = true;
-                }
+                anm_frame = 0;
             }
+            if(this.Y < map.Height - 120)
+            {
+               
+            }
+            float yVelocity = 0;
+            float jumpSpeed = 15.0f;
+             
+            float gravity = 0.98f;
+            yVelocity = jumpSpeed;
+            yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
+            this.Y = this.Y + (int)(yVelocity);
+            this.OnMyValueChanged += WhenMove;
+            // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
 
@@ -223,5 +214,15 @@ namespace BigGame.Role.HERO
                 val = BackGround.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
             }
         }
+
+        //public  void KeyPress(KeyPressEventArgs e)
+        //{
+        //    if(e.KeyChar=='j'|| e.KeyChar == 'J')
+        //    {
+        //        index = 2;
+        //        anm_frame = 0;
+        //        guntag = 1;
+        //    }
+        //}
     }
 }
