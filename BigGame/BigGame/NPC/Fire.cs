@@ -40,9 +40,28 @@ namespace BigGame.NPC
             g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
 
+        public void attackBack() //击退英雄
+        {
+            int face;
+            if (SingleObject.GetSingle().BG.TP.face == 0)
+            {
+                face = -1;
+            }
+            else
+            {
+                face = 1;
+            }
+            SingleObject.GetSingle().BG.TP.X = SingleObject.GetSingle().BG.TP.X + face * 100;
+        }
+
+        public override Rectangle GetRectangle()  //将矩阵缩小
+        {
+            return new Rectangle(this.X, this.Y-30, this.Width, this.Height);
+        }
         public override void Buffer()
         {
-            SingleObject.GetSingle().BG.TP.currentlife--; ;
+            SingleObject.GetSingle().BG.TP.currentlife--;
+            attackBack();
         }
     }
 }
