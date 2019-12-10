@@ -67,11 +67,13 @@ namespace BigGame.Map
                 ListWeapon[i].map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
                 ListWeapon[i].Draw(g);
             }
+            /*
             for (int i = 0; i < ListGoods.Count; i++)
             {
                 ListGoods[i].map = new Rectangle(this.X, this.y, BGImage.Width, BGImage.Height);
                 ListGoods[i].Draw(g);
             }
+            */
             GoldList.Draw(g);
         }
 

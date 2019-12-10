@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BigGame.Map;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -13,7 +14,11 @@ namespace BigGame.Action
         public  void Draw(Graphics g)
         {
             int i;
-            for(i=0;i< SingleObject.GetSingle().BG.ListGoods.Count();i++)
+            int x = SingleObject.GetSingle().BG.X;
+            int y= SingleObject.GetSingle().BG.Y;
+            int w = BackGround.BGImage.Width;
+            int h = BackGround.BGImage.Height;
+            for (i=0;i< SingleObject.GetSingle().BG.ListGoods.Count();i++)
             {
                 if (SingleObject.GetSingle().BG.ListGoods[i].GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
                 {
@@ -22,6 +27,7 @@ namespace BigGame.Action
                 }
                 else
                 {
+                    SingleObject.GetSingle().BG.ListGoods[i].map = new Rectangle(x, y,w, h);
                     SingleObject.GetSingle().BG.ListGoods[i].Draw(g);
                 }
             }
