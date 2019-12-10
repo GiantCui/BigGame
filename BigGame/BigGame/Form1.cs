@@ -26,8 +26,8 @@ namespace BigGame
         Monster walk = FactoryM.createMonster(500, "walk");
         Monster walk1 = FactoryM.createMonster(1000, "Walk");
 
-        Goods fire = FactoryGoods.createGoods(300,550, "Fire");
-        Goods blood = FactoryGoods.createGoods(600, 520, "Blood");
+        Goods fire = FactoryGoods.createGoods(130,550, "Fire");
+        Goods blood = FactoryGoods.createGoods(300, 520, "Blood");
         Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
 
         Life life_UI = new Life(50, 10, 20, 20);
@@ -56,8 +56,8 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(walk1);
             //加入物品
-            SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
+            SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
             SingleObject.GetSingle().AddGameObject(life_UI);
             //创建金币集对象
