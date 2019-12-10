@@ -85,6 +85,7 @@
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
     <Compile Include="UI\Life.cs" />
+    <Compile Include="UI\Listing.cs" />
     <Compile Include="Weapon\Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -277,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\life_bag.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\木牌2.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

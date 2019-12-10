@@ -39,7 +39,7 @@ namespace BigGame.UI
             {
                 g.DrawImage(img[anm_frame], this.X + i*40 + 15, this.Y + 45, img[anm_frame].Width / 2, img[anm_frame].Height / 2);
             }
-            g.DrawString("Score\n123123", new Font("Consolas", 25, FontStyle.Bold), Brushes.Red, 640, 50);
+            
         }
 
         public override void InitializeImages()

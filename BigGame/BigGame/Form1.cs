@@ -31,6 +31,7 @@ namespace BigGame
         Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
 
         Life life_UI = new Life(50, 10, 20, 20);
+        Listing list_UI = new Listing(600, 30);
 
         Hero_GetGoods gold_list = new Hero_GetGoods();
         public Form1()
@@ -46,11 +47,7 @@ namespace BigGame
             SingleObject.GetSingle().AddGameObject(new BackGround(0, 0, 20));
             SingleObject.GetSingle().BG.SetCamera(new Rectangle(this.Location, this.Size));
             //加载测试游戏对象
-          //  SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
-           // SingleObject.GetSingle().AddGameObject(h );
-            SingleObject.GetSingle().BG.TP = h;
-            // SingleObject.GetSingle().AddGameObject(fly);
-            // SingleObject.GetSingle().AddGameObject(walk);
+            SingleObject.GetSingle().BG.TP = h;         
             //加入怪物
             SingleObject.GetSingle().BG.ListMonster.Add(fly);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
@@ -59,7 +56,9 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
+            //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
+            SingleObject.GetSingle().AddGameObject(list_UI);
             //创建金币集对象
             SingleObject.GetSingle().BG.GoldList = gold_list;
 
