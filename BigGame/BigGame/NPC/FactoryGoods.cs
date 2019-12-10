@@ -13,15 +13,15 @@ namespace BigGame.NPC
             Goods goods;
             if (goodsName == "Fire")
             {
-                goods = new Fire(x, y, 50, 50, 5);
+                goods = new Fire(x, y, 50, 50);
             }
             else if(goodsName == "Blood")
             {
-                goods = new Blood(x, y, 50, 50, 5);
+                goods = new Blood(x, y, 50, 50);
             }
             else
             {
-                goods = new Gold(x, y, 50, 50, 5);
+                goods = new Gold(x, y, 50, 50);
             }
             return goods;
         }

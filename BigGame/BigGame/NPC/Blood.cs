@@ -10,9 +10,8 @@ namespace BigGame.NPC
     class Blood:Goods
     {
         Image[] img = new Image[3];  //保存Blood的图像
-        public Blood(int x, int y, int width, int height, int buffer) : base(x, y, width, height, buffer)
+        public Blood(int x, int y, int width, int height) : base(x, y, width, height)
         {
-            this.Buffer = buffer;
         }
 
         public override void InitializeImages()
@@ -35,6 +34,11 @@ namespace BigGame.NPC
             }
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+        }
+
+        public override void Buffer()
+        {
+            SingleObject.GetSingle().BG.TP.currentlife++;
         }
     }
 }

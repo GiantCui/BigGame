@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.Action
 {
-    public class Hero_GetGold
+    public class Hero_GetGoods
     {
 
         public  void Draw(Graphics g)
@@ -22,7 +22,7 @@ namespace BigGame.Action
             {
                 if (SingleObject.GetSingle().BG.ListGoods[i].GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
                 {
-                    SingleObject.GetSingle().BG.TP.score += 5;
+                    SingleObject.GetSingle().BG.ListGoods[i].Buffer();
                     SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
                 }
                 else
