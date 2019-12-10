@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Action\Hero_GetGold.cs" />
     <Compile Include="comm.cs" />
     <Compile Include="FactoryMonster\FactoryMonster.cs" />
     <Compile Include="FactoryMonster\MonsterWalk.cs" />
