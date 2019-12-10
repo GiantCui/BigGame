@@ -15,7 +15,7 @@ namespace BigGame.Role.HERO
         public Image[][] img = new Image[4][];           
         public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public int guntag = 0;  //记录拿枪状态
-        public bool finsh = false;
+        
         public int g = 10;  //重力加速度
 
         bool A_down, S_down, D_down, J_down, K_down, K_up, J_up = false;
@@ -224,7 +224,7 @@ namespace BigGame.Role.HERO
                 if (anm_frame >= img[index].Length)
                 {
                     anm_frame = img[index].Length - 1;
-                    Thread.Sleep(1000);
+                    //Thread.Sleep(1000);
                     finsh = true;
                 }
             }

@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Action\Hero_GetGold.cs" />
     <Compile Include="comm.cs" />
+    <Compile Include="GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="MonsterRole\FactoryMonster.cs" />
     <Compile Include="MonsterRole\MonsterWalk.cs" />
     <Compile Include="Form1.cs">
@@ -82,6 +88,9 @@
     <Compile Include="Weapon\Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -259,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\加血3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,6 +20,7 @@ namespace BigGame.Role.HERO
         public long last_frame_time = 0;    //记录上一帧时间
         public long frame_internal = 150; //记录两帧间隔
         public Rectangle map { get; set; }   //记录地图坐标
+        public bool finsh = false; //记录是否死亡
         public Hero(int x, int y, int width, int height, string name)
               : base(x, y, width, height)
         {
