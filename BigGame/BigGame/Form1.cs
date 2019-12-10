@@ -14,6 +14,7 @@ using BigGame.Role.HERO;
 using BigGame.FactoryMonster;
 using BigGame.UI;
 using BigGame.NPC;
+using BigGame.Action;
 
 namespace BigGame
 {
@@ -30,6 +31,8 @@ namespace BigGame
         Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
 
         Life life_UI = new Life(50, 10, 20, 20);
+
+        Hero_GetGold gold_list = new Hero_GetGold();
         public Form1()
         {
             InitializeComponent();
@@ -57,6 +60,9 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
             SingleObject.GetSingle().AddGameObject(life_UI);
+            //创建金币集对象
+            SingleObject.GetSingle().BG.GoldList = gold_list;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -224,7 +224,7 @@ namespace BigGame.Role.HERO
                 if (anm_frame >= img[index].Length)
                 {
                     anm_frame = img[index].Length - 1;
-                    Thread.Sleep(1000);
+                   // Thread.Sleep(1000);
                     finsh = true;
                 }
             }
