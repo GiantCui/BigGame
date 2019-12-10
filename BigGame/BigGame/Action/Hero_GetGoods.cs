@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.Action
 {
-    public class Hero_GetGold
+    public class Hero_GetGoods
     {
 
         public  void Draw(Graphics g)
