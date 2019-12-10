@@ -71,6 +71,7 @@
     <Compile Include="FactoryMonster\MonsterFly.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
+    <Compile Include="UI\Life.cs" />
     <Compile Include="Weapon\Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -194,6 +195,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bullet_l_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muscle-up.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -123,7 +123,8 @@ namespace BigGame.FactoryMonster
                 int life = SingleObject.GetSingle().BG.TP.currentlife;
                 if (life > 0)
                 {
-                    SingleObject.GetSingle().BG.TP.currentlife = 0;
+                    SingleObject.GetSingle().BG.TP.currentlife --;
+                    
                 }
             }
         }

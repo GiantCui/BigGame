@@ -12,6 +12,7 @@ using BigGame;
 using BigGame.Role;
 using BigGame.Role.HERO;
 using BigGame.FactoryMonster;
+using BigGame.UI;
 
 namespace BigGame
 {
@@ -20,7 +21,7 @@ namespace BigGame
         Heroine h=new Heroine(0,400,100,100,"唐妮");
         Monster fly = FactoryM.createMonster(2000, "fly");
         Monster walk = FactoryM.createMonster(500, "walk");
-
+        Life life_UI = new Life(50, 10, 20, 20);
         public Form1()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace BigGame
            // SingleObject.GetSingle().AddGameObject(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(fly);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
+            SingleObject.GetSingle().AddGameObject(life_UI);
         }
 
         private void Form1_Load(object sender, EventArgs e)
