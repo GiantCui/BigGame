@@ -43,6 +43,20 @@ namespace BigGame.FactoryMonster
                 return false;
             }
         }
+
+        public void attackBack() //击退英雄
+        {
+            int face;
+            if (SingleObject.GetSingle().BG.TP.face == 0)
+            {
+                face = -1;
+            }
+            else
+            {
+                face = 1;
+            }
+            SingleObject.GetSingle().BG.TP.X = SingleObject.GetSingle().BG.TP.X + face * 100;
+        }
         public abstract void attackHero(); //怪物攻击英雄
         public abstract void Move();    //怪物在一定范围内移动
         public abstract bool Die();     //怪物死亡

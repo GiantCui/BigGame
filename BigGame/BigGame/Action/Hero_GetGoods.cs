@@ -1,4 +1,5 @@
 ﻿using BigGame.Map;
+using BigGame.NPC;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -20,10 +21,14 @@ namespace BigGame.Action
             int h = BackGround.BGImage.Height;
             for (i=0;i< SingleObject.GetSingle().BG.ListGoods.Count();i++)
             {
+               // GameObject god = SingleObject.GetSingle().BG.ListGoods[i];
                 if (SingleObject.GetSingle().BG.ListGoods[i].GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
                 {
                     SingleObject.GetSingle().BG.ListGoods[i].Buffer();
-                    SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
+                    if(!(SingleObject.GetSingle().BG.ListGoods[i] is Fire))
+                    {
+                        SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
+                    }             
                 }
                 else
                 {
