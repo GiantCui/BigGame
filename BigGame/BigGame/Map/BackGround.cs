@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BigGame.NPC;
 
 namespace BigGame.Map
 {
@@ -17,6 +18,7 @@ namespace BigGame.Map
         public int speed { get; set; }
         public Hero TP { get; set; }
         public List<Monster> ListMonster = new List<Monster>();  //怪物集合
+        public List<Goods> ListGoods = new List<Goods>();   //物品集合
         public List<Weapon> ListWeapon = new List<Weapon>();
         //创建相机
         public Rectangle Camera { get; set; }
@@ -60,6 +62,11 @@ namespace BigGame.Map
             {
                 ListWeapon[i].map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
                 ListWeapon[i].Draw(g);
+            }
+            for (int i = 0; i < ListGoods.Count; i++)
+            {
+                ListGoods[i].map = new Rectangle(this.X, this.y, BGImage.Width, BGImage.Height);
+                ListGoods[i].Draw(g);
             }
         }
 
