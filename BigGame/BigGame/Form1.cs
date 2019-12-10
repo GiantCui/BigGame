@@ -73,11 +73,25 @@ namespace BigGame
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer
                 | ControlStyles.ResizeRedraw
                 | ControlStyles.AllPaintingInWmPaint, true);
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             SingleObject.GetSingle().Draw(e.Graphics);
+            if(SingleObject.GetSingle().BG.TP.finsh)
+            {
+                long start = comm.Time();
+                long end = start + 500;
+                while(start < end)
+                {
+                    start = comm.Time();
+                }
+                GameOver gameOver = new GameOver();
+                this.Hide();
+                gameOver.ShowDialog(this);
+                this.Close();
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
