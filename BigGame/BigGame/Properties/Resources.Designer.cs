@@ -373,6 +373,26 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap life_bag {
+            get {
+                object obj = ResourceManager.GetObject("life_bag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap lifecontainer {
+            get {
+                object obj = ResourceManager.GetObject("lifecontainer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap muscle_up {
             get {
                 object obj = ResourceManager.GetObject("muscle_up", resourceCulture);

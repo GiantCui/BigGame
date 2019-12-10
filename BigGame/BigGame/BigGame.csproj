@@ -272,5 +272,11 @@
   <ItemGroup>
     <None Include="Resources\end.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifecontainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life_bag.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

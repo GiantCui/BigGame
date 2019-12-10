@@ -193,6 +193,9 @@
   <data name="life" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\life.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lifecontainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lifecontainer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="life_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\life_1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -201,6 +204,9 @@
   </data>
   <data name="life_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\life_3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="life_bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\life_bag.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="muscle_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muscle-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
