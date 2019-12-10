@@ -124,7 +124,16 @@ namespace BigGame.FactoryMonster
                 if (life > 0)
                 {
                     SingleObject.GetSingle().BG.TP.currentlife --;
-                    
+                    int face;
+                    if (SingleObject.GetSingle().BG.TP.face == 0)
+                    {
+                        face = -1;
+                    }
+                    else
+                    {
+                        face = 1;
+                    }
+                    SingleObject.GetSingle().BG.TP.X = SingleObject.GetSingle().BG.TP.X + face * 100;
                 }
             }
         }
