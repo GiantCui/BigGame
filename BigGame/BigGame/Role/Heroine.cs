@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,9 +12,10 @@ namespace BigGame.Role.HERO
 {
     public class Heroine : Hero
     {
-        public Image[][] img = new Image[3][];
-        public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
+        public Image[][] img = new Image[4][];
+        public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪,4是死亡状态
         public int guntag = 0;  //记录拿枪状态
+        public bool finish = false;
 
         bool A_down, S_down, D_down, J_down, K_down, K_up, J_up = false;
 
@@ -35,7 +37,13 @@ namespace BigGame.Role.HERO
             img[1][3] = Properties.Resources.walk_6;
             img[1][4] = Properties.Resources.walk_1;
             img[2] = new Image[1];
-            img[2][0] = Properties.Resources.Layer_4;     
+            img[2][0] = Properties.Resources.Layer_4;
+            img[3] = new Image[5];
+            img[3][0] = Properties.Resources.dead_1;
+            img[3][1] = Properties.Resources.death2;
+            img[3][2] = Properties.Resources.death3;
+            img[3][3] = Properties.Resources.death4;
+            img[3][4] = Properties.Resources.death5;
         }
 
         public override void key_ctrl(KeyEventArgs e)
@@ -148,30 +156,56 @@ namespace BigGame.Role.HERO
             }   
         }
 
+        public bool Change_life()
+        {
+            if (this.currentlife == 0)
+            {
+                index = 3;
+                return false;
+            }
+            return true;
+        }
 
         public override void Draw(Graphics g)
         {
-            move();        
-            if (comm.Time() - last_frame_time > frame_internal)
+            if (Change_life())   //还有生命才会进行这些操作
             {
-                anm_frame++;
-                last_frame_time = comm.Time();
+                move();
+                if (comm.Time() - last_frame_time > frame_internal)
+                {
+                    anm_frame++;
+                    last_frame_time = comm.Time();
+                }
+                if (anm_frame >= img[index].Length)
+                {
+                    anm_frame = 0;
+                }
+                if (this.Y < map.Height - 120)
+                {
+
+                }
+                float yVelocity = 0;
+                float jumpSpeed = 15.0f;
+                float gravity = 0.98f;
+                yVelocity = jumpSpeed;
+                yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
+                this.Y = this.Y + (int)(yVelocity);
+                this.OnMyValueChanged += WhenMove;
             }
-            if (anm_frame >= img[index].Length)
+            else
             {
-                anm_frame = 0;
+                if (comm.Time() - last_frame_time > frame_internal)
+                {
+                    anm_frame++;
+                    last_frame_time = comm.Time();
+                }
+                if (anm_frame >= img[index].Length)
+                {
+                    anm_frame = img[index].Length-1;
+                    Thread.Sleep(1000);
+                    finish = true;
+                }
             }
-            if(this.Y < map.Height - 120)
-            {
-               
-            }
-            float yVelocity = 0;
-            float jumpSpeed = 15.0f; 
-            float gravity = 0.98f;
-            yVelocity = jumpSpeed;
-            yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
-            this.Y = this.Y + (int)(yVelocity);
-            this.OnMyValueChanged += WhenMove;
             g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
 
