@@ -13,14 +13,22 @@ using BigGame.Role;
 using BigGame.Role.HERO;
 using BigGame.FactoryMonster;
 using BigGame.UI;
+using BigGame.NPC;
 
 namespace BigGame
 {
     public partial class Form1 : Form
     {
         Heroine h=new Heroine(0,400,100,100,"唐妮");
+
         Monster fly = FactoryM.createMonster(2000, "fly");
         Monster walk = FactoryM.createMonster(500, "walk");
+        Monster walk1 = FactoryM.createMonster(1000, "Walk");
+
+        Goods fire = FactoryGoods.createGoods(100,550, "Fire");
+        Goods blood = FactoryGoods.createGoods(300, 520, "Blood");
+        Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
+
         Life life_UI = new Life(50, 10, 20, 20);
         public Form1()
         {
@@ -38,10 +46,16 @@ namespace BigGame
           //  SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
            // SingleObject.GetSingle().AddGameObject(h );
             SingleObject.GetSingle().BG.TP = h;
-           // SingleObject.GetSingle().AddGameObject(fly);
-           // SingleObject.GetSingle().AddGameObject(walk);
+            // SingleObject.GetSingle().AddGameObject(fly);
+            // SingleObject.GetSingle().AddGameObject(walk);
+            //加入怪物
             SingleObject.GetSingle().BG.ListMonster.Add(fly);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
+            SingleObject.GetSingle().BG.ListMonster.Add(walk1);
+            //加入物品
+            SingleObject.GetSingle().BG.ListGoods.Add(fire);
+            SingleObject.GetSingle().BG.ListGoods.Add(blood);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold);
             SingleObject.GetSingle().AddGameObject(life_UI);
         }
 

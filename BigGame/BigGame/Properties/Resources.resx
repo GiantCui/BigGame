@@ -250,4 +250,46 @@
   <data name="_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="加血1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\加血1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="加血2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\加血2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="加血3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\加血3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火堆1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火堆1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火堆2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火堆2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火堆3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火堆3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火堆4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火堆4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火堆5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火堆5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火堆6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火堆6.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火堆7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火堆7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="金币1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\金币1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="金币2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\金币2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="金币3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\金币3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="金币4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\金币4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
