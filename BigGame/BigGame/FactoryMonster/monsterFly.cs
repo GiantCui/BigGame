@@ -122,10 +122,10 @@ namespace BigGame.FactoryMonster
             }
             if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
             {
-                int life = SingleObject.GetSingle().BG.TP.origlife;
+                int life = SingleObject.GetSingle().BG.TP.currentlife;
                 if (life > 0)
                 {
-                    SingleObject.GetSingle().BG.TP.origlife = 0;
+                    SingleObject.GetSingle().BG.TP.currentlife = 0;
                 }
             }
         }
