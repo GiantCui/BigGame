@@ -45,6 +45,7 @@ namespace BigGame.Role.HERO
             {
                 K_down = true;
                 K_up = false;
+                index = 2;
             }
             else if(e.KeyCode == Keys.J && J_up)
             {
@@ -54,10 +55,12 @@ namespace BigGame.Role.HERO
             else if(e.KeyCode == Keys.A)
             {
                 A_down = true;
+                index = 1;
             }
             else if(e.KeyCode == Keys.D)
             {
                 D_down = true;
+                index = 1;
             }
             else
             {
@@ -72,11 +75,28 @@ namespace BigGame.Role.HERO
             {
                 K_down = false;
                 K_up = true;
+                //index = 0;
+                if (A_down || D_down)
+                {
+                    index = 1;
+                }
+                else
+                {
+                    index = 0;
+                }
             }
             else if (e.KeyCode == Keys.J)
             {
                 J_down = false;
                 J_up = true;
+                if (A_down || D_down)
+                {
+                    index = 1;
+                }
+                else
+                {
+                    index = 0;
+                }
             }
             else if (e.KeyCode == Keys.A)
             {
@@ -100,7 +120,7 @@ namespace BigGame.Role.HERO
             {
                 K_down = false;
                 anm_frame = 0;
-                index = 2;
+                
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
@@ -118,7 +138,7 @@ namespace BigGame.Role.HERO
             }
             if (A_down && this.X > map.X - 30)
             {
-                index = 1;
+                //index = 1;
                 if (face != 1)
                 {
                     overturn();
@@ -128,7 +148,7 @@ namespace BigGame.Role.HERO
             }
             if (D_down && this.X < map.Width - 100)
             {
-                index = 1;
+                //index = 1;
                 if (face != 0)
                 {
                     overturn();
