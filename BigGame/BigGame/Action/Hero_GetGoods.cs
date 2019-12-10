@@ -21,15 +21,14 @@ namespace BigGame.Action
             int h = BackGround.BGImage.Height;
             for (i=0;i< SingleObject.GetSingle().BG.ListGoods.Count();i++)
             {
-                GameObject god = SingleObject.GetSingle().BG.ListGoods[i];
-                if (god.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
+               // GameObject god = SingleObject.GetSingle().BG.ListGoods[i];
+                if (SingleObject.GetSingle().BG.ListGoods[i].GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
                 {
-                   // if(god is Gold)
-                   // {
-                    //    god.
-                  //  }
-                  //  S
-                    SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
+                    SingleObject.GetSingle().BG.ListGoods[i].Buffer();
+                    if(!(SingleObject.GetSingle().BG.ListGoods[i] is Fire))
+                    {
+                        SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
+                    }             
                 }
                 else
                 {
