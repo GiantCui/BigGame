@@ -99,7 +99,7 @@ namespace BigGame.FactoryMonster
 
         public override void attackHero()
         {
-            int offset = this.X - SingleObject.GetSingle().hero.X;
+            int offset = this.X - SingleObject.GetSingle().BG.TP.X;
             if (offset > 0)
             {
                 if (face == 1)
@@ -120,10 +120,10 @@ namespace BigGame.FactoryMonster
             }
             if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
             {
-                int life = SingleObject.GetSingle().hero.origlife;
+                int life = SingleObject.GetSingle().BG.TP.origlife;
                 if (life > 0)
                 {
-                    SingleObject.GetSingle().hero.origlife = 0;
+                    SingleObject.GetSingle().BG.TP.origlife = 0;
                 }
             }
         }

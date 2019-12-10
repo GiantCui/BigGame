@@ -37,40 +37,20 @@ namespace BigGame
 
         //背景对象
         public BackGround BG { get; set; }
-        //测试游戏对象
-        public Hero hero { get; set; }
-        //添加游戏对象
-        public Monster monster { get; set; }
-        public List<Monster> ListMonster = new List<Monster>();
-
-        public List<Weapon> ListWeapon = new List<Weapon>();
-        //添加苍蝇怪
+        
         public void AddGameObject(GameObject go)
         {
             if(go is BackGround)
             {
                 BG = go as BackGround;
             }
-            if(go is Hero)
-            {
-                hero = go as Hero;
-            }
-            if(go is Monster)
-            {
-                ListMonster.Add(go as Monster);
-            }
-            if (go is Weapon)
-            {
-                ListWeapon.Add(go as Weapon);
-            }
+            
         }
 
         //绘制游戏对象
         public void Draw(Graphics g)
         {
             BG.Draw(g);
-            //hero.Draw(g);
-            //monster.Draw(g);
         }
     }
 }

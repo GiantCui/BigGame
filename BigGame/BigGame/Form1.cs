@@ -35,10 +35,10 @@ namespace BigGame
             SingleObject.GetSingle().BG.SetCamera(new Rectangle(this.Location, this.Size));
             //加载测试游戏对象
           //  SingleObject.GetSingle().AddGameObject(new TestPlayer(150, 180));
-            SingleObject.GetSingle().AddGameObject(h );
+           // SingleObject.GetSingle().AddGameObject(h );
             SingleObject.GetSingle().BG.TP = h;
-            SingleObject.GetSingle().AddGameObject(fly);
-            SingleObject.GetSingle().AddGameObject(walk);
+           // SingleObject.GetSingle().AddGameObject(fly);
+           // SingleObject.GetSingle().AddGameObject(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(fly);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
         }
