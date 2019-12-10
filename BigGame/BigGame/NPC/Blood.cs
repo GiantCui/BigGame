@@ -38,7 +38,10 @@ namespace BigGame.NPC
 
         public override void Buffer()
         {
-            SingleObject.GetSingle().BG.TP.currentlife++;
+            if (SingleObject.GetSingle().BG.TP.currentlife < 3)
+            {
+                SingleObject.GetSingle().BG.TP.currentlife++;
+            }         
         }
     }
 }

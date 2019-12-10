@@ -56,7 +56,7 @@ namespace BigGame.NPC
 
         public override Rectangle GetRectangle()  //将矩阵缩小
         {
-            return new Rectangle(this.X, this.Y-30, this.Width, this.Height);
+            return new Rectangle(this.X, this.Y-30, this.Width-20, this.Height);
         }
         public override void Buffer()
         {
