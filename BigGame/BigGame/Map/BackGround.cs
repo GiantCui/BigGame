@@ -53,6 +53,9 @@ namespace BigGame.Map
             {
                 this.X = (Camera.Width / 2) - TP.X;
             }
+
+            GoldList.Draw(g);
+
             //更新角色存储的地图信息
             TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
             TP.BackGd = this;
@@ -73,8 +76,7 @@ namespace BigGame.Map
                 ListGoods[i].map = new Rectangle(this.X, this.y, BGImage.Width, BGImage.Height);
                 ListGoods[i].Draw(g);
             }
-            */
-            GoldList.Draw(g);
+            */          
         }
 
         public override void InitializeImages()
