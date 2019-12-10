@@ -42,7 +42,7 @@ namespace BigGame.NPC
 
         public override void Buffer()
         {
-            SingleObject.GetSingle().BG.TP.currentlife--; ;
+            SingleObject.GetSingle().BG.TP.currentlife=0; 
         }
     }
 }
