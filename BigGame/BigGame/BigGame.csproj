@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Action\Hero_GetGold.cs" />
+    <Compile Include="Action\Hero_GetGoods.cs" />
     <Compile Include="comm.cs" />
     <Compile Include="GameOver.cs">
       <SubType>Form</SubType>
@@ -271,6 +271,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\end.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifecontainer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life_bag.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

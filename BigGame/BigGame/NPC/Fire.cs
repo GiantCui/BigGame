@@ -10,9 +10,8 @@ namespace BigGame.NPC
     class Fire:Goods
     {
         Image[] img = new Image[7];  //保存火堆的图像
-        public Fire(int x,int y,int width,int height,int buffer) : base(x, y, width, height, buffer)
+        public Fire(int x,int y,int width,int height) : base(x, y, width, height)
         {
-            this.Buffer = buffer;
         }
 
         public override void InitializeImages()
@@ -39,6 +38,11 @@ namespace BigGame.NPC
             }
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+        }
+
+        public override void Buffer()
+        {
+            SingleObject.GetSingle().BG.TP.currentlife--;
         }
     }
 }

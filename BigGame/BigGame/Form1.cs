@@ -32,7 +32,7 @@ namespace BigGame
 
         Life life_UI = new Life(50, 10, 20, 20);
 
-        Hero_GetGold gold_list = new Hero_GetGold();
+        Hero_GetGoods gold_list = new Hero_GetGoods();
         public Form1()
         {
             InitializeComponent();

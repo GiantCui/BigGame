@@ -13,11 +13,10 @@ namespace BigGame.NPC
         public long last_frame_time = 0;    //记录上一帧时间
         public long frame_internal = 100; //记录两帧间隔
         public Rectangle map { get; set; }   //记录地图坐标
-        public Goods(int x,int y,int width,int height,int buffer):base(x, y, width, height)
-        {
-            this.Buffer = buffer;   
+        public Goods(int x,int y,int width,int height):base(x, y, width, height)
+        {  
         }
 
-        public int Buffer { get; set; } //物品对怪物的影响
+        public abstract void Buffer();
     }
 }
