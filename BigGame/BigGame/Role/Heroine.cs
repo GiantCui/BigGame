@@ -16,7 +16,7 @@ namespace BigGame.Role.HERO
         public int guntag = 0;  //记录拿枪状态
         public int g = 10;  //重力加速度
 
-        bool A_down, S_down, D_down, W_down, J_down, J_up, W_up = false;
+        bool A_down, S_down, D_down, J_down, K_down, K_up, J_up = false;
 
         public Heroine(int x, int y, int width, int height, string name)
            : base(x, y, width, height, name)
@@ -41,16 +41,15 @@ namespace BigGame.Role.HERO
 
         public override void key_ctrl(KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.J && J_up)
+            if(e.KeyCode == Keys.K && K_up)
+            {
+                K_down = true;
+                K_up = false;
+            }
+            else if(e.KeyCode == Keys.J && J_up)
             {
                 J_down = true;
-                index = 2;
                 J_up = false;
-            }
-            else if(e.KeyCode == Keys.W && W_up)
-            {
-                W_down = true;
-                W_up = false;
             }
             else if(e.KeyCode == Keys.A)
             {
@@ -69,15 +68,15 @@ namespace BigGame.Role.HERO
 
         internal void key_upctrl(KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.J)
+            if (e.KeyCode == Keys.K)
+            {
+                K_down = false;
+                K_up = true;
+            }
+            else if (e.KeyCode == Keys.J)
             {
                 J_down = false;
                 J_up = true;
-            }
-            else if (e.KeyCode == Keys.W)
-            {
-                W_down = false;
-                W_up = true;
             }
             else if (e.KeyCode == Keys.A)
             {
@@ -97,10 +96,11 @@ namespace BigGame.Role.HERO
             int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
             int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
 
-            if (J_down)
+            if (K_down)
             {
-                J_down = false;
-                anm_frame = 0;            
+                K_down = false;
+                anm_frame = 0;
+                index = 2;
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
@@ -109,9 +109,9 @@ namespace BigGame.Role.HERO
 
                 this.Y = this.Y + speed;
             }
-            if (W_down && this.Y - 300 > map.Y && b_up > 250)
+            if (J_down && this.Y - 300 > map.Y && b_up > 250)
             {
-                W_down = false;
+                J_down = false;
                 // this.Y = (int)(yVelocity);
                 //this.Y = this.Y - (int)(yVelocity);
                 this.Y = this.Y - 100;
