@@ -18,13 +18,13 @@ namespace BigGame.Map
         public static Bitmap BGunder = Properties.Resources._5;
         public int speed { get; set; }
         public Hero TP { get; set; }
-        private Hero_GetGold goldList;
+        private Hero_GetGoods goldList;
         public List<Monster> ListMonster = new List<Monster>();  //怪物集合
         public List<Goods> ListGoods = new List<Goods>();   //物品集合
         public List<Weapon> ListWeapon = new List<Weapon>();
         //创建相机
         public Rectangle Camera { get; set; }
-        public Hero_GetGold GoldList { get => goldList; set => goldList = value; }
+        public Hero_GetGoods GoldList { get => goldList; set => goldList = value; }
 
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
         {
@@ -67,11 +67,13 @@ namespace BigGame.Map
                 ListWeapon[i].map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
                 ListWeapon[i].Draw(g);
             }
+            /*
             for (int i = 0; i < ListGoods.Count; i++)
             {
                 ListGoods[i].map = new Rectangle(this.X, this.y, BGImage.Width, BGImage.Height);
                 ListGoods[i].Draw(g);
             }
+            */
             GoldList.Draw(g);
         }
 

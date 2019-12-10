@@ -10,9 +10,8 @@ namespace BigGame.NPC
     class Gold:Goods
     {
         Image[] img = new Image[4];  //保存Blood的图像
-        public Gold(int x, int y, int width, int height, int buffer) : base(x, y, width, height, buffer)
+        public Gold(int x, int y, int width, int height) : base(x, y, width, height)
         {
-            this.Buffer = buffer;
         }
 
         public override void InitializeImages()
@@ -41,6 +40,11 @@ namespace BigGame.NPC
         public override Rectangle GetRectangle()  //将矩阵缩小
         {
             return new Rectangle(this.X, this.Y, this.Width - 50, this.Height - 50);
+        }
+
+        public override void Buffer()
+        {
+            SingleObject.GetSingle().BG.TP.score += 5;
         }
     }
 }
