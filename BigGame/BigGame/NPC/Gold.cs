@@ -37,5 +37,10 @@ namespace BigGame.NPC
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
         }
+
+        public override Rectangle GetRectangle()  //将矩阵缩小
+        {
+            return new Rectangle(this.X, this.Y, this.Width - 50, this.Height - 50);
+        }
     }
 }

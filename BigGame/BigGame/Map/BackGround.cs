@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BigGame.NPC;
+using BigGame.Action;
 
 namespace BigGame.Map
 {
@@ -17,11 +18,14 @@ namespace BigGame.Map
         public static Bitmap BGunder = Properties.Resources._5;
         public int speed { get; set; }
         public Hero TP { get; set; }
+        private Hero_GetGold goldList;
         public List<Monster> ListMonster = new List<Monster>();  //怪物集合
         public List<Goods> ListGoods = new List<Goods>();   //物品集合
         public List<Weapon> ListWeapon = new List<Weapon>();
         //创建相机
         public Rectangle Camera { get; set; }
+        public Hero_GetGold GoldList { get => goldList; set => goldList = value; }
+
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
         {
             this.speed = speed;
@@ -68,6 +72,7 @@ namespace BigGame.Map
                 ListGoods[i].map = new Rectangle(this.X, this.y, BGImage.Width, BGImage.Height);
                 ListGoods[i].Draw(g);
             }
+            GoldList.Draw(g);
         }
 
         public override void InitializeImages()

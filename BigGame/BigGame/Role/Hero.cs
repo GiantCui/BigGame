@@ -17,6 +17,7 @@ namespace BigGame.Role.HERO
         public int origlife = 3;       //初始生命
         public int currentlife = 3;    //当前生命
         public int anm_frame = 0;   //记录当前帧
+        public int score = 0;
         public long last_frame_time = 0;    //记录上一帧时间
         public long frame_internal = 150; //记录两帧间隔
         public Rectangle map { get; set; }   //记录地图坐标
