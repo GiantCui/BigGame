@@ -44,6 +44,7 @@ namespace BigGame.Role.HERO
             if(e.KeyCode == Keys.J && J_up)
             {
                 J_down = true;
+                index = 2;
                 J_up = false;
             }
             else if(e.KeyCode == Keys.W && W_up)
@@ -99,8 +100,7 @@ namespace BigGame.Role.HERO
             if (J_down)
             {
                 J_down = false;
-                anm_frame = 0;
-                index = 2;
+                anm_frame = 0;            
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
             }
