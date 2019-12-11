@@ -657,15 +657,6 @@ namespace BigGame.Properties {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap 保存进度 {
-            get {
-                object obj = ResourceManager.GetObject("保存进度", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
         
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
@@ -707,15 +698,7 @@ namespace BigGame.Properties {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap 回主菜单 {
-            get {
-                object obj = ResourceManager.GetObject("回主菜单", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
+        
         
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
@@ -947,135 +930,7 @@ namespace BigGame.Properties {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把1 {
-            get {
-                object obj = ResourceManager.GetObject("火把1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把10 {
-            get {
-                object obj = ResourceManager.GetObject("火把10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把11 {
-            get {
-                object obj = ResourceManager.GetObject("火把11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把2 {
-            get {
-                object obj = ResourceManager.GetObject("火把2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把3 {
-            get {
-                object obj = ResourceManager.GetObject("火把3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把4 {
-            get {
-                object obj = ResourceManager.GetObject("火把4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把5 {
-            get {
-                object obj = ResourceManager.GetObject("火把5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把6 {
-            get {
-                object obj = ResourceManager.GetObject("火把6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把7 {
-            get {
-                object obj = ResourceManager.GetObject("火把7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把8 {
-            get {
-                object obj = ResourceManager.GetObject("火把8", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 火把9 {
-            get {
-                object obj = ResourceManager.GetObject("火把9", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 继续游戏 {
-            get {
-                object obj = ResourceManager.GetObject("继续游戏", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 退出游戏 {
-            get {
-                object obj = ResourceManager.GetObject("退出游戏", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
+       
         
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
