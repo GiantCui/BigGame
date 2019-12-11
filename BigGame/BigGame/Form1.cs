@@ -30,7 +30,7 @@ namespace BigGame
 
         Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
         Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
-        Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
+        Goods gold = FactoryGoods.createGoods(700, 520, "Blood");
 
         Life life_UI = new Life(50, 10, 20, 20);
         Listing list_UI = new Listing(600, 30);
