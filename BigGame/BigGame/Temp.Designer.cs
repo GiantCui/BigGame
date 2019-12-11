@@ -42,8 +42,6 @@
             this.Name = "Temp";
             this.Text = "Temp";
             this.Load += new System.EventHandler(this.Temp_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Temp_KeyPress);
             this.ResumeLayout(false);
 
         }

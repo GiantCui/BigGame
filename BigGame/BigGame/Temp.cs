@@ -50,8 +50,7 @@ namespace BigGame
 
         private void Temp_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
-           // this.Width
+            WindowState = FormWindowState.Maximized;         
         }
 
         private void Return_Menu()
@@ -73,30 +72,11 @@ namespace BigGame
 
         private void Return_Game()
         {
-         //   Form1 f2 = new Form1();
-
-            //    this.Hide();
-            using (FileStream fs = new FileStream(@"exit_temp.txt", FileMode.OpenOrCreate, FileAccess.Read))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                SingleObject._single = (SingleObject)bf.Deserialize(fs);
-            }
-              f1.ShowDialog(this);
-            
-           
-          //    f2.ShowDialog(this);
-           
+            this.DialogResult = DialogResult.OK;
             this.Close();
             this.Dispose();
         }
 
-        private void Temp_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            SingleObject.GetSingle().BG.TP.key_ctrl(e);
-        }
+      
     }
 }

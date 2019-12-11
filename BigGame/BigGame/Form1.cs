@@ -113,14 +113,14 @@ namespace BigGame
                 {
                     BinaryFormatter bf = new BinaryFormatter();
                     bf.Serialize(fs, SingleObject._single);
-                }
-                //this.Close();             
+                }                       
                 Temp temp = new Temp(this);         
-                this.Hide();               
-              
-               // this.Show();
-                temp.ShowDialog();
-                this.Close();
+                this.Hide();                               
+                DialogResult d = temp.ShowDialog(this);
+                if (d == DialogResult.OK)
+                {
+                    this.Visible = true;
+                }                     
             }
             h.index = 0;
             h.key_upctrl(e);
