@@ -9,20 +9,24 @@ namespace BigGame.NPC
 {
     class Fire:Goods
     {
-        Image[] img = new Image[7];  //保存火堆的图像
+        Image[] img = new Image[11];  //保存火堆的图像
         public Fire(int x,int y,int width,int height) : base(x, y, width, height)
         {
         }
 
         public override void InitializeImages()
         {
-            img[0] = Properties.Resources.火堆1;
-            img[1] = Properties.Resources.火堆2;
-            img[2] = Properties.Resources.火堆3;
-            img[3] = Properties.Resources.火堆4;
-            img[4] = Properties.Resources.火堆5;
-            img[5] = Properties.Resources.火堆6;
-            img[6] = Properties.Resources.火堆7;
+            img[0] = Properties.Resources.火把1;
+            img[1] = Properties.Resources.火把2;
+            img[2] = Properties.Resources.火把3;
+            img[3] = Properties.Resources.火把4;
+            img[4] = Properties.Resources.火把5;
+            img[5] = Properties.Resources.火把6;
+            img[6] = Properties.Resources.火把7;
+            img[7] = Properties.Resources.火把8;
+            img[8] = Properties.Resources.火把9;
+            img[9] = Properties.Resources.火把10;
+            img[10] = Properties.Resources.火把11;
         }
 
         public override void Draw(Graphics g)

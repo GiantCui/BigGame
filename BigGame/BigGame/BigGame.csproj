@@ -288,5 +288,38 @@
   <ItemGroup>
     <None Include="Resources\血袋2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火把11.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
