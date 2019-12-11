@@ -8,6 +8,6 @@ namespace BigGame.NPC
 {
     interface IBufffer
     {
-        void buffertoHero(); //物品的buffer
+        void buffertohero(); //物品的buffer
     }
 }

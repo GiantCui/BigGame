@@ -1,22 +1,14 @@
 ﻿using BigGame.Map;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BigGame;
-using BigGame.Role;
 using BigGame.Role.HERO;
 using BigGame.FactoryMonster;
 using BigGame.UI;
 using BigGame.NPC;
 using BigGame.Action;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.DirectX;
+using Microsoft.DirectX.DirectSound;
 
 namespace BigGame
 {
@@ -31,6 +23,7 @@ namespace BigGame
         Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
         Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
         Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
+        Goods torch = FactoryGoods.createGoods(150, 400, "Torch");
 
         Life life_UI = new Life(50, 10, 20, 20);
         Listing list_UI = new Listing(600, 30);
@@ -58,6 +51,7 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
+            SingleObject.GetSingle().BG.ListGoods.Add(torch);
             //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
             SingleObject.GetSingle().AddGameObject(list_UI);
@@ -65,7 +59,8 @@ namespace BigGame
             SingleObject.GetSingle().BG.GoldList = gold_list;
 
         }
-
+        public SecondaryBuffer secBuffer;//缓冲区对象    
+        public Device secDev;//设备对象 
         private void Form1_Load(object sender, EventArgs e)
         {
             //测试
@@ -75,6 +70,11 @@ namespace BigGame
                 | ControlStyles.ResizeRedraw
                 | ControlStyles.AllPaintingInWmPaint, true);
             this.WindowState = FormWindowState.Maximized;
+            //初始化播放器
+            SoundPlayer.form = this;
+            SoundPlayer.secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
+            SoundPlayer.play_BGM();
+            //sd.playLoop(Properties.Resources.play_BGM, sb);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -107,16 +107,6 @@ namespace BigGame
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
-            {                                  
-                Temp temp = new Temp(this);         
-                this.Hide();                               
-                DialogResult d = temp.ShowDialog(this);
-                if (d == DialogResult.OK)
-                {
-                    this.Visible = true;
-                }                     
-            }
             h.index = 0;
             h.key_upctrl(e);
         }
