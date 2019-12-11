@@ -84,6 +84,12 @@
     <Compile Include="MonsterRole\MonsterFly.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
     <Compile Include="Temp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Temp.resx">
       <DependentUpon>Temp.cs</DependentUpon>
@@ -308,6 +317,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\退出游戏.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\开始游戏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\结束游戏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\界面.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

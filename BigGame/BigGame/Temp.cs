@@ -55,9 +55,13 @@ namespace BigGame
 
         private void Return_Menu()
         {
-          //  Form1 f1 = new Form1();
-          //  this.Hide();
-          //  f1.ShowDialog(this);
+            Start s = new Start();
+            this.Hide();
+            DialogResult d = s.ShowDialog(this);
+            if (d == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.OK;
+            }         
             this.Close();
         }
 
