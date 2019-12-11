@@ -98,6 +98,16 @@ namespace BigGame
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             h.key_ctrl(e);
+            if (e.KeyCode == Keys.Escape)
+            {
+                Temp t = new Temp(this);
+                this.Visible = false;
+                DialogResult d = t.ShowDialog(this);
+                if(d== DialogResult.OK)
+                {
+                    this.Visible = true;
+                }
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
