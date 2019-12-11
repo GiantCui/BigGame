@@ -667,6 +667,15 @@ namespace BigGame.Properties {
         }
         
         /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream 僵尸死亡音效 {
+            get {
+                return ResourceManager.GetStream("僵尸死亡音效", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap 加血1 {
@@ -697,6 +706,15 @@ namespace BigGame.Properties {
         }
         
         /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream 吃惊惊讶的声音 {
+            get {
+                return ResourceManager.GetStream("吃惊惊讶的声音", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap 回主菜单 {
@@ -713,6 +731,15 @@ namespace BigGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("开始游戏", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream 撞击金币音效 {
+            get {
+                return ResourceManager.GetStream("撞击金币音效", resourceCulture);
             }
         }
         
@@ -953,6 +980,15 @@ namespace BigGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("血袋2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream 跳跃声 {
+            get {
+                return ResourceManager.GetStream("跳跃声", resourceCulture);
             }
         }
         

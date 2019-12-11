@@ -97,6 +97,7 @@ namespace BigGame.Role.HERO
             {
                 J_down = false;
                 J_up = true;
+                SoundPlayer.Jump_BGM();
                 if (A_down || D_down)
                 {
                     index = 1;

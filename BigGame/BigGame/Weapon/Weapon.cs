@@ -65,7 +65,8 @@ namespace BigGame.Role
                             int y = SingleObject.GetSingle().BG.ListMonster[i].y;
                             SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
                             SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y+5, "Gold"));
-                            tag = 2;                          
+                            tag = 2;
+                            SoundPlayer.MonsterDie_BGM();
                             break;
                         }
                     }
@@ -93,7 +94,8 @@ namespace BigGame.Role
                             int y = SingleObject.GetSingle().BG.ListMonster[i].y;
                             SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
                             SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y + 5, "Gold"));
-                            tag = 2;                       
+                            tag = 2;
+                            SoundPlayer.MonsterDie_BGM();
                             break;
                         }
                     }

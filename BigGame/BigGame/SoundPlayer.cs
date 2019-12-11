@@ -49,5 +49,59 @@ namespace BigGame
             is_run = false;
             secBuffer_run.Stop();
         }
+
+        public static void MonsterATT_BGM()
+        {
+            //被怪物攻击
+            SecondaryBuffer secBuffer;
+            secBuffer = new SecondaryBuffer(Properties.Resources.aahhh, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = 0;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
+
+        public static void FireATT_BGM()
+        {
+            //被火堆烫伤
+            SecondaryBuffer secBuffer;
+            secBuffer = new SecondaryBuffer(Properties.Resources.aahhzz, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = 0;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
+
+        public static void GetGold_BGM()
+        {
+            //吃金币
+            SecondaryBuffer secBuffer;
+            secBuffer = new SecondaryBuffer(Properties.Resources.撞击金币音效, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = -1000;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
+
+        public static void GetBlood_BGM()
+        {
+            //吃血袋
+            SecondaryBuffer secBuffer;
+            secBuffer = new SecondaryBuffer(Properties.Resources.吃惊惊讶的声音, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = 0;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
+
+        public static void MonsterDie_BGM()
+        {
+            //怪物死亡
+            SecondaryBuffer secBuffer;
+            secBuffer = new SecondaryBuffer(Properties.Resources.僵尸死亡音效, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = 0;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
+
+        public static void Jump_BGM()
+        {
+            //跳跃
+            SecondaryBuffer secBuffer;
+            secBuffer = new SecondaryBuffer(Properties.Resources.跳跃声, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = 0;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
     }
 }
