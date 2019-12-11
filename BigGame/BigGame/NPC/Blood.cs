@@ -17,8 +17,8 @@ namespace BigGame.NPC
 
         public override void InitializeImages()
         {
-            img[0] = Properties.Resources.血袋1;
-            img[1] = Properties.Resources.血袋2;
+            img[0] = Properties.Resources.加血1;
+            img[1] = Properties.Resources.加血2;
             //img[2] = Properties.Resources.加血3;
         }
 
