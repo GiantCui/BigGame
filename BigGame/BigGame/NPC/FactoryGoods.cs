@@ -17,11 +17,11 @@ namespace BigGame.NPC
             }
             else if(goodsName == "Blood")
             {
-                goods = new Blood(x, y, 50, 50);
+                goods = new Blood(x, y, 30, 40);
             }
             else
             {
-                goods = new Gold(x, y, 50, 50);
+                goods = new Gold(x, y, 30, 30);
             }
             return goods;
         }

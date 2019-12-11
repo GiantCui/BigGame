@@ -9,16 +9,16 @@ namespace BigGame.NPC
 {
     class Blood:Goods
     {
-        Image[] img = new Image[3];  //保存Blood的图像
+        Image[] img = new Image[2];  //保存Blood的图像
         public Blood(int x, int y, int width, int height) : base(x, y, width, height)
         {
         }
 
         public override void InitializeImages()
         {
-            img[0] = Properties.Resources.加血1;
-            img[1] = Properties.Resources.加血2;
-            img[2] = Properties.Resources.加血3;
+            img[0] = Properties.Resources.血袋1;
+            img[1] = Properties.Resources.血袋2;
+            //img[2] = Properties.Resources.加血3;
         }
 
         public override void Draw(Graphics g)

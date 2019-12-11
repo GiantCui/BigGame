@@ -27,7 +27,7 @@ namespace BigGame
         Monster walk1 = FactoryM.createMonster(1000, "Walk");
 
         Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
-        Goods blood = FactoryGoods.createGoods(600, 520, "Blood");
+        Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
         Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
 
         Life life_UI = new Life(50, 10, 20, 20);
