@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace BigGame.Role
 {
+    [Serializable]  //可序列化
     public class Weapon : GameObject
     {
         public Image[] img = new Image[2];

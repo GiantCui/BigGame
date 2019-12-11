@@ -15,6 +15,8 @@ using BigGame.FactoryMonster;
 using BigGame.UI;
 using BigGame.NPC;
 using BigGame.Action;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace BigGame
 {
@@ -105,6 +107,21 @@ namespace BigGame
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Escape)
+            {
+                using (FileStream fs = new FileStream(@"exit_temp.txt", FileMode.OpenOrCreate, FileAccess.Write))
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(fs, SingleObject._single);
+                }
+                //this.Close();             
+                Temp temp = new Temp(this);         
+                this.Hide();               
+              
+               // this.Show();
+                temp.ShowDialog();
+                this.Close();
+            }
             h.index = 0;
             h.key_upctrl(e);
         }

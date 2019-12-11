@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.FactoryMonster
 {
+
     class FactoryM
     {
         public static Monster createMonster(int x, string monsterType) //需要怪物的坐标和怪物的类型

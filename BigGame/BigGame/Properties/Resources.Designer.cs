@@ -533,6 +533,16 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 保存进度 {
+            get {
+                object obj = ResourceManager.GetObject("保存进度", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 加血1 {
             get {
                 object obj = ResourceManager.GetObject("加血1", resourceCulture);
@@ -556,6 +566,16 @@ namespace BigGame.Properties {
         internal static System.Drawing.Bitmap 加血3 {
             get {
                 object obj = ResourceManager.GetObject("加血3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 回主菜单 {
+            get {
+                object obj = ResourceManager.GetObject("回主菜单", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,6 +663,16 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 继续游戏 {
+            get {
+                object obj = ResourceManager.GetObject("继续游戏", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 血袋1 {
             get {
                 object obj = ResourceManager.GetObject("血袋1", resourceCulture);
@@ -656,6 +686,16 @@ namespace BigGame.Properties {
         internal static System.Drawing.Bitmap 血袋2 {
             get {
                 object obj = ResourceManager.GetObject("血袋2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 退出游戏 {
+            get {
+                object obj = ResourceManager.GetObject("退出游戏", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

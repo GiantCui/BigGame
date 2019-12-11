@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BigGame.NPC
 {
+    [Serializable]  //可序列化
     class Gold:Goods
     {
         Image[] img = new Image[4];  //保存Blood的图像

@@ -12,6 +12,7 @@ using BigGame.Action;
 
 namespace BigGame.Map
 {
+    [Serializable]  //可序列化
     public class BackGround:GameObject
     {
         public static Bitmap BGImage = Properties.Resources.background4;

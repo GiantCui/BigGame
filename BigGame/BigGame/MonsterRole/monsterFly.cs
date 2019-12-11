@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace BigGame.FactoryMonster
 {
+    [Serializable]  //可序列化
     class MonsterFly : Monster
     {
         public int face = 0;    //face=1默认为右，face=0默认为左

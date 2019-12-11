@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.Action
 {
+    [Serializable]  //可序列化
     public class Hero_GetGoods
     {
 

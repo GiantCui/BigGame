@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace BigGame.FactoryMonster
 {
+    [Serializable]  //可序列化
     public abstract class Monster : GameObject
     {
         public int speed = 5;   //怪物移动的速度

@@ -259,6 +259,9 @@
   <data name="_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="保存进度" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\保存进度.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="加血1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\加血1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -267,6 +270,9 @@
   </data>
   <data name="加血3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\加血3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="回主菜单" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\回主菜单.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="木牌2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\木牌2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,11 +298,17 @@
   <data name="火堆7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\火堆7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="继续游戏" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\继续游戏.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="血袋1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\血袋1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="血袋2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\血袋2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="退出游戏" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\退出游戏.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="金币1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\金币1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

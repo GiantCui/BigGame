@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.UI
 {
+    [Serializable]  //可序列化
     class Life:GameObject
     {
         public static Image[] img = new Image[2];

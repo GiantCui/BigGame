@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace BigGame.Role.HERO
 {
+    [Serializable]  //可序列化
     public abstract class Hero : GameObject
     {
         public BackGround BackGd { get; set; }

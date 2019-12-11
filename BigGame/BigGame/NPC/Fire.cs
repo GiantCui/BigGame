@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BigGame.NPC
 {
+    [Serializable]  //可序列化
     class Fire:Goods
     {
         Image[] img = new Image[7];  //保存火堆的图像

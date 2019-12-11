@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.UI
 {
+    [Serializable]  //可序列化
     class Listing : GameObject
     {
         public static Image img = Properties.Resources.木牌2;
