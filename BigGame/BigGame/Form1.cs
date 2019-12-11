@@ -1,20 +1,14 @@
 ﻿using BigGame.Map;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BigGame;
-using BigGame.Role;
 using BigGame.Role.HERO;
 using BigGame.FactoryMonster;
 using BigGame.UI;
 using BigGame.NPC;
 using BigGame.Action;
+using Microsoft.DirectX;
+using Microsoft.DirectX.DirectSound;
 
 namespace BigGame
 {
@@ -63,7 +57,8 @@ namespace BigGame
             SingleObject.GetSingle().BG.GoldList = gold_list;
 
         }
-
+        public SecondaryBuffer secBuffer;//缓冲区对象    
+        public Device secDev;//设备对象 
         private void Form1_Load(object sender, EventArgs e)
         {
             //测试
@@ -73,6 +68,11 @@ namespace BigGame
                 | ControlStyles.ResizeRedraw
                 | ControlStyles.AllPaintingInWmPaint, true);
             this.WindowState = FormWindowState.Maximized;
+            //初始化播放器
+            SoundPlayer.form = this;
+            SoundPlayer.secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
+            SoundPlayer.play_BGM();
+            //sd.playLoop(Properties.Resources.play_BGM, sb);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

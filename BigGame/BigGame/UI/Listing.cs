@@ -25,7 +25,7 @@ namespace BigGame.UI
         {
             int i = SingleObject.GetSingle().BG.TP.score;
             g.DrawImage(img, this.X, this.y, this.Width, this.Height);
-            g.DrawString("Score\n  " + i.ToString(), new Font("Consolas", 25, FontStyle.Bold), Brushes.Red, 630, 100);
+            g.DrawString("Score\n  " + i.ToString(), new Font("Consolas", 25, FontStyle.Bold), Brushes.LightGray, 630, 100);
         }
 
         

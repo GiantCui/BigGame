@@ -1,4 +1,6 @@
 ﻿using BigGame.Map;
+using Microsoft.DirectX.AudioVideoPlayback;
+using Microsoft.DirectX.DirectSound;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -54,11 +56,13 @@ namespace BigGame.Role.HERO
                 K_down = true;
                 K_up = false;
                 index = 2;
+                SoundPlayer.bang_BGM();
             }
             else if(e.KeyCode == Keys.J && J_up)
             {
                 J_down = true;
                 J_up = false;
+                
             }
             else if(e.KeyCode == Keys.A)
             {
