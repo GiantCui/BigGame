@@ -21,7 +21,7 @@ namespace BigGame.NPC
             }
             else if (goodsName == "Torch")
             {
-                goods = new Torch(x, y, 20, 20);
+                goods = new Torch(x, y, 30, 30);
             }
             else
             {
