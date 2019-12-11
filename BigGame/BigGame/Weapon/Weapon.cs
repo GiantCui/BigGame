@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BigGame.NPC;
 
 namespace BigGame.Role
 {
@@ -59,7 +60,10 @@ namespace BigGame.Role
                         if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.ListMonster[i].GetRectangle()))
                         {
                             SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
+                            int x = SingleObject.GetSingle().BG.ListMonster[i].X;
+                            int y = SingleObject.GetSingle().BG.ListMonster[i].y;
                             SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
+                            SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y+5, "Gold"));
                             tag = 2;                          
                             break;
                         }
@@ -84,7 +88,10 @@ namespace BigGame.Role
                         if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.ListMonster[i].GetRectangle()))
                         {
                             SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
+                            int x = SingleObject.GetSingle().BG.ListMonster[i].X;
+                            int y = SingleObject.GetSingle().BG.ListMonster[i].y;
                             SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
+                            SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y + 5, "Gold"));
                             tag = 2;                       
                             break;
                         }
