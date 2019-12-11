@@ -33,8 +33,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.GraphClient, Version=2.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.ActiveDirectory.GraphClient.2.1.1\lib\portable-net4+sl5+win+wpa+wp8\Microsoft.Azure.ActiveDirectory.GraphClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.DirectX.DirectSound.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,7 +99,6 @@
     <Compile Include="NPC\Gold.cs" />
     <Compile Include="NPC\Goods.cs" />
     <Compile Include="NPC\IBufffer.cs" />
-    <Compile Include="NPC\Torch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -85,12 +112,7 @@
     <Compile Include="MonsterRole\MonsterFly.cs" />
     <Compile Include="Role\TestPlayer.cs" />
     <Compile Include="SingleObject.cs" />
-    <Compile Include="Temp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Temp.Designer.cs">
-      <DependentUpon>Temp.cs</DependentUpon>
-    </Compile>
+    <Compile Include="SoundPlayer.cs" />
     <Compile Include="UI\Life.cs" />
     <Compile Include="UI\Listing.cs" />
     <Compile Include="Weapon\Weapon.cs" />
@@ -105,9 +127,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Temp.resx">
-      <DependentUpon>Temp.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -251,6 +271,27 @@
     <None Include="Resources\金币4.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\火堆1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火堆2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火堆3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火堆4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火堆5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火堆6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火堆7.gif" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\加血1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -272,43 +313,49 @@
     <None Include="Resources\木牌2.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\血袋1.jpg" />
+    <None Include="Resources\play_BGM.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\血袋2.jpg" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\保存进度.jpg" />
+    <None Include="Resources\bang_1.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\回主菜单.jpg" />
+    <None Include="Resources\aahhh.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\继续游戏.jpg" />
+    <None Include="Resources\aahhzz.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\退出游戏.jpg" />
+    <None Include="Resources\ahhh.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\火堆1.gif" />
+    <None Include="Resources\bang_1.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\火堆2.gif" />
+    <None Include="Resources\door-open-1.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\火堆4.gif" />
+    <None Include="Resources\fire-1.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\火堆5.gif" />
+    <None Include="Resources\gunshot.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\火堆6.gif" />
+    <None Include="Resources\microwave-oven-close-1.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\火堆7.gif" />
+    <None Include="Resources\pssst-1.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\火堆3.gif" />
+    <None Include="Resources\rrrou-2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urghhh.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woohoo.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
