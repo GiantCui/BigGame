@@ -12,7 +12,8 @@ namespace BigGame
     {   
         public static Device secDev = new Device();//设备对象 
         public static Form1 form;
-        
+        public static SecondaryBuffer secBuffer_run;
+        static bool is_run = false;
         public static void play_BGM()
         {
             //播放背景音乐
@@ -31,12 +32,22 @@ namespace BigGame
             secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
         }
 
-        public static void run_BGM(SecondaryBuffer secBuffer)
+        public static void run_BGM()
         {
-            //跑步音效
-            secBuffer = new SecondaryBuffer(Properties.Resources.run_bgm, SoundPlayer.secDev);//创建辅助缓冲区
-            secBuffer.Volume = 0;
-            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+            if (!is_run)
+            {
+                //跑步音效
+                secBuffer_run = new SecondaryBuffer(Properties.Resources.run_bgm, SoundPlayer.secDev);//创建辅助缓冲区
+                secBuffer_run.Volume = 0;
+                secBuffer_run.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+                is_run = true;
+            }   
+        }
+
+        public static void stop_run()
+        {
+            is_run = false;
+            secBuffer_run.Stop();
         }
     }
 }
