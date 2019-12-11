@@ -19,6 +19,10 @@ namespace BigGame.NPC
             {
                 goods = new Blood(x, y, 30, 40);
             }
+            else if (goodsName == "Torch")
+            {
+                goods = new Torch(x, y, 20, 20);
+            }
             else
             {
                 goods = new Gold(x, y, 30, 30);
