@@ -397,5 +397,8 @@
   <ItemGroup>
     <None Include="Resources\血袋2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\run_bgm.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

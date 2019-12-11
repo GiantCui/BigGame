@@ -247,6 +247,9 @@
   <data name="rrrou_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rrrou-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="run_bgm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\run_bgm.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="urghhh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\urghhh.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

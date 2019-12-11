@@ -30,5 +30,13 @@ namespace BigGame
             secBuffer.Volume = 0;
             secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
         }
+
+        public static void run_BGM(SecondaryBuffer secBuffer)
+        {
+            //跑步音效
+            secBuffer = new SecondaryBuffer(Properties.Resources.run_bgm, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = 0;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
     }
 }
