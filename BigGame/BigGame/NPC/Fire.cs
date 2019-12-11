@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BigGame.NPC
 {
+    [Serializable]  //可序列化
     class Fire:Goods
     {
         Image[] img = new Image[7];  //保存火堆的图像
@@ -58,6 +59,7 @@ namespace BigGame.NPC
         {
             return new Rectangle(this.X, this.Y-30, this.Width-20, this.Height);
         }
+
         public override void Buffer()
         {
             SingleObject.GetSingle().BG.TP.currentlife--;

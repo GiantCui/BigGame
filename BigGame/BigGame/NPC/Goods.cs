@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BigGame.NPC
 {
+    [Serializable]  //可序列化
     public abstract class Goods:GameObject
     {
         public int anm_frame = 0;   //记录当前帧

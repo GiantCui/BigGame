@@ -10,14 +10,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BigGame.FactoryMonster;
 using BigGame.UI;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace BigGame
 {
+    [Serializable]  //可序列化
     class SingleObject
     {
         #region 单例设计模式
         //1.声明全局唯一对象
-        private static SingleObject _single;
+        public static SingleObject _single;
         //2.构造函数私有化
         private SingleObject() { }
         //3.提供一个静态函数返回一个唯一对象
@@ -30,6 +33,7 @@ namespace BigGame
             return _single;
         }
         #endregion
+
 
         public void test()
         {

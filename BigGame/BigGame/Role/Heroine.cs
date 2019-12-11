@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace BigGame.Role.HERO
 {
+    [Serializable]  //可序列化
     public class Heroine : Hero
     {
         public Image[][] img = new Image[4][];           

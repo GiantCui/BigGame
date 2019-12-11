@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.Action
 {
+    [Serializable]  //可序列化
     public class Hero_GetGoods
     {
 
@@ -25,7 +26,8 @@ namespace BigGame.Action
                 if (SingleObject.GetSingle().BG.ListGoods[i].GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
                 {
                     SingleObject.GetSingle().BG.ListGoods[i].Buffer();
-                    if(!(SingleObject.GetSingle().BG.ListGoods[i] is Fire))
+                    if(!(SingleObject.GetSingle().BG.ListGoods[i] is Fire)||
+                        !(SingleObject.GetSingle().BG.ListGoods[i] is Torch))
                     {
                         SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
                     }             

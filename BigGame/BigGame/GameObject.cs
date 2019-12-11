@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BigGame
 {
+    [Serializable]  //可序列化
     public abstract class GameObject
     {
         //初始化构造函数
