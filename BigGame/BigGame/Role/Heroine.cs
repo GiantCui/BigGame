@@ -9,7 +9,7 @@ namespace BigGame.Role.HERO
     public class Heroine : Hero
     {
         public Image[][] img = new Image[4][];           
-        public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
+        
         public int guntag = 0;  //记录拿枪状态
         
         public int g = 10;  //重力加速度
@@ -78,7 +78,7 @@ namespace BigGame.Role.HERO
                      
         }
 
-        internal void key_upctrl(KeyEventArgs e)
+        public override void key_upctrl(KeyEventArgs e)
         {
             if (e.KeyCode == Keys.K)
             {

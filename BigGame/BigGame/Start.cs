@@ -1,4 +1,5 @@
-﻿using Microsoft.DirectX.DirectSound;
+﻿using BigGame.Map;
+using Microsoft.DirectX.DirectSound;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,15 +81,23 @@ namespace BigGame
            // this.DialogResult = DialogResult.OK;
             
             Form1 f = new Form1();
+
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open,
+            FileAccess.Read, FileShare.Read);
+            SingleObject._single = (SingleObject)formatter.Deserialize(stream);
+            stream.Close();
+
+            //using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Read))
+            //{
+            //    BinaryFormatter bf = new BinaryFormatter();
+            //    //Gameobject
+            //    SingleObject._single = (SingleObject)bf.Deserialize(fs);
+            //}
+            this.Hide();
             
-            using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Read))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                //Gameobject
-                SingleObject._single = (SingleObject)bf.Deserialize(fs);
-            }
-            this.Hide();        
             f.ShowDialog(this);
+            
             this.Close();
 
         }

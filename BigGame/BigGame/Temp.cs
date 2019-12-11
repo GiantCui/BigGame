@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace BigGame
 {
     public partial class Temp : Form
     {
-        Form1 f1;
+        public Form1 f1;
 
         public Temp(Form1 f)
         {
@@ -61,17 +62,24 @@ namespace BigGame
             if (d == DialogResult.OK)
             {
                 this.DialogResult = DialogResult.OK;
-            }         
+            }
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
         private void Exit_Game()
         {
-            using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Write))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(fs, SingleObject._single);
-            }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Create,
+            FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, SingleObject._single);
+            stream.Close();
+            MessageBox.Show("保存成功");
+            //using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Write))
+            //{
+            //    BinaryFormatter bf = new BinaryFormatter();
+            //    bf.Serialize(fs, SingleObject._single);
+            //}
         }
 
         private void Return_Game()

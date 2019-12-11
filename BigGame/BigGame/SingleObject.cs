@@ -22,7 +22,7 @@ namespace BigGame
         //1.声明全局唯一对象
         public static SingleObject _single;
         //2.构造函数私有化
-        private SingleObject() { }
+        public SingleObject() { }
         //3.提供一个静态函数返回一个唯一对象
         public static SingleObject GetSingle()
         {
