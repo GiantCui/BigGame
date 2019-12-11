@@ -116,11 +116,9 @@ namespace BigGame
                 }
                 //this.Close();             
                 Temp temp = new Temp(this);         
-                this.Hide();               
-              
-               // this.Show();
-                temp.ShowDialog();
-                this.Close();
+                //this.Hide();               
+                temp.ShowDialog(this);
+                //this.Close();
             }
             h.index = 0;
             h.key_upctrl(e);

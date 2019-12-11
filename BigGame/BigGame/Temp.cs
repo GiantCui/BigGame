@@ -73,21 +73,16 @@ namespace BigGame
 
         private void Return_Game()
         {
-         //   Form1 f2 = new Form1();
+
 
             //    this.Hide();
-            using (FileStream fs = new FileStream(@"exit_temp.txt", FileMode.OpenOrCreate, FileAccess.Read))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                SingleObject._single = (SingleObject)bf.Deserialize(fs);
-            }
-              f1.ShowDialog(this);
-            
-           
-          //    f2.ShowDialog(this);
-           
+            //using (FileStream fs = new FileStream(@"exit_temp.txt", FileMode.OpenOrCreate, FileAccess.Read))
+            //{
+            //   BinaryFormatter bf = new BinaryFormatter();
+            //   SingleObject._single = (SingleObject)bf.Deserialize(fs);
+            //}
+            this.Hide();
             this.Close();
-            this.Dispose();
         }
 
         private void Temp_KeyPress(object sender, KeyPressEventArgs e)
