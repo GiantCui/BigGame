@@ -410,22 +410,22 @@
     <None Include="Resources\火把11.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\血袋1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\血袋2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\run_bgm.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\开始游戏.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\结束游戏.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\界面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\开始游戏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\血袋1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\血袋2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
