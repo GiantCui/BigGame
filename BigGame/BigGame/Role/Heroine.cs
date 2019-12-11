@@ -69,14 +69,17 @@ namespace BigGame.Role.HERO
             {
                 A_down = true;
                 index = 1;
+                SoundPlayer.run_BGM();
             }
             else if(e.KeyCode == Keys.D)
             {
                 D_down = true;
                 index = 1;
+                SoundPlayer.run_BGM();
             }
             else
             {
+               
                 index = 0;
             }
                      
@@ -113,10 +116,12 @@ namespace BigGame.Role.HERO
             else if (e.KeyCode == Keys.A)
             {
                 A_down = false;
+                SoundPlayer.stop_run();
             }
             else if (e.KeyCode == Keys.D)
             {
                 D_down = false;
+                SoundPlayer.stop_run();
             }
           
         }
@@ -135,7 +140,9 @@ namespace BigGame.Role.HERO
                 
                 Weapon w = new Weapon(this.X, this.Y, 20, 20, this);
                 SingleObject.GetSingle().BG.ListWeapon.Add(w);
+                
             }
+            
             if (S_down && this.Y < map.Height - 120 && b_down > 250)
             {
 
@@ -167,7 +174,9 @@ namespace BigGame.Role.HERO
                     face = 0;
                 }
                 this.X = this.X + speed;
+                
             }
+            
             
         }
 
