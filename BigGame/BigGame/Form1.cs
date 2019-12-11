@@ -108,12 +108,7 @@ namespace BigGame
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
-            {
-                using (FileStream fs = new FileStream(@"exit_temp.txt", FileMode.OpenOrCreate, FileAccess.Write))
-                {
-                    BinaryFormatter bf = new BinaryFormatter();
-                    bf.Serialize(fs, SingleObject._single);
-                }                       
+            {                                  
                 Temp temp = new Temp(this);         
                 this.Hide();                               
                 DialogResult d = temp.ShowDialog(this);
