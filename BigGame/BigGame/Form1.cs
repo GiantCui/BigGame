@@ -29,8 +29,9 @@ namespace BigGame
         Monster walk1 = FactoryM.createMonster(1000, "Walk");
 
         Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
-        Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
+        Goods blood = FactoryGoods.createGoods(570, 350, "Gold");
         Goods gold = FactoryGoods.createGoods(700, 520, "Blood");
+        Goods torch = FactoryGoods.createGoods(150, 400, "Torhc");
 
         Life life_UI = new Life(50, 10, 20, 20);
         Listing list_UI = new Listing(600, 30);
@@ -58,6 +59,7 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
+            SingleObject.GetSingle().BG.ListGoods.Add(torch);
             //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
             SingleObject.GetSingle().AddGameObject(list_UI);
