@@ -439,5 +439,11 @@
   <ItemGroup>
     <None Include="Resources\撞击金币音效.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\继续游戏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_game.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

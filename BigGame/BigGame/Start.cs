@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.DirectX.DirectSound;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +41,7 @@ namespace BigGame
             button3.Size = new Size(250, 70);
             button3.Location = new Point((int)(w / 2) + 450, (int)(h / 2) + 500);
             button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.BackgroundImage = Properties.Resources.结束游戏;
+            button3.BackgroundImage = Properties.Resources.继续游戏1;
             button3.Click += delegate { Return_game(); };
             this.Controls.Add(button3);
         }
@@ -53,6 +54,11 @@ namespace BigGame
             this.Width = 900;
             this.Height = 600;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            //BGM
+            Device secDev = new Device();//设备对象  
+            secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
+            SecondaryBuffer secBuffer = new SecondaryBuffer(Properties.Resources.start_game, secDev);
+            secBuffer.Play(0, BufferPlayFlags.Looping);//设置缓冲区为默认播放 
         }
 
         private void start_game()
