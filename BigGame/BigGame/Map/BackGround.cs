@@ -15,7 +15,7 @@ namespace BigGame.Map
     [Serializable]  //可序列化
     public class BackGround:GameObject
     {
-        public static Bitmap BGImage = Properties.Resources.background4;
+        private static Bitmap bGImage = Properties.Resources.background4;
         public static Bitmap BGunder = Properties.Resources._5;
         private bool j_tag = false;
         public int speed { get; set; }
@@ -28,6 +28,7 @@ namespace BigGame.Map
         public Rectangle Camera { get; set; }
         public Hero_GetGoods GoldList { get => goldList; set => goldList = value; }
         public bool J_tag { get => j_tag; set => j_tag = value; }
+        public static Bitmap BGImage { get => bGImage; set => bGImage = value; }
 
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
         {
