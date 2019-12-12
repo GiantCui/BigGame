@@ -20,6 +20,10 @@ namespace BigGame.FactoryMonster
             {
                 monster = new Boss(x, y, 400, 400, "陈晓蝶", 100);
             }
+            else if (monsterType == "Mini")
+            {
+                monster = new MonsterMini(x, 565, 100, 100, "", 100);
+            }
             else
             {
                 monster = new MonsterWalk(x, y, 100, 100, "宝琴怪", 100);

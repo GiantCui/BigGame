@@ -12,6 +12,7 @@ namespace BigGame.FactoryMonster
     [Serializable]  //可序列化
     class Boss : Monster
     {
+        System.Timers.Timer t = new System.Timers.Timer(2000);
         public int face = 0;    //face=1默认为右，face=0默认为左
         public int start = 0;   //怪物的移动范围
         public int end = 0;
@@ -27,6 +28,7 @@ namespace BigGame.FactoryMonster
         public override void InitializeImages()
         {
             updateRange();
+            updateMini();
             img[0] = Properties.Resources.Boss1;
             img[1] = Properties.Resources.Boss2;
             img[2] = Properties.Resources.Boss3;
@@ -68,6 +70,10 @@ namespace BigGame.FactoryMonster
                 {
                     Move();
                 }
+            }
+            if (this.Hp == 0)
+            {
+                t.Stop();
             }
         }
 
@@ -125,6 +131,23 @@ namespace BigGame.FactoryMonster
                     SingleObject.GetSingle().BG.TP.currentlife--;
                     attackBack();
                 }
+            }
+        }
+        public void updateMini()
+        {
+            //System.Timers.Timer t = new System.Timers.Timer(2000);
+
+            t.Elapsed += new System.Timers.ElapsedEventHandler(updateMonster);  //到达时间的时候执行倒计时事件timeout；
+
+            t.AutoReset = true;  //设置是执行一次（false）还是一直执行(true)；
+            t.Enabled = true;
+
+            //倒计时事件
+            void updateMonster(object source, System.Timers.ElapsedEventArgs e)
+            {
+                Monster mini = FactoryM.createMonster(this.X, this.Y, "Mini");
+                SingleObject.GetSingle().BG.ListMonster.Add(mini);
+                // t= new System.Timers.Timer(3000);
             }
         }
     }
