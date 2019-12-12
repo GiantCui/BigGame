@@ -551,5 +551,14 @@
   <ItemGroup>
     <None Include="Resources\小怪3.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\硬币_ 动摇硬币的袋- 摇-6%28coin_ shake ba_爱给网_aigei_com 00_00_00-00_00_01 [高质量] [高质量].wma" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eat_GoldBag.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_1.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

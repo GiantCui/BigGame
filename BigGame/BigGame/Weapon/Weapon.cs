@@ -84,7 +84,7 @@ namespace BigGame.Role
                                 }
                                 else
                                 {
-                                    SingleObject.GetSingle().BG.ListMonster[i].Hp -= 10;
+                                    SingleObject.GetSingle().BG.ListMonster[i].Hp -= 5;
                                 }
                             }
                             else

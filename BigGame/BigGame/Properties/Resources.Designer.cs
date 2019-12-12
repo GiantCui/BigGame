@@ -237,6 +237,15 @@ namespace BigGame.Properties {
         }
         
         /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Boss_1 {
+            get {
+                return ResourceManager.GetStream("Boss_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Boss1 {
@@ -461,6 +470,15 @@ namespace BigGame.Properties {
         internal static System.IO.UnmanagedMemoryStream Eat_GoldBag {
             get {
                 return ResourceManager.GetStream("Eat_GoldBag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Eat_GoldBag1 {
+            get {
+                return ResourceManager.GetStream("Eat_GoldBag1", resourceCulture);
             }
         }
         
