@@ -33,12 +33,12 @@ namespace BigGame.NPC
                 index = 0;
                 g.DrawImage(img[index], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
             }
-            else if (Random < 30)
+            else if (Random < 20)
             {
                 index = 1;
                 g.DrawImage(img[index], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
             }
-            else if (Random < 60)
+            else if (Random < 30)
             {
                 index = 2;
                 g.DrawImage(img[index], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
@@ -53,15 +53,15 @@ namespace BigGame.NPC
 
         public override void Buffer()
         {
-            if (Random < 20)
+            if (Random < 10)
             {
                 SingleObject.GetSingle().BG.TP.currentlife = SingleObject.GetSingle().BG.TP.origlife;//恢复全部生命
             }
-            else if (Random < 40)
+            else if (Random < 20)
             {
                 SingleObject.GetSingle().BG.TP.currentlife--;//毒苹果
             }
-            else if (Random < 60)
+            else if (Random < 30)
             {
                 Weapon.w +=10; Weapon.h +=10;//子弹变大
             }

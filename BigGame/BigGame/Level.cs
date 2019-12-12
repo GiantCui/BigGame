@@ -34,6 +34,8 @@ namespace BigGame
             Goods foods = FactoryGoods.createGoods(500, 350, "Foods");
             Goods foods1 = FactoryGoods.createGoods(1200, 520, "Foods");
             Goods foods2 = FactoryGoods.createGoods(800, 520, "Foods");
+            Goods foods3 = FactoryGoods.createGoods(2000, 350, "Foods");
+            Goods foods4 = FactoryGoods.createGoods(2500, 350, "Foods");
 
             Life life_UI = new Life(50, 10, 20, 20);
             Listing list_UI = new Listing(600, 30);
@@ -60,6 +62,8 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(foods);
             SingleObject.GetSingle().BG.ListGoods.Add(foods1);
             SingleObject.GetSingle().BG.ListGoods.Add(foods2);
+            SingleObject.GetSingle().BG.ListGoods.Add(foods3);
+            SingleObject.GetSingle().BG.ListGoods.Add(foods4);
             //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
             SingleObject.GetSingle().AddGameObject(list_UI);

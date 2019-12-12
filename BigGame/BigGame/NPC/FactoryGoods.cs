@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BigGame.NPC
 {
@@ -30,7 +31,7 @@ namespace BigGame.NPC
             else if (goodsName == "Foods")
             {
                 Random r = new Random();
-                goods = new Foods(x, y, 30, 30, r.Next(0, 80));
+                goods = new Foods(x, y, 30, 30, r.Next(0, 40));
             }
             else
             {
