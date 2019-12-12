@@ -94,6 +94,7 @@
     <Compile Include="GC.cs" />
     <Compile Include="Map\BackGround.cs" />
     <Compile Include="NPC\Blood.cs" />
+    <Compile Include="NPC\Foods.cs" />
     <Compile Include="NPC\FactoryGoods.cs" />
     <Compile Include="NPC\Fire.cs" />
     <Compile Include="NPC\Gold.cs" />
@@ -462,6 +463,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\火4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\can.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grape.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

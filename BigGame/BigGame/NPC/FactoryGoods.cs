@@ -23,6 +23,10 @@ namespace BigGame.NPC
             {
                 goods = new Torch(x, y, 30, 30);
             }
+            else if (goodsName == "Foods")
+            {
+                goods = new Foods(x, y, 30, 30);
+            }
             else
             {
                 goods = new Gold(x, y, 30, 30);
