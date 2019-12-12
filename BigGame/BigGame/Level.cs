@@ -33,13 +33,18 @@ namespace BigGame
             Goods gold_2 = FactoryGoods.createGoods(730, 520, "Gold");
             Goods gold_3 = FactoryGoods.createGoods(760, 520, "Gold");
             Goods gold_4 = FactoryGoods.createGoods(670, 520, "Gold");
-            Goods gold_5 = FactoryGoods.createGoods(1510, 380, "Gold");
-            Goods gold_6 = FactoryGoods.createGoods(1540, 370, "Gold");
-            Goods gold_7 = FactoryGoods.createGoods(1570, 360, "Gold");
-            Goods gold_8 = FactoryGoods.createGoods(1600, 350, "Gold");
+            Goods gold_5 = FactoryGoods.createGoods(1510, 360, "Gold");
+            Goods gold_6 = FactoryGoods.createGoods(1540, 350, "Gold");
+            Goods gold_7 = FactoryGoods.createGoods(1570, 340, "Gold");
+            Goods gold_8 = FactoryGoods.createGoods(1600, 330, "Gold");
             Goods Door = FactoryGoods.createGoods(2795, 300, "Door");
             Goods torch = FactoryGoods.createGoods(150, 450, "Torch");
             Goods torch1 = FactoryGoods.createGoods(500, 450, "Torch");
+            Goods torch2 = FactoryGoods.createGoods(1500, 300, "Torch");
+            Goods torch3 = FactoryGoods.createGoods(1900, 320, "Torch");
+            Goods torch4 = FactoryGoods.createGoods(2250, 320, "Torch");
+            Goods torch5 = FactoryGoods.createGoods(500, 450, "Torch");
+            Goods torch6 = FactoryGoods.createGoods(1100, 300, "Torch");
             Goods foods = FactoryGoods.createGoods(500, 350, "Foods");
             Goods foods1 = FactoryGoods.createGoods(1200, 520, "Foods");
             Goods foods2 = FactoryGoods.createGoods(2000, 350,"Foods");//,
@@ -77,6 +82,11 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(gold_8);
             SingleObject.GetSingle().BG.ListGoods.Add(torch);
             SingleObject.GetSingle().BG.ListGoods.Add(torch1);
+            SingleObject.GetSingle().BG.ListGoods.Add(torch2);
+            SingleObject.GetSingle().BG.ListGoods.Add(torch3);
+            SingleObject.GetSingle().BG.ListGoods.Add(torch4);
+            SingleObject.GetSingle().BG.ListGoods.Add(torch5);
+            SingleObject.GetSingle().BG.ListGoods.Add(torch6);
             SingleObject.GetSingle().BG.ListGoods.Add(Door);
             SingleObject.GetSingle().BG.ListGoods.Add(foods);
             SingleObject.GetSingle().BG.ListGoods.Add(foods1);
