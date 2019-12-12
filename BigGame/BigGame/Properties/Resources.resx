@@ -181,6 +181,9 @@
   <data name="Boss4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boss4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Boss_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="bullet_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bullet_1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -237,6 +240,9 @@
   </data>
   <data name="Eat_GoldBag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\硬币_ 动摇硬币的袋- 摇-6(coin_ shake ba_爱给网_aigei_com.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Eat_GoldBag1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eat_GoldBag.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="end" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\end.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

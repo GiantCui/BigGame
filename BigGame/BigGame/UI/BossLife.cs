@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace BigGame.UI
 {
+    [Serializable]  //可序列化
     class BossLife:GameObject
     {
 
