@@ -1093,6 +1093,7 @@ namespace BigGame.Properties {
         
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap 血袋1 {
             get {
@@ -1166,6 +1167,26 @@ namespace BigGame.Properties {
         internal static System.Drawing.Bitmap 金币4 {
             get {
                 object obj = ResourceManager.GetObject("金币4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 金袋 {
+            get {
+                object obj = ResourceManager.GetObject("金袋", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 金袋2 {
+            get {
+                object obj = ResourceManager.GetObject("金袋2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

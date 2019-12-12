@@ -101,6 +101,7 @@
     <Compile Include="NPC\FactoryGoods.cs" />
     <Compile Include="NPC\Fire.cs" />
     <Compile Include="NPC\Gold.cs" />
+    <Compile Include="NPC\GoldenBag.cs" />
     <Compile Include="NPC\Goods.cs" />
     <Compile Include="NPC\IBufffer.cs" />
     <Compile Include="NPC\Torch.cs" />
@@ -521,6 +522,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\血条2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\金袋.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\金袋2.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

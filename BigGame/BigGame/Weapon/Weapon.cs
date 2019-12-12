@@ -76,17 +76,13 @@ namespace BigGame.Role
                             {
                                 if (SingleObject.GetSingle().BG.ListMonster[i].Hp == 0)
                                 {
-                                    int number = 1;
+                                   // int number = 1;
                                     SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
-                                    while (number <= 300)
-                                    {
-                                        SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x+number, y + 300, "Gold"));
-                                        number+=30;
-                                    }              
+                                    SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y + 250, "GoldenBag"));
                                 }
                                 else
                                 {
-                                    SingleObject.GetSingle().BG.ListMonster[i].Hp -= 5;
+                                    SingleObject.GetSingle().BG.ListMonster[i].Hp -= 10;
                                 }
                             }
                             else
