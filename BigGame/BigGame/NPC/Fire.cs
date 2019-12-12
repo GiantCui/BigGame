@@ -53,6 +53,7 @@ namespace BigGame.NPC
                 face = 1;
             }
             SingleObject.GetSingle().BG.TP.X = SingleObject.GetSingle().BG.TP.X + face * 100;
+            SoundPlayer.FireATT_BGM();
         }
 
         public override Rectangle GetRectangle()  //将矩阵缩小

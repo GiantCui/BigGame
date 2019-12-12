@@ -42,6 +42,7 @@ namespace BigGame.NPC
         public override void Buffer()
         {
             SingleObject.GetSingle().BG.TP.score += 5;
+            SoundPlayer.GetGold_BGM();
         }
     }
 }

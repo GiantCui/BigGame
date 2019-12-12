@@ -1,10 +1,13 @@
-﻿using System;
+﻿using BigGame.Map;
+using Microsoft.DirectX.DirectSound;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,33 +17,30 @@ namespace BigGame
 {
     public partial class Start : Form
     {
+        public int w;
+        public int h;
+
         public Start()
-        {
-            int w = this.Width;
-            int h = this.Height;
+        {         
             InitializeComponent();
+            w = this.Width;
+            h = this.Height;
             System.Windows.Forms.Button button1 = new Button();
             //button.Text = "按钮";
-            button1.Size = new Size(250, 70);
-            button1.Location = new Point((int)(w/2)+450, (int)(h/2)+100);
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1 = button_set(button1, 100);
             button1.BackgroundImage = Properties.Resources.开始游戏;
             button1.Click += delegate { start_game(); };
             this.Controls.Add(button1);
             System.Windows.Forms.Button button2 = new Button();
             //button.Text = "按钮";
-            button2.Size = new Size(250, 70);
-            button2.Location = new Point((int)(w / 2) + 450, (int)(h / 2)+300);
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2 = button_set(button2, 500);
             button2.BackgroundImage = Properties.Resources.结束游戏;
             button2.Click += delegate { end(); };
             this.Controls.Add(button2);
             //继续游戏
             System.Windows.Forms.Button button3 = new Button();
-            button3.Size = new Size(250, 70);
-            button3.Location = new Point((int)(w / 2) + 450, (int)(h / 2) + 500);
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.BackgroundImage = Properties.Resources.继续游戏;
+            button3 = button_set(button3, 300);
+            button3.BackgroundImage = Properties.Resources.继续游戏1;
             button3.Click += delegate { Return_game(); };
             this.Controls.Add(button3);
         }
@@ -53,6 +53,13 @@ namespace BigGame
             this.Width = 900;
             this.Height = 600;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            //BGM
+            Device secDev = new Device();//设备对象  
+            secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
+            SecondaryBuffer secBuffer = new SecondaryBuffer(Properties.Resources.start_game, secDev);
+            secBuffer.Play(0, BufferPlayFlags.Looping);//设置缓冲区为默认播放 
+
+            this.Cursor = new Cursor("..//..//Resources//cur_default.cur");
         }
 
         private void start_game()
@@ -70,25 +77,36 @@ namespace BigGame
 
         private void Return_game()
         {
+           // this.DialogResult = DialogResult.OK;
+            
+            Form1 f = new Form1();
 
-           
-          //  SingleObject s;
-            // this.DialogResult = DialogResult.OK;
-          //  using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Read))
-          //  {
-         //       BinaryFormatter bf = new BinaryFormatter();
-                //Gameobject
-         //        s = (SingleObject)bf.Deserialize(fs);
-         //   }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open,
+            FileAccess.Read, FileShare.Read);
+            SingleObject.SetSingle((SingleObject)formatter.Deserialize(stream));
+            stream.Close();
 
-            Form1 f = new Form1(true);
-
-           // SingleObject._single = s;
-            this.Hide();        
+            this.Hide();
+            
             f.ShowDialog(this);
+            
             this.Close();
-
         }
- 
+        
+        private Button button_set(Button btn, int n)
+        {
+            btn.Size = new Size(250, 70);
+            btn.Location = new Point((int)(w / 2) + 300, (int)(h / 2) + n);
+            btn.BackgroundImageLayout = ImageLayout.Stretch;
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.BackColor = System.Drawing.Color.Transparent;
+            btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            btn.Cursor = Cursors.Hand;
+            btn.Cursor = new Cursor("..//..//Resources//cur.cur");
+            return btn;
+        }
     }
 }

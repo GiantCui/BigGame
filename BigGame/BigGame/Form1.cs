@@ -9,11 +9,13 @@ using BigGame.NPC;
 using BigGame.Action;
 using Microsoft.DirectX;
 using Microsoft.DirectX.DirectSound;
+using System.Runtime.Serialization;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace BigGame
 {
+    [Serializable]  //可序列化
     public partial class Form1 : Form
     {
         Heroine h=new Heroine(0,400,100,100,"唐妮");
@@ -33,28 +35,8 @@ namespace BigGame
         Hero_GetGoods gold_list = new Hero_GetGoods();
         public Form1()
         {
-            InitializeComponent();       
-            InitialGame();
-
-        }
-        public Form1(bool IsR)
-        {
             InitializeComponent();
-            if (IsR == true)
-            {
-                InitialGame();
-                using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Read))
-                {
-                  BinaryFormatter bf = new BinaryFormatter();
-                  SingleObject._single = (SingleObject)bf.Deserialize(fs);
-                }
- 
-            }
-            else
-            {
-                InitialGame();
-            }
-          
+            InitialGame();
         }
 
         public void InitialGame()
@@ -97,6 +79,7 @@ namespace BigGame
             SoundPlayer.secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
             SoundPlayer.play_BGM();
             //sd.playLoop(Properties.Resources.play_BGM, sb);
+            this.Cursor.Dispose();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -119,17 +102,23 @@ namespace BigGame
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            h.key_ctrl(e);
+            SingleObject.GetSingle().BG.TP.key_ctrl(e);
             if (e.KeyCode == Keys.Escape)
             {
                 Temp t = new Temp(this);
+                t.f1 = this;
                 this.Visible = false;
                 DialogResult d = t.ShowDialog(this);
                 if(d== DialogResult.OK)
                 {
                     this.Visible = true;
                 }
+                else
+                {
+                    this.Close();
+                }
             }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -139,13 +128,13 @@ namespace BigGame
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            h.index = 0;
-            h.key_upctrl(e);
+            SingleObject.GetSingle().BG.TP.index = 0;
+            SingleObject.GetSingle().BG.TP.key_upctrl(e);
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //h.KeyPress(e);
+            //SingleObject.GetSingle().BG.TP.KeyPress(e);
         }
     }
 }

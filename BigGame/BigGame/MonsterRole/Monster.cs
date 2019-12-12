@@ -57,6 +57,7 @@ namespace BigGame.FactoryMonster
                 face = 1;
             }
             SingleObject.GetSingle().BG.TP.X = SingleObject.GetSingle().BG.TP.X + face * 100;
+            SoundPlayer.MonsterATT_BGM();
         }
         public abstract void attackHero(); //怪物攻击英雄
         public abstract void Move();    //怪物在一定范围内移动

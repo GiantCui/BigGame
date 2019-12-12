@@ -42,7 +42,8 @@ namespace BigGame.NPC
             if (SingleObject.GetSingle().BG.TP.currentlife < 3)
             {
                 SingleObject.GetSingle().BG.TP.currentlife++;
-            }         
+            }
+            SoundPlayer.GetBlood_BGM();
         }
     }
 }

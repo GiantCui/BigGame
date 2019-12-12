@@ -20,7 +20,7 @@ namespace BigGame
     {
         #region 单例设计模式
         //1.声明全局唯一对象
-        public static SingleObject _single;
+        private static SingleObject _single;
         //2.构造函数私有化
         private SingleObject() { }
         //3.提供一个静态函数返回一个唯一对象
@@ -31,6 +31,10 @@ namespace BigGame
                 _single = new SingleObject();
             }
             return _single;
+        }
+        public static void SetSingle(SingleObject single)
+        {
+            _single = single;
         }
         #endregion
 

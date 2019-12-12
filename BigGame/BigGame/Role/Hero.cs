@@ -22,6 +22,7 @@ namespace BigGame.Role.HERO
         public long last_frame_time = 0;    //记录上一帧时间
         public long frame_internal = 150; //记录两帧间隔
         public Rectangle map { get; set; }   //记录地图坐标
+        public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public bool finsh = false; //记录是否死亡
         public Hero(int x, int y, int width, int height, string name)
               : base(x, y, width, height)
@@ -33,6 +34,8 @@ namespace BigGame.Role.HERO
      //   public Image[][] Img { get => img; set => img = value; }
 
         public abstract void key_ctrl(KeyEventArgs e);
+
+        public abstract void key_upctrl(KeyEventArgs e);
 
         public override Rectangle GetRectangle()  //将矩阵缩小
         {

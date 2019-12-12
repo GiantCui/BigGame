@@ -428,7 +428,28 @@
     <None Include="Resources\血袋2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\吃惊惊讶的声音.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\僵尸死亡音效.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\跳跃声.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\撞击金币音效.wav" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\继续游戏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start_game.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cur.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cur_default.cur" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
