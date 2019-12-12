@@ -478,9 +478,6 @@
     <None Include="Resources\grass.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\apple.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\banana.png" />
   </ItemGroup>
   <ItemGroup>
@@ -491,6 +488,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\吃.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

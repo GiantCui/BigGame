@@ -29,7 +29,8 @@ namespace BigGame.NPC
             }
             else if (goodsName == "Foods")
             {
-                goods = new Foods(x, y, 30, 30);
+                Random r = new Random();
+                goods = new Foods(x, y, 30, 30, r.Next(0, 4));
             }
             else
             {
