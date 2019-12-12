@@ -16,6 +16,7 @@ namespace BigGame.NPC
         {
             this.Random = random;
         }
+        public int index { get; set; }
         public int Random { get; set; }
         public override void InitializeImages()
         {
@@ -27,18 +28,46 @@ namespace BigGame.NPC
 
         public override void Draw(Graphics g)
         {
-            g.DrawImage(img[Random], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+            if (Random < 10)
+            {
+                index = 0;
+                g.DrawImage(img[index], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+            }
+            else if (Random < 30)
+            {
+                index = 1;
+                g.DrawImage(img[index], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+            }
+            else if (Random < 60)
+            {
+                index = 2;
+                g.DrawImage(img[index], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+            }
+            else
+            {
+                index = 3;
+                g.DrawImage(img[index], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+            }
+            
         }
-
 
         public override void Buffer()
         {
-            switch (Random)
+            if (Random < 20)
             {
-                case 0:SingleObject.GetSingle().BG.TP.currentlife = SingleObject.GetSingle().BG.TP.origlife;break;//恢复全部生命
-                case 1: SingleObject.GetSingle().BG.TP.currentlife--;break;//毒苹果
-                case 2:Weapon.w *= 2;Weapon.h *= 2;break;//子弹变大
-                case 3: Weapon.end *= 2; break;//子弹射程*2
+                SingleObject.GetSingle().BG.TP.currentlife = SingleObject.GetSingle().BG.TP.origlife;//恢复全部生命
+            }
+            else if (Random < 40)
+            {
+                SingleObject.GetSingle().BG.TP.currentlife--;//毒苹果
+            }
+            else if (Random < 60)
+            {
+                Weapon.w +=10; Weapon.h +=10;//子弹变大
+            }
+            else
+            {
+                Weapon.end *= 2;//子弹射程*2
             }
             SoundPlayer.Eat_BGM();
         }
