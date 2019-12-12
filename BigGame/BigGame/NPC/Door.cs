@@ -11,7 +11,7 @@ namespace BigGame.NPC
     public class Door: Goods
     {
         public Image[][] img = new Image[3][];
-        private int index = 0;
+        public static int index = 0;
         public Door(int x, int y, int width, int height) : base(x, y, width, height)
         {
         }
@@ -42,6 +42,14 @@ namespace BigGame.NPC
             }
             // img[index][anm_frame].RotateFlip(RotateFlipType.Rotate180FlipY);
             g.DrawImage(img[index][anm_frame], this.X + map.X, this.Y + map.Y, this.Width, this.Height);
+        }
+
+        public static void new_level(System.Windows.Forms.KeyEventArgs e)
+        {
+            if(index == 1 && e.KeyCode == System.Windows.Forms.Keys.W)
+            {
+                Level.InitialGame_2();
+            }
         }
 
         public override void Buffer()

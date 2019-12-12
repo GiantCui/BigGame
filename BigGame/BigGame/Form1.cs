@@ -90,6 +90,7 @@ namespace BigGame
         {
             SingleObject.GetSingle().BG.TP.index = 0;
             SingleObject.GetSingle().BG.TP.key_upctrl(e);
+            Door.new_level(e);
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)

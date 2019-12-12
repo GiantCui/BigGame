@@ -493,5 +493,11 @@
   <ItemGroup>
     <None Include="Resources\apple.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\场景2 - 副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\场景2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -49,7 +49,12 @@ namespace BigGame.Role
             img[1] = Properties.Resources.bullet_2;   
         }
 
-    
+        public static void Restore()
+        {
+            w = 20;
+            h = 20;
+            end = 200;
+        }
 
         public void IsAtMonster()
         {
