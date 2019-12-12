@@ -108,22 +108,21 @@ namespace BigGame
             BackGround.BGunder = Properties.Resources.Caverns1;
             SingleObject.GetSingle().AddGameObject(backGround);
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
+  
 
-            Monster fly = FactoryM.createMonster(2000,500, "fly");
-            Monster walk = FactoryM.createMonster(500,500, "walk");
-            Monster walk1 = FactoryM.createMonster(1000,500, "Walk");
-
-            Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
-            Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
-            Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
+            Goods fire = FactoryGoods.createGoods(750, 620, "Fire");
+            Goods blood = FactoryGoods.createGoods(900, 600, "Blood");
+            Goods blood1 = FactoryGoods.createGoods(750, 530, "Blood");
+            Goods gold = FactoryGoods.createGoods(760, 460, "Gold");
+            Goods gold_1 = FactoryGoods.createGoods(200, 320, "Gold");
+            Goods gold_2 = FactoryGoods.createGoods(230, 320, "Gold");
+            Goods gold_3 = FactoryGoods.createGoods(260, 320, "Gold");
+            Goods gold_4 = FactoryGoods.createGoods(290, 320, "Gold");
             Goods Door = FactoryGoods.createGoods(2750, 270, "Door");
-            Goods torch = FactoryGoods.createGoods(150, 450, "Torch");
-            Goods torch1 = FactoryGoods.createGoods(500, 450, "Torch");
-            Goods foods = FactoryGoods.createGoods(500, 350, "Foods");
-            Goods foods1 = FactoryGoods.createGoods(1200, 520, "Foods");
-            Goods foods2 = FactoryGoods.createGoods(2000, 350, "Foods");//,
-            Goods foods3 = FactoryGoods.createGoods(800, 520, "Foods");
-            Goods foods4 = FactoryGoods.createGoods(2500, 350, "Foods");
+            Goods torch = FactoryGoods.createGoods(150, 270, "Torch");
+            Goods torch1 = FactoryGoods.createGoods(500, 270, "Torch");
+            Goods foods = FactoryGoods.createGoods(500, 320, "Foods");
+     
 
             Life life_UI = new Life(50, 10, 20, 20);
             Listing list_UI = new Listing(600, 30);
@@ -136,22 +135,23 @@ namespace BigGame
             SingleObject.GetSingle().BG.SetCamera(rec);
             //加载测试游戏对象
             SingleObject.GetSingle().BG.TP = h;
-            //加入怪物
-            SingleObject.GetSingle().BG.ListMonster.Add(fly);
-            SingleObject.GetSingle().BG.ListMonster.Add(walk);
-            SingleObject.GetSingle().BG.ListMonster.Add(walk1);
             //加入物品
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
+            SingleObject.GetSingle().BG.ListGoods.Add(blood1);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_1);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_2);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_3);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_4);
             SingleObject.GetSingle().BG.ListGoods.Add(torch);
             SingleObject.GetSingle().BG.ListGoods.Add(torch1);
             SingleObject.GetSingle().BG.ListGoods.Add(Door);
             SingleObject.GetSingle().BG.ListGoods.Add(foods);
-            SingleObject.GetSingle().BG.ListGoods.Add(foods1);
-            SingleObject.GetSingle().BG.ListGoods.Add(foods2);
-            SingleObject.GetSingle().BG.ListGoods.Add(foods3);
-            SingleObject.GetSingle().BG.ListGoods.Add(foods4);
+         //   SingleObject.GetSingle().BG.ListGoods.Add(foods1);
+        //    SingleObject.GetSingle().BG.ListGoods.Add(foods2);
+       //     SingleObject.GetSingle().BG.ListGoods.Add(foods3);
+          //  SingleObject.GetSingle().BG.ListGoods.Add(foods4);
             //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
             SingleObject.GetSingle().AddGameObject(list_UI);

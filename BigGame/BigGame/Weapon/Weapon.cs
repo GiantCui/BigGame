@@ -70,8 +70,8 @@ namespace BigGame.Role
                         {
                             SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
                             int x = SingleObject.GetSingle().BG.ListMonster[i].X;
-                            int y = SingleObject.GetSingle().BG.ListMonster[i].y;
-                            SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
+                            int y = SingleObject.GetSingle().BG.ListMonster[i].y;         
+                           SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
                             SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y+5, "Gold"));
                             tag = 2;
                             SoundPlayer.MonsterDie_BGM();
