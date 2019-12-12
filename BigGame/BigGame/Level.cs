@@ -27,6 +27,8 @@ namespace BigGame
             Monster walk = FactoryM.createMonster(500, 520, "walk");
             Monster walk1 = FactoryM.createMonster(700,340, "Walk");
 
+            Monster boss = FactoryM.createMonster(800, 270, "Boss");
+
             Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
             Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
             Goods gold_1 = FactoryGoods.createGoods(700, 520, "Gold");
@@ -69,6 +71,8 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListMonster.Add(fly_2);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(walk1);
+
+            SingleObject.GetSingle().BG.ListMonster.Add(boss);
             //加入物品
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
@@ -110,6 +114,12 @@ namespace BigGame
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
   
 
+            //Boss
+            Monster boss = FactoryM.createMonster(1500, 270, "Boss");
+
+            Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
+            Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
+            Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
             Goods fire = FactoryGoods.createGoods(750, 620, "Fire");
             Goods blood = FactoryGoods.createGoods(900, 600, "Blood");
             Goods blood1 = FactoryGoods.createGoods(750, 530, "Blood");
@@ -135,6 +145,11 @@ namespace BigGame
             SingleObject.GetSingle().BG.SetCamera(rec);
             //加载测试游戏对象
             SingleObject.GetSingle().BG.TP = h;
+            //加入怪物
+            SingleObject.GetSingle().BG.ListMonster.Add(fly);
+            SingleObject.GetSingle().BG.ListMonster.Add(walk);
+            SingleObject.GetSingle().BG.ListMonster.Add(walk1);
+            SingleObject.GetSingle().BG.ListMonster.Add(boss);
             //加入物品
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);

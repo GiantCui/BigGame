@@ -169,6 +169,18 @@
   <data name="BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Boss1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bullet_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bullet_1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
