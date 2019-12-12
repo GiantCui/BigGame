@@ -85,6 +85,7 @@
     <Compile Include="Level.cs" />
     <Compile Include="MonsterRole\Boss.cs" />
     <Compile Include="MonsterRole\FactoryMonster.cs" />
+    <Compile Include="MonsterRole\MonsterMini.cs" />
     <Compile Include="MonsterRole\MonsterWalk.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -540,6 +541,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gulp_GoldBug.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\小怪1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\小怪2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\小怪3.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

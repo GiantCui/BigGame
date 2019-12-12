@@ -388,6 +388,15 @@
   <data name="场景2___副本" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\场景2 - 副本.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="小怪1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\小怪1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="小怪2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\小怪2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="小怪3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\小怪3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="开始游戏" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\开始游戏.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
