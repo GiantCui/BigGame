@@ -154,8 +154,14 @@
   <data name="alien_enemy_flying8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alien-enemy-flying8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bang_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bang_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -174,6 +180,9 @@
   </data>
   <data name="bullet_l_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bullet_l_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="can" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\can.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cur" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cur.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -213,6 +222,12 @@
   </data>
   <data name="fire_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grape" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gunshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gunshot.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -352,6 +367,18 @@
   <data name="木牌2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\木牌2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="火1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="火4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\火4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="火堆1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\火堆1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -372,39 +399,6 @@
   </data>
   <data name="火堆7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\火堆7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把10.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把11.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把6.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把8.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="火把9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\火把9.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="界面" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\界面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

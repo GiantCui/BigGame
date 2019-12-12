@@ -27,6 +27,10 @@ namespace BigGame.NPC
             {
                 goods = new Door(x, y, 120, 120);
             }
+            else if (goodsName == "Foods")
+            {
+                goods = new Foods(x, y, 30, 30);
+            }
             else
             {
                 goods = new Gold(x, y, 30, 30);

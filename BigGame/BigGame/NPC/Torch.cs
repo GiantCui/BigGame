@@ -10,24 +10,17 @@ namespace BigGame.NPC
     [Serializable]  //可序列化
     class Torch:Goods
     {
-        Image[] img = new Image[11];
+        Image[] img = new Image[4];
         public Torch(int x,int y,int width,int height) : base(x, y, width, height)
         {
 
         }
         public override void InitializeImages()
         {
-            img[0] = Properties.Resources.火把1;
-            img[1] = Properties.Resources.火把2;
-            img[2] = Properties.Resources.火把3;
-            img[3] = Properties.Resources.火把4;
-            img[4] = Properties.Resources.火把5;
-            img[5] = Properties.Resources.火把6;
-            img[6] = Properties.Resources.火把7;
-            img[7] = Properties.Resources.火把8;
-            img[8] = Properties.Resources.火把9;
-            img[9] = Properties.Resources.火把10;
-            img[10] = Properties.Resources.火把11;
+            img[0] = Properties.Resources.火1;
+            img[1] = Properties.Resources.火2;
+            img[2] = Properties.Resources.火3;
+            img[3] = Properties.Resources.火4;
         }
 
         public override void Draw(Graphics g)
