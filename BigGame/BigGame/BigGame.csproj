@@ -94,6 +94,7 @@
     <Compile Include="GC.cs" />
     <Compile Include="Map\BackGround.cs" />
     <Compile Include="NPC\Blood.cs" />
+    <Compile Include="NPC\Door.cs" />
     <Compile Include="NPC\FactoryGoods.cs" />
     <Compile Include="NPC\Fire.cs" />
     <Compile Include="NPC\Gold.cs" />
@@ -450,6 +451,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cur_default.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door3.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

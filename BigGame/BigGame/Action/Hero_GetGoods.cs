@@ -26,11 +26,15 @@ namespace BigGame.Action
                 if (SingleObject.GetSingle().BG.ListGoods[i].GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
                 {
                     SingleObject.GetSingle().BG.ListGoods[i].Buffer();
-                    if(!(SingleObject.GetSingle().BG.ListGoods[i] is Fire)&&
-                        !(SingleObject.GetSingle().BG.ListGoods[i] is Torch))
+                    if((SingleObject.GetSingle().BG.ListGoods[i] is Fire) ||(SingleObject.GetSingle().BG.ListGoods[i] is Torch) 
+                        ||(SingleObject.GetSingle().BG.ListGoods[i] is Door))
                     {
+                        SingleObject.GetSingle().BG.ListGoods[i].map = new Rectangle(x, y, w, h);
+                        SingleObject.GetSingle().BG.ListGoods[i].Draw(g);
+                    }
+                    else{
                         SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
-                    }             
+                    }           
                 }
                 else
                 {

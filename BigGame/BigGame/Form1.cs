@@ -28,6 +28,7 @@ namespace BigGame
         Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
         Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
         Goods torch = FactoryGoods.createGoods(150, 400, "Torch");
+        Goods Door = FactoryGoods.createGoods(2750, 270, "Door");
 
         Life life_UI = new Life(50, 10, 20, 20);
         Listing list_UI = new Listing(600, 30);
@@ -56,6 +57,7 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
             SingleObject.GetSingle().BG.ListGoods.Add(torch);
+            SingleObject.GetSingle().BG.ListGoods.Add(Door);
             //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
             SingleObject.GetSingle().AddGameObject(list_UI);
