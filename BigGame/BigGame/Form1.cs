@@ -12,6 +12,7 @@ using Microsoft.DirectX.DirectSound;
 using System.Runtime.Serialization;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 namespace BigGame
 {
@@ -48,6 +49,7 @@ namespace BigGame
             SingleObject.GetSingle().Draw(e.Graphics);
             if(SingleObject.GetSingle().BG.TP.finsh)
             {
+                timer1.Stop();
                 long start = comm.Time();
                 long end = start + 500;
                 while(start < end)
@@ -57,7 +59,11 @@ namespace BigGame
                 GameOver gameOver = new GameOver();
                 this.Hide();
                 gameOver.ShowDialog(this);
+                Start f = new Start();
+                this.Hide();
+                f.ShowDialog(this);
                 this.Close();
+                
             }
         }
 
