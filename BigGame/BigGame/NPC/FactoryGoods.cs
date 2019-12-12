@@ -30,7 +30,7 @@ namespace BigGame.NPC
             }
             else if (goodsName == "Foods")
             {
-                Random r = new Random();
+                Random r = new Random(unchecked((int)DateTime.Now.Ticks)); //系统时间为参数
                 goods = new Foods(x, y, 30, 30, r.Next(0, 40));
             }
             else
