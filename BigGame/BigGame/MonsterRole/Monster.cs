@@ -65,7 +65,7 @@ namespace BigGame.FactoryMonster
 
         public override Rectangle GetRectangle()  //将矩阵缩小
         {
-            return new Rectangle(this.X, this.Y, this.Width - 50, this.Height - 50);
+            return new Rectangle(this.X, this.Y, this.Width - 50, this.Height - 20);
         }
     }
 }

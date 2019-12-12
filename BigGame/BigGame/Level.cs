@@ -22,14 +22,22 @@ namespace BigGame
         {
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
 
-            Monster fly = FactoryM.createMonster(2000, "fly");
-            Monster walk = FactoryM.createMonster(500, "walk");
-            Monster walk1 = FactoryM.createMonster(1000, "Walk");
+            Monster fly_1 = FactoryM.createMonster(2000,440,"fly");
+            Monster fly_2 = FactoryM.createMonster(1500, 250, "fly");
+            Monster walk = FactoryM.createMonster(500, 520, "walk");
+            Monster walk1 = FactoryM.createMonster(700,340, "Walk");
 
             Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
             Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
-            Goods gold = FactoryGoods.createGoods(700, 520, "Gold");
-            Goods Door = FactoryGoods.createGoods(2750, 270, "Door");
+            Goods gold_1 = FactoryGoods.createGoods(700, 520, "Gold");
+            Goods gold_2 = FactoryGoods.createGoods(730, 520, "Gold");
+            Goods gold_3 = FactoryGoods.createGoods(760, 520, "Gold");
+            Goods gold_4 = FactoryGoods.createGoods(670, 520, "Gold");
+            Goods gold_5 = FactoryGoods.createGoods(1510, 380, "Gold");
+            Goods gold_6 = FactoryGoods.createGoods(1540, 370, "Gold");
+            Goods gold_7 = FactoryGoods.createGoods(1570, 360, "Gold");
+            Goods gold_8 = FactoryGoods.createGoods(1600, 350, "Gold");
+            Goods Door = FactoryGoods.createGoods(2795, 300, "Door");
             Goods torch = FactoryGoods.createGoods(150, 450, "Torch");
             Goods torch1 = FactoryGoods.createGoods(500, 450, "Torch");
             Goods foods = FactoryGoods.createGoods(500, 350, "Foods");
@@ -50,13 +58,21 @@ namespace BigGame
             //加载测试游戏对象
             SingleObject.GetSingle().BG.TP = h;
             //加入怪物
-            SingleObject.GetSingle().BG.ListMonster.Add(fly);
+            SingleObject.GetSingle().BG.ListMonster.Add(fly_1);
+            SingleObject.GetSingle().BG.ListMonster.Add(fly_2);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(walk1);
             //加入物品
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
-            SingleObject.GetSingle().BG.ListGoods.Add(gold);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_1);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_2);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_3);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_4);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_5);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_6);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_7);
+            SingleObject.GetSingle().BG.ListGoods.Add(gold_8);
             SingleObject.GetSingle().BG.ListGoods.Add(torch);
             SingleObject.GetSingle().BG.ListGoods.Add(torch1);
             SingleObject.GetSingle().BG.ListGoods.Add(Door);
