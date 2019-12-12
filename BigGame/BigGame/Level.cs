@@ -126,9 +126,10 @@ namespace BigGame
             Goods torch1 = FactoryGoods.createGoods(500, 270, "Torch");
             Goods foods = FactoryGoods.createGoods(500, 320, "Foods");
      
-
+            //UI
             Life life_UI = new Life(50, 10, 20, 20);
             Listing list_UI = new Listing(600, 30);
+            BossLife bossLife = new BossLife(700, 20, 20, 20);
 
             Hero_GetGoods gold_list = new Hero_GetGoods();
 
@@ -155,6 +156,7 @@ namespace BigGame
             //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
             SingleObject.GetSingle().AddGameObject(list_UI);
+            SingleObject.GetSingle().AddGameObject(bossLife);
             //创建金币集对象
             SingleObject.GetSingle().BG.GoldList = gold_list;
         }

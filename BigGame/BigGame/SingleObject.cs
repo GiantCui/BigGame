@@ -49,6 +49,8 @@ namespace BigGame
         //UI对象
         public Life life { get; set; }
         public Listing list_UI { get; set; }
+        public BossLife boss_UI { get; set; }
+
         public void AddGameObject(GameObject go)
         {
             if(go is BackGround)
@@ -63,6 +65,10 @@ namespace BigGame
             {
                 list_UI = go as Listing;
             }
+            if(go is BossLife)
+            {
+                boss_UI = go as BossLife;
+            }
         }
 
         //绘制游戏对象
@@ -71,6 +77,7 @@ namespace BigGame
             BG.Draw(g);
             life.Draw(g);
             list_UI.Draw(g);
+            boss_UI.Draw(g);
         }
 
         public static void Delay(int milliSecond)

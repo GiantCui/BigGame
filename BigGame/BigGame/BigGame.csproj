@@ -130,6 +130,7 @@
       <DependentUpon>Temp.cs</DependentUpon>
     </Compile>
     <Compile Include="SoundPlayer.cs" />
+    <Compile Include="UI\BossLife.cs" />
     <Compile Include="UI\Life.cs" />
     <Compile Include="UI\Listing.cs" />
     <Compile Include="Weapon\Weapon.cs" />
@@ -517,6 +518,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Boss4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\血条2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,9 +47,6 @@ namespace BigGame.UI
         {
             img[0] = Properties.Resources.life_2;
             img[1] = Properties.Resources.life_3;
-            //img[2] = Properties.Resources.life_3;
-            //img[3] = Properties.Resources.life_2;
-            //img[4] = Properties.Resources.life_1;
         }
     }
 }
