@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BigGame.NPC
 {
+    [Serializable]  //可序列化
     class Foods:Goods
     {
         Image[] img = new Image[5];  //保存Blood的图像
@@ -34,7 +35,7 @@ namespace BigGame.NPC
 
         public override void Buffer()
         {
-            SingleObject.GetSingle().BG.TP.score += 1;
+            SingleObject.GetSingle().BG.TP.score += 3;
             SoundPlayer.GetGold_BGM();
         }
     }
