@@ -19,7 +19,7 @@ namespace BigGame
         static Rectangle rec;
 
         public static void InitialGame_1(Form1 form)
-        {
+        {    
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
 
             Monster fly_1 = FactoryM.createMonster(2000,440,"fly");
@@ -59,6 +59,9 @@ namespace BigGame
             //记录窗体信息
             //加载背景图片
             SingleObject.GetSingle().AddGameObject(new BackGround(0, 0, 20));
+            SingleObject.GetSingle().BG.BGImage = Properties.Resources.background4; ;
+            SingleObject.GetSingle().BG.BGunder = Properties.Resources._5;
+
             rec = new Rectangle(form.Location, form.Size);
             SingleObject.GetSingle().BG.SetCamera(rec);
 
@@ -104,9 +107,10 @@ namespace BigGame
         public static void InitialGame_2()
         {
             BackGround backGround = new BackGround(0, 0, 20);
-            BackGround.BGImage = Properties.Resources.Caverns;
-            BackGround.BGunder = Properties.Resources.Caverns1;
+            
             SingleObject.GetSingle().AddGameObject(backGround);
+            backGround.BGImage = Properties.Resources.Caverns;
+            backGround.BGunder = Properties.Resources.Caverns1;
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
 
 

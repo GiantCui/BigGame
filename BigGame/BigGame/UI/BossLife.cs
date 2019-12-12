@@ -11,7 +11,6 @@ namespace BigGame.UI
     [Serializable]  //可序列化
     class BossLife:GameObject
     {
-
         public static Image img;
         public static Image imgBack;
 

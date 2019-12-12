@@ -18,8 +18,8 @@ namespace BigGame.Action
             int i;
             int x = SingleObject.GetSingle().BG.X;
             int y= SingleObject.GetSingle().BG.Y;
-            int w = BackGround.BGImage.Width;
-            int h = BackGround.BGImage.Height;
+            int w = SingleObject.GetSingle().BG.BGImage.Width;
+            int h = SingleObject.GetSingle().BG.BGImage.Height;
             for (i=0;i< SingleObject.GetSingle().BG.ListGoods.Count();i++)
             {
                // GameObject god = SingleObject.GetSingle().BG.ListGoods[i];

@@ -81,14 +81,7 @@ namespace BigGame
         {
            // this.DialogResult = DialogResult.OK;
             
-            Form1 f = new Form1();
-
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Open,
-            FileAccess.Read, FileShare.Read);
-            SingleObject.SetSingle((SingleObject)formatter.Deserialize(stream));
-            stream.Close();
-
+            Form1 f = new Form1(true);
             this.Hide();
             
             f.ShowDialog(this);
