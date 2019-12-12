@@ -12,6 +12,7 @@ namespace BigGame.UI
     {
 
         public static Image img;
+        public static Image imgBack;
 
         public BossLife(int x, int y, int width, int height) : base(x, y, width, height)
         {
@@ -30,6 +31,7 @@ namespace BigGame.UI
                     {
                         float life = (float)(boss.Hp/2) / 100;
                         int w = (int)(img.Width * life);
+                        g.DrawImage(imgBack, boss.X + 30 + boss.map.X, boss.Y - 80, imgBack.Width/2, imgBack.Height / 2);
                         g.DrawImage(img, boss.X + 30 + boss.map.X, boss.Y - 80, w, img.Height/2);
                     }
                 }
@@ -39,6 +41,7 @@ namespace BigGame.UI
         public override void InitializeImages()
         {
             img = Properties.Resources.血条2;
+            imgBack = Properties.Resources.血条3;
         }
         void Init()
         {
