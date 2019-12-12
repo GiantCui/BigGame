@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BigGame.NPC;
+using BigGame.FactoryMonster;
 
 namespace BigGame.Role
 {
@@ -71,11 +72,31 @@ namespace BigGame.Role
                             SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
                             int x = SingleObject.GetSingle().BG.ListMonster[i].X;
                             int y = SingleObject.GetSingle().BG.ListMonster[i].y;
-                            SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
-                            SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y+5, "Gold"));
-                            tag = 2;
-                            SoundPlayer.MonsterDie_BGM();
-                            break;
+                            if(SingleObject.GetSingle().BG.ListMonster[i] is Boss)
+                            {
+                                if (SingleObject.GetSingle().BG.ListMonster[i].Hp == 0)
+                                {
+                                    int number = 1;
+                                    SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
+                                    while (number <= 300)
+                                    {
+                                        SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x+number, y + 300, "Gold"));
+                                        number+=30;
+                                    }              
+                                }
+                                else
+                                {
+                                    SingleObject.GetSingle().BG.ListMonster[i].Hp -= 5;
+                                }
+                            }
+                            else
+                            {
+                                SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
+                                SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y + 5, "Gold"));
+                                tag = 2;
+                                SoundPlayer.MonsterDie_BGM();
+                                break;
+                            }                       
                         }
                     }
                     if (tag == 0)
