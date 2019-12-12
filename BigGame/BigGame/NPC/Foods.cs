@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using BigGame.Role;
 
 namespace BigGame.NPC
 {
@@ -36,7 +37,10 @@ namespace BigGame.NPC
         public override void Buffer()
         {
             SingleObject.GetSingle().BG.TP.score += 3;
-            SoundPlayer.GetGold_BGM();
+            Weapon.w *= 2;
+            Weapon.h *= 2;
+            Weapon.end *= 2;
+            SoundPlayer.Eat_BGM();
         }
     }
 }

@@ -13,6 +13,9 @@ namespace BigGame.Role
     [Serializable]  //可序列化
     public class Weapon : GameObject
     {
+        public static int w = 20;
+        public static int h = 20;
+        public static int end = 200;
         public Image[] img = new Image[2];
         private int index = 0;  //记录图片下标
         private int isexit=0 ;  //记录图片下标
@@ -24,7 +27,7 @@ namespace BigGame.Role
 
         public Weapon(int x, int y, int width, int height, Hero ob)
              : base(x, y, width, height)
-        {
+        {    
             this.Hero = ob;       
             if (hero.face == 0)
             {
@@ -54,7 +57,7 @@ namespace BigGame.Role
             if ((hero.face == 0&& this.Isexit == 0 )||(this.Isexit == 1))
             {
                 this.Isexit = 1;
-                if (this.X <= p.X + 200)
+                if (this.X <= p.X + end)
                 {
                     for (int i = 0; i < SingleObject.GetSingle().BG.ListMonster.Count(); i++)
                     {
@@ -83,7 +86,7 @@ namespace BigGame.Role
             else if((hero.face == 1 && this.Isexit == 0) || (this.Isexit == 2))
             {
                 this.Isexit = 2;
-                if (this.X >= p.X - 200)
+                if (this.X >= p.X - end)
                 {
                     for (int i = 0; i < SingleObject.GetSingle().BG.ListMonster.Count(); i++)
                     {
@@ -122,7 +125,7 @@ namespace BigGame.Role
                 {
                     index = 0;
                 }
-                g.DrawImage(img[index], this.X+map.X, this.Y+map.Y, this.Width, this.Height);
+                g.DrawImage(img[index], this.X+map.X, this.Y+map.Y, w, h);
                 index++;
             }      
         }

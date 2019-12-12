@@ -103,5 +103,14 @@ namespace BigGame
             secBuffer.Volume = 0;
             secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
         }
+
+        public static void Eat_BGM()
+        {
+            //吃食物音效
+            SecondaryBuffer secBuffer;
+            secBuffer = new SecondaryBuffer(Properties.Resources.吃, SoundPlayer.secDev);//创建辅助缓冲区
+            secBuffer.Volume = 0;
+            secBuffer.Play(0, BufferPlayFlags.Default);//设置缓冲区为默认播放 
+        }
     }
 }
