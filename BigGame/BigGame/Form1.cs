@@ -39,7 +39,7 @@ namespace BigGame
         public Form1()
         {
             InitializeComponent();
-            InitialGame();
+            
         }
 
         public void InitialGame()
@@ -85,6 +85,7 @@ namespace BigGame
             SoundPlayer.play_BGM();
             //sd.playLoop(Properties.Resources.play_BGM, sb);
             this.Cursor.Dispose();
+            InitialGame();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

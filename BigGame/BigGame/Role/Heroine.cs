@@ -145,8 +145,6 @@ namespace BigGame.Role.HERO
             if (J_down && this.Y - 300 > map.Y && b_up > 250)
             {
                 J_down = false;
-                // this.Y = (int)(yVelocity);
-                //this.Y = this.Y - (int)(yVelocity);
                 this.Y = this.Y - 100;
             }
             if (A_down && this.X > map.X - 30)
