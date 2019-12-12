@@ -14,7 +14,7 @@ namespace BigGame.FactoryMonster
             Monster monster;
             if (monsterType == "fly")
             {
-                monster = new MonsterFly(x, y, 100, 100, "苍蝇怪", 100);
+                monster = new MonsterFly(x, y, 100, 100, "崔开金怪怪", 100);
             }
             else if (monsterType == "Boss")
             {
@@ -22,7 +22,7 @@ namespace BigGame.FactoryMonster
             }
             else
             {
-                monster = new MonsterWalk(x, y, 100, 100, "螃蟹怪", 100);
+                monster = new MonsterWalk(x, y, 100, 100, "宝琴怪", 100);
             }
             return monster;
         }
