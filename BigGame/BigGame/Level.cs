@@ -106,14 +106,7 @@ namespace BigGame
 
         public static void InitialGame_2()
         {
-            BackGround backGround = new BackGround(0, 0, 20);
-            
-            SingleObject.GetSingle().AddGameObject(backGround);
-            backGround.BGImage = Properties.Resources.Caverns;
-            backGround.BGunder = Properties.Resources.Caverns1;
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
-
-
             //Boss
             Monster boss = FactoryM.createMonster(1500, 270, "Boss");
 
@@ -139,7 +132,14 @@ namespace BigGame
 
             //记录窗体信息
             //加载背景图片
+            //BackGround backGround = new BackGround(0, 0, 20);
+
+            
             SingleObject.GetSingle().AddGameObject(new BackGround(0, 0, 20));
+            //SingleObject.GetSingle().AddGameObject(backGround);
+            SingleObject.GetSingle().BG.BGImage = Properties.Resources.Caverns;
+            SingleObject.GetSingle().BG.BGunder = Properties.Resources.Caverns1;
+            //rec = new Rectangle(form.Location, form.Size);
             SingleObject.GetSingle().BG.SetCamera(rec);
             //加载测试游戏对象
             SingleObject.GetSingle().BG.TP = h;
