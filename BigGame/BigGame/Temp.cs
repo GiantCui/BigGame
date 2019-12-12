@@ -46,7 +46,8 @@ namespace BigGame
 
         private void Temp_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;         
+            WindowState = FormWindowState.Maximized;
+            this.Cursor = new Cursor("..//..//Resources//cur_default.cur");
         }
 
         private void Return_Menu()
@@ -95,6 +96,7 @@ namespace BigGame
             btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             btn.Cursor = Cursors.Hand;
+            btn.Cursor = new Cursor("..//..//Resources//cur.cur");
             return btn;
         }
     }

@@ -79,6 +79,7 @@ namespace BigGame
             SoundPlayer.secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
             SoundPlayer.play_BGM();
             //sd.playLoop(Properties.Resources.play_BGM, sb);
+            this.Cursor.Dispose();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

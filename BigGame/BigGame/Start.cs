@@ -58,6 +58,8 @@ namespace BigGame
             secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
             SecondaryBuffer secBuffer = new SecondaryBuffer(Properties.Resources.start_game, secDev);
             secBuffer.Play(0, BufferPlayFlags.Looping);//设置缓冲区为默认播放 
+
+            this.Cursor = new Cursor("..//..//Resources//cur_default.cur");
         }
 
         private void start_game()
@@ -103,6 +105,7 @@ namespace BigGame
             btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             btn.Cursor = Cursors.Hand;
+            btn.Cursor = new Cursor("..//..//Resources//cur.cur");
             return btn;
         }
     }

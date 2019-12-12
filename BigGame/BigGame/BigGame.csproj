@@ -445,5 +445,11 @@
   <ItemGroup>
     <None Include="Resources\start_game.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cur.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cur_default.cur" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
