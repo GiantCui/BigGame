@@ -27,8 +27,6 @@ namespace BigGame
             Monster walk = FactoryM.createMonster(500, 520, "walk");
             Monster walk1 = FactoryM.createMonster(700,340, "Walk");
 
-            Monster boss = FactoryM.createMonster(800, 270, "Boss");
-
             Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
             Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
             Goods gold_1 = FactoryGoods.createGoods(700, 520, "Gold");
@@ -49,7 +47,7 @@ namespace BigGame
             Goods torch6 = FactoryGoods.createGoods(1100, 300, "Torch");
             Goods foods = FactoryGoods.createGoods(500, 350, "Foods");
             Goods foods1 = FactoryGoods.createGoods(1200, 520, "Foods");
-            Goods foods2 = FactoryGoods.createGoods(2000, 350,"Foods");//,
+            Goods foods2 = FactoryGoods.createGoods(2000, 350,"Foods");
             Goods foods3 = FactoryGoods.createGoods(800, 520, "Foods");
             Goods foods4 = FactoryGoods.createGoods(2500, 350, "Foods");
 
@@ -71,8 +69,6 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListMonster.Add(fly_2);
             SingleObject.GetSingle().BG.ListMonster.Add(walk);
             SingleObject.GetSingle().BG.ListMonster.Add(walk1);
-
-            SingleObject.GetSingle().BG.ListMonster.Add(boss);
             //加入物品
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
@@ -112,10 +108,11 @@ namespace BigGame
             BackGround.BGunder = Properties.Resources.Caverns1;
             SingleObject.GetSingle().AddGameObject(backGround);
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
-  
+
 
             //Boss
             Monster boss = FactoryM.createMonster(1500, 270, "Boss");
+
             Goods fire = FactoryGoods.createGoods(750, 620, "Fire");
             Goods blood = FactoryGoods.createGoods(900, 600, "Blood");
             Goods blood1 = FactoryGoods.createGoods(750, 530, "Blood");
@@ -140,8 +137,9 @@ namespace BigGame
             SingleObject.GetSingle().AddGameObject(new BackGround(0, 0, 20));
             SingleObject.GetSingle().BG.SetCamera(rec);
             //加载测试游戏对象
-            SingleObject.GetSingle().BG.TP = h;         
+            SingleObject.GetSingle().BG.TP = h;
             //加入物品
+            SingleObject.GetSingle().BG.ListMonster.Add(boss);
             SingleObject.GetSingle().BG.ListGoods.Add(fire);
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(blood1);
