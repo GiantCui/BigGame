@@ -451,5 +451,17 @@
   <ItemGroup>
     <None Include="Resources\cur_default.cur" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\火4.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
