@@ -915,6 +915,15 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream 怪物死亡 {
+            get {
+                return ResourceManager.GetStream("怪物死亡", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream 撞击金币音效 {
             get {
                 return ResourceManager.GetStream("撞击金币音效", resourceCulture);

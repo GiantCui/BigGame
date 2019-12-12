@@ -77,7 +77,11 @@ namespace BigGame
             BG.Draw(g);
             life.Draw(g);
             list_UI.Draw(g);
-            boss_UI.Draw(g);
+            if(boss_UI != null)
+            {
+                boss_UI.Draw(g);
+            }
+            
         }
 
         public static void Delay(int milliSecond)

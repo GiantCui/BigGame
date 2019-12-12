@@ -532,5 +532,8 @@
   <ItemGroup>
     <None Include="Resources\血条3.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\怪物死亡.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

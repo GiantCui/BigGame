@@ -76,7 +76,8 @@ namespace BigGame.Role
                             {
                                 if (SingleObject.GetSingle().BG.ListMonster[i].Hp == 0)
                                 {
-                                   // int number = 1;
+                                    // int number = 1;
+                                    SoundPlayer.BossDie_BGM();
                                     SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
                                     SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y + 250, "GoldenBag"));
                                 }
