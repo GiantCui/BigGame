@@ -15,8 +15,8 @@ namespace BigGame.Map
     [Serializable]  //可序列化
     public class BackGround:GameObject
     {
-        public static Bitmap BGImage = Properties.Resources.background4;
-        public static Bitmap BGunder = Properties.Resources._5;
+        public Bitmap BGImage { get; set; }
+        public Bitmap BGunder { get; set; }
         private bool j_tag = false;
         public int speed { get; set; }
         public Hero TP { get; set; }
@@ -29,7 +29,7 @@ namespace BigGame.Map
         public Hero_GetGoods GoldList { get => goldList; set => goldList = value; }
         public bool J_tag { get => j_tag; set => j_tag = value; }
 
-        public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
+        public BackGround(int x, int y, int speed) : base(x, y, 2937, 618)
         {
             this.speed = speed;
         }
@@ -39,8 +39,8 @@ namespace BigGame.Map
         }
         public override void Draw(Graphics g)
         {
-            g.DrawImage(BGunder, this.X, this.Y, BGunder.Width, BGunder.Height);
-            g.DrawImage(BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
+            g.DrawImage(this.BGunder, this.X, this.Y);//, BGunder.Width, BGunder.Height);
+            g.DrawImage(this.BGImage, this.X, this.Y);//, BGImage.Width, BGImage.Height);
             //人物遇到地图左边界
             if(TP.X < Camera.Width / 2)
             {
@@ -84,8 +84,8 @@ namespace BigGame.Map
 
         public override void InitializeImages()
         {
-             BGImage = Properties.Resources.background4;
-             BGunder = Properties.Resources._5;
+             //BGImage = Properties.Resources.background4;
+             //BGunder = Properties.Resources._5;
         }
     }
 }

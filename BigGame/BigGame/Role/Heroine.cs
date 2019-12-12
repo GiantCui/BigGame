@@ -126,10 +126,10 @@ namespace BigGame.Role.HERO
             {
                 this.Y = 100;
             }
-            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y - 100).B;
-            int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
-            int b_left = BackGround.BGunder.GetPixel(this.X + 40 - this.speed, this.Y + 90 + this.speed).B;
-            int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
+            int b_up = SingleObject.GetSingle().BG.BGunder.GetPixel(this.X + 50, this.Y - 100).B;
+            int b_down = SingleObject.GetSingle().BG.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
+            int b_left = SingleObject.GetSingle().BG.BGunder.GetPixel(this.X + 40 - this.speed, this.Y + 90 + this.speed).B;
+            int b_right = SingleObject.GetSingle().BG.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
 
             if (K_down)
             {
@@ -243,16 +243,16 @@ namespace BigGame.Role.HERO
 
         private void WhenMove()
         {
-            if(BackGround.BGunder.Height < this.Y + this.Height)
+            if(SingleObject.GetSingle().BG.BGunder.Height < this.Y + this.Height)
             {
-                this.y = BackGround.BGunder.Height - this.Height - 1;
+                this.y = SingleObject.GetSingle().BG.BGunder.Height - this.Height - 1;
             }
-            int asd = BackGround.BGunder.GetPixel(0, 0).B;
-            int val = BackGround.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
+            int asd = SingleObject.GetSingle().BG.BGunder.GetPixel(0, 0).B;
+            int val = SingleObject.GetSingle().BG.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
             while (val < 10)
             {
                 this.y--;
-                val = BackGround.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
+                val = SingleObject.GetSingle().BG.BGunder.GetPixel(this.X + 50, this.Y + this.Height).B;
             }
         }
     }
