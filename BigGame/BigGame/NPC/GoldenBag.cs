@@ -19,7 +19,6 @@ namespace BigGame.NPC
         {
             img[0] = Properties.Resources.金袋;
             img[1] = Properties.Resources.金袋2;
-            //img[2] = Properties.Resources.加血3;
         }
 
         public override void Draw(Graphics g)
@@ -39,6 +38,7 @@ namespace BigGame.NPC
         public override void Buffer()
         {
             SingleObject.GetSingle().BG.TP.score += 150;
+            SoundPlayer.Gulp_GoldBag();
         }
     }
 }

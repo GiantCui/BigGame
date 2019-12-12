@@ -535,5 +535,11 @@
   <ItemGroup>
     <None Include="Resources\怪物死亡.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\硬币_ 动摇硬币的袋- 摇-6%28coin_ shake ba_爱给网_aigei_com.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gulp_GoldBug.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
