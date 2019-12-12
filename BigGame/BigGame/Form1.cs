@@ -117,15 +117,7 @@ namespace BigGame
                     this.Close();
                 }
             }
-            else if(e.KeyCode == Keys.Q)
-            {
-                IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream("MyFile.bin", FileMode.Open,
-                FileAccess.Read, FileShare.Read);
-                SingleObject.GetSingle().BG = (BackGround)formatter.Deserialize(stream);
-                stream.Close();
-                //SingleObject._single = new SingleObject();
-            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
