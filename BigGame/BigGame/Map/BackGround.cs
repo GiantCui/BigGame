@@ -41,8 +41,8 @@ namespace BigGame.Map
         }
         public override void Draw(Graphics g)
         {
-            g.DrawImage(this.BGunder, this.X, this.Y);//, BGunder.Width, BGunder.Height);
-            g.DrawImage(this.BGImage, this.X, this.Y);//, BGImage.Width, BGImage.Height);
+            g.DrawImage(this.BGunder, this.X, this.Y, BGunder.Width, BGunder.Height);
+            g.DrawImage(this.BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
             //人物遇到地图左边界
             if(TP.X < Camera.Width / 2)
             {
