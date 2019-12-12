@@ -59,6 +59,8 @@ namespace BigGame
             SingleObject.GetSingle().BG.ListGoods.Add(blood);
             SingleObject.GetSingle().BG.ListGoods.Add(gold);
             SingleObject.GetSingle().BG.ListGoods.Add(torch);
+            SingleObject.GetSingle().BG.ListGoods.Add(Door);
+            SingleObject.GetSingle().BG.ListGoods.Add(foods);
             //加载UI界面
             SingleObject.GetSingle().AddGameObject(life_UI);
             SingleObject.GetSingle().AddGameObject(list_UI);
