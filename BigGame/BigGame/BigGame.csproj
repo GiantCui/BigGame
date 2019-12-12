@@ -356,9 +356,6 @@
     <None Include="Resources\bang_1.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\door-open-1.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\fire-1.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -498,6 +495,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\场景2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door-open-1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caverns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caverns1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

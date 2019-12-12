@@ -54,7 +54,11 @@ namespace BigGame.NPC
 
         public override void Buffer()
         {
-            index = 1;
+            if(index == 0)
+            {
+                SoundPlayer.OpenDoor_BGM();
+            }
+            index = 1;            
          //   SingleObject.GetSingle().BG.TP;
         }
     }

@@ -122,9 +122,13 @@ namespace BigGame.Role.HERO
 
         public void move()
         {
-            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 20).B;
+            if(this.Y - 100 < 0)
+            {
+                this.Y = 100;
+            }
+            int b_up = BackGround.BGunder.GetPixel(this.X + 50, this.Y - 100).B;
             int b_down = BackGround.BGunder.GetPixel(this.X + 50, this.Y + 90 + this.speed).B;
-            int b_left = BackGround.BGunder.GetPixel(this.X + 50 - this.speed, this.Y + 90 + this.speed).B;
+            int b_left = BackGround.BGunder.GetPixel(this.X + 40 - this.speed, this.Y + 90 + this.speed).B;
             int b_right = BackGround.BGunder.GetPixel(this.X + 50 + this.speed, this.Y + 90 + this.speed).B;
 
             if (K_down)
@@ -142,12 +146,12 @@ namespace BigGame.Role.HERO
 
                 this.Y = this.Y + speed;
             }
-            if (J_down && this.Y - 300 > map.Y && b_up > 250)
+            if (J_down && this.Y - 100 > 0 && b_up > 250)
             {
                 J_down = false;
                 this.Y = this.Y - 100;
             }
-            if (A_down && this.X > map.X - 30)
+            if (A_down && this.X > map.X - 30 && b_left > 250)
             {
                 //index = 1;
                 if (face != 1)
@@ -157,7 +161,7 @@ namespace BigGame.Role.HERO
                 }
                 this.X = this.X - speed;
             }
-            if (D_down && this.X < map.Width - 100)
+            if (D_down && this.X < map.Width - 100 && b_right > 250)
             {
                 //index = 1;
                 if (face != 0)

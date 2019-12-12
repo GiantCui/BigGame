@@ -94,14 +94,14 @@ namespace BigGame
         public static void InitialGame_2()
         {
             BackGround backGround = new BackGround(0, 0, 20);
-            BackGround.BGImage = Properties.Resources.场景2;
-            BackGround.BGunder = Properties.Resources.场景2___副本;
+            BackGround.BGImage = Properties.Resources.Caverns;
+            BackGround.BGunder = Properties.Resources.Caverns1;
             SingleObject.GetSingle().AddGameObject(backGround);
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
 
-            Monster fly = FactoryM.createMonster(2000, "fly");
-            Monster walk = FactoryM.createMonster(500, "walk");
-            Monster walk1 = FactoryM.createMonster(1000, "Walk");
+            Monster fly = FactoryM.createMonster(2000, 500, "fly");
+            Monster walk = FactoryM.createMonster(500, 300, "walk");
+            Monster walk1 = FactoryM.createMonster(1000, 250, "Walk");
 
             Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
             Goods blood = FactoryGoods.createGoods(570, 350, "Blood");

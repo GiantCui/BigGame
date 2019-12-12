@@ -40,6 +40,7 @@ namespace BigGame
             SoundPlayer.play_BGM();
             this.Cursor.Dispose();
             Level.InitialGame_1(this);
+            Level.InitialGame_2();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
