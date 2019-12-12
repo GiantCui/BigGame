@@ -1,4 +1,5 @@
 ﻿using BigGame.Map;
+using BigGame.Role;
 using Microsoft.DirectX.DirectSound;
 using System;
 using System.Collections.Generic;
@@ -65,6 +66,7 @@ namespace BigGame
         private void start_game()
         {
             Form1 f1 = new Form1();
+            Weapon.Restore();
             this.Hide();
             f1.ShowDialog(this);
             this.Close();
