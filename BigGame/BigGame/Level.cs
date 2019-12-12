@@ -20,6 +20,9 @@ namespace BigGame
 
         public static void InitialGame_1(Form1 form)
         {
+            BackGround.BGImage = Properties.Resources.background4; ;
+            BackGround.BGunder = Properties.Resources._5;
+
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
 
             Monster fly_1 = FactoryM.createMonster(2000,440,"fly");

@@ -12,10 +12,13 @@ namespace BigGame.FactoryMonster
     [Serializable]  //可序列化
     class Boss : Monster
     {
-        System.Timers.Timer t = new System.Timers.Timer(2000);
         public int face = 0;    //face=1默认为右，face=0默认为左
         public int start = 0;   //怪物的移动范围
         public int end = 0;
+        //生成间隔
+        public long last_time = 0;
+        public long wait_time = 2500;
+
         Image[] img = new Image[4]; //保存怪物的图像素材
         public Boss(int x, int y, int width, int height, string name, int hp)
             : base(x, y, width, height, name, hp)
@@ -28,7 +31,7 @@ namespace BigGame.FactoryMonster
         public override void InitializeImages()
         {
             updateRange();
-            updateMini();
+            //updateMini();
             img[0] = Properties.Resources.Boss1;
             img[1] = Properties.Resources.Boss2;
             img[2] = Properties.Resources.Boss3;
@@ -48,6 +51,13 @@ namespace BigGame.FactoryMonster
 
         public override void Draw(Graphics g)
         {
+            //定时生成怪物
+            if(comm.Time() - last_time > wait_time)
+            {
+                last_time = comm.Time();
+                updateMonster();
+            }
+            //定时更换图片
             if (comm.Time() - last_frame_time > frame_internal)
             {
                 anm_frame++;
@@ -71,10 +81,7 @@ namespace BigGame.FactoryMonster
                     Move();
                 }
             }
-            if (this.Hp == 0)
-            {
-                t.Stop();
-            }
+            
         }
 
         public override void Move()
@@ -133,22 +140,12 @@ namespace BigGame.FactoryMonster
                 }
             }
         }
-        public void updateMini()
+
+        public void updateMonster()
         {
-            //System.Timers.Timer t = new System.Timers.Timer(2000);
-
-            t.Elapsed += new System.Timers.ElapsedEventHandler(updateMonster);  //到达时间的时候执行倒计时事件timeout；
-
-            t.AutoReset = true;  //设置是执行一次（false）还是一直执行(true)；
-            t.Enabled = true;
-
-            //倒计时事件
-            void updateMonster(object source, System.Timers.ElapsedEventArgs e)
-            {
-                Monster mini = FactoryM.createMonster(this.X, this.Y, "Mini");
-                SingleObject.GetSingle().BG.ListMonster.Add(mini);
-                // t= new System.Timers.Timer(3000);
-            }
+            Monster mini = FactoryM.createMonster(this.X, this.Y, "Mini");
+            SingleObject.GetSingle().BG.ListMonster.Add(mini);
+            // t= new System.Timers.Timer(3000);
         }
     }
 }

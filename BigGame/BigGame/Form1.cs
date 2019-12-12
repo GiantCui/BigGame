@@ -21,11 +21,18 @@ namespace BigGame
     {
         public Form1()
         {
-            InitializeComponent();   
+            InitializeComponent();           
         }
-        
+
+        public Form1(bool load_game)
+        {
+            InitializeComponent();
+            this.load_game = load_game;
+        }
+
         public SecondaryBuffer secBuffer;//缓冲区对象    
         public Device secDev;//设备对象 
+        public bool load_game = false;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -39,8 +46,15 @@ namespace BigGame
             SoundPlayer.form = this;
             SoundPlayer.secDev.SetCooperativeLevel(this, CooperativeLevel.Normal);
             SoundPlayer.play_BGM();
-            this.Cursor.Dispose();
-            Level.InitialGame_1(this);
+            this.Cursor.Dispose();          
+            if (load_game)
+            {
+                Load_Game();
+            }
+            else
+            {
+                Level.InitialGame_1(this);
+            }
             //Level.InitialGame_2();
         }
 
@@ -103,6 +117,15 @@ namespace BigGame
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             //SingleObject.GetSingle().BG.TP.KeyPress(e);
+        }
+
+        public void Load_Game()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open,
+            FileAccess.Read, FileShare.Read);
+            SingleObject.SetSingle((SingleObject)formatter.Deserialize(stream));
+            stream.Close();
         }
     }
 }

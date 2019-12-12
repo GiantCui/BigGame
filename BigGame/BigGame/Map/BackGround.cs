@@ -84,7 +84,8 @@ namespace BigGame.Map
 
         public override void InitializeImages()
         {
-            
+             BGImage = Properties.Resources.background4;
+             BGunder = Properties.Resources._5;
         }
     }
 }
