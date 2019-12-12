@@ -427,5 +427,8 @@
   <ItemGroup>
     <None Include="Resources\血袋2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\继续游戏.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

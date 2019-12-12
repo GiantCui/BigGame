@@ -9,6 +9,8 @@ using BigGame.NPC;
 using BigGame.Action;
 using Microsoft.DirectX;
 using Microsoft.DirectX.DirectSound;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace BigGame
 {
@@ -31,8 +33,28 @@ namespace BigGame
         Hero_GetGoods gold_list = new Hero_GetGoods();
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();       
             InitialGame();
+
+        }
+        public Form1(bool IsR)
+        {
+            InitializeComponent();
+            if (IsR == true)
+            {
+                InitialGame();
+                using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Read))
+                {
+                  BinaryFormatter bf = new BinaryFormatter();
+                  SingleObject._single = (SingleObject)bf.Deserialize(fs);
+                }
+ 
+            }
+            else
+            {
+                InitialGame();
+            }
+          
         }
 
         public void InitialGame()

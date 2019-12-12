@@ -17,6 +17,7 @@ namespace BigGame.Map
     {
         public static Bitmap BGImage = Properties.Resources.background4;
         public static Bitmap BGunder = Properties.Resources._5;
+        private bool j_tag = false;
         public int speed { get; set; }
         public Hero TP { get; set; }
         private Hero_GetGoods goldList;
@@ -26,6 +27,7 @@ namespace BigGame.Map
         //创建相机
         public Rectangle Camera { get; set; }
         public Hero_GetGoods GoldList { get => goldList; set => goldList = value; }
+        public bool J_tag { get => j_tag; set => j_tag = value; }
 
         public BackGround(int x, int y, int speed) : base(x, y, BGImage.Height, BGImage.Width)
         {

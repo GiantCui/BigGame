@@ -40,7 +40,7 @@ namespace BigGame
             button3.Size = new Size(250, 70);
             button3.Location = new Point((int)(w / 2) + 450, (int)(h / 2) + 500);
             button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.BackgroundImage = Properties.Resources.结束游戏;
+            button3.BackgroundImage = Properties.Resources.继续游戏;
             button3.Click += delegate { Return_game(); };
             this.Controls.Add(button3);
         }
@@ -70,16 +70,20 @@ namespace BigGame
 
         private void Return_game()
         {
-           // this.DialogResult = DialogResult.OK;
-            
-            Form1 f = new Form1();
-            
-            using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Read))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
+
+           
+          //  SingleObject s;
+            // this.DialogResult = DialogResult.OK;
+          //  using (FileStream fs = new FileStream(@"In.txt", FileMode.OpenOrCreate, FileAccess.Read))
+          //  {
+         //       BinaryFormatter bf = new BinaryFormatter();
                 //Gameobject
-                SingleObject._single = (SingleObject)bf.Deserialize(fs);
-            }
+         //        s = (SingleObject)bf.Deserialize(fs);
+         //   }
+
+            Form1 f = new Form1(true);
+
+           // SingleObject._single = s;
             this.Hide();        
             f.ShowDialog(this);
             this.Close();
