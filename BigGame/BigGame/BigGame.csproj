@@ -82,6 +82,7 @@
     <Compile Include="GameOver.Designer.cs">
       <DependentUpon>GameOver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Level.cs" />
     <Compile Include="MonsterRole\FactoryMonster.cs" />
     <Compile Include="MonsterRole\MonsterWalk.cs" />
     <Compile Include="Form1.cs">
