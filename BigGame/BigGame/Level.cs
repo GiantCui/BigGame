@@ -99,9 +99,9 @@ namespace BigGame
             SingleObject.GetSingle().AddGameObject(backGround);
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
 
-            Monster fly = FactoryM.createMonster(2000, "fly");
-            Monster walk = FactoryM.createMonster(500, "walk");
-            Monster walk1 = FactoryM.createMonster(1000, "Walk");
+            Monster fly = FactoryM.createMonster(2000,500, "fly");
+            Monster walk = FactoryM.createMonster(500,500, "walk");
+            Monster walk1 = FactoryM.createMonster(1000,500, "Walk");
 
             Goods fire = FactoryGoods.createGoods(150, 550, "Fire");
             Goods blood = FactoryGoods.createGoods(570, 350, "Blood");
