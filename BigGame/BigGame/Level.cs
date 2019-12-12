@@ -104,8 +104,8 @@ namespace BigGame
         public static void InitialGame_2()
         {
             BackGround backGround = new BackGround(0, 0, 20);
-            BackGround.BGImage = Properties.Resources.场景2;
-            BackGround.BGunder = Properties.Resources.场景2___副本;
+            BackGround.BGImage = Properties.Resources.Caverns;
+            BackGround.BGunder = Properties.Resources.Caverns1;
             SingleObject.GetSingle().AddGameObject(backGround);
             Heroine h = new Heroine(0, 400, 100, 100, "唐妮");
 
