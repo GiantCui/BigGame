@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BigGame.NPC;
 using BigGame.Action;
+using System.Drawing.Drawing2D;
 
 namespace BigGame.Map
 {
@@ -39,6 +40,9 @@ namespace BigGame.Map
         }
         public override void Draw(Graphics g)
         {
+            g.DrawImage(Properties.Resources.moeny, 0, 630, 200, 200);
+            g.DrawImage(Properties.Resources.all, 200, 630, 650, 200);
+            g.DrawImage(Properties.Resources.html, 850, 630, 600, 170);
             g.DrawImage(this.BGunder, this.X, this.Y, BGunder.Width, BGunder.Height);
             g.DrawImage(this.BGImage, this.X, this.Y, BGImage.Width, BGImage.Height);
             //人物遇到地图左边界
