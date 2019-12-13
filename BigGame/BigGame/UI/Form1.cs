@@ -87,7 +87,7 @@ namespace BigGame
             else
             {
                 Level.InitialGame_1(this);
-                Level.InitialGame_2();
+                //Level.InitialGame_2();
             }
         }
 

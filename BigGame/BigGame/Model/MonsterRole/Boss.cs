@@ -17,7 +17,7 @@ namespace BigGame.FactoryMonster
         public int end = 0;
         //生成间隔
         public long last_time = 0;
-        public long wait_time = 2500;
+        public long wait_time = 3000;
 
         Image[] img = new Image[4]; //保存怪物的图像素材
         public Boss(int x, int y, int width, int height, string name, int hp)

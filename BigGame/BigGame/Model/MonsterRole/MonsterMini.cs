@@ -11,8 +11,7 @@ namespace BigGame.FactoryMonster
     class MonsterMini : Monster
     {
         public int face = 0;    //face=1默认为右，face=0默认为左
-        public int start = 0;   //怪物的移动范围
-        public int end = 0;
+        public int start = 750;  //怪物边界 
         Image[] img = new Image[3]; //保存怪物的图像素材
         public MonsterMini(int x, int y, int width, int height, string name, int hp)
             : base(x, y, width, height, name, hp)
@@ -52,11 +51,15 @@ namespace BigGame.FactoryMonster
 
         public override void Move()
         {
+            if (this.X > start)
+            {
+                this.X = this.X - 2;
+            }
         }
 
         public override void attackHero()
         {
-            this.X = this.X - 2;
+            Move();
             if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.TP.GetRectangle()))
             {
                 int life = SingleObject.GetSingle().BG.TP.currentlife;
