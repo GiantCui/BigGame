@@ -20,13 +20,12 @@ namespace BigGame
         private void Congraduation_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-            
+            print_score();
         }
 
         public void time_close()
         {
             timer1.Stop();
-            print_score();
             comm.Wait(2000);
             this.Hide();
             this.Close();
