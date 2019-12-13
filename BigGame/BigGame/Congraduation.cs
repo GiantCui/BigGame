@@ -39,7 +39,12 @@ namespace BigGame
         private void print_score()
         {
             label1.Text = SingleObject.GetSingle().BG.TP.score.ToString();
-            label1.Location = new Point((int)(this.Width/2 + 150), (int)(this.Height/2 + 30));
+            label1.Location = new Point((int)(this.Width/2 + 170), (int)(this.Height/2 + 21));
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
