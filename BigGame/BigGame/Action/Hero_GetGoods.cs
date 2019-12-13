@@ -32,9 +32,15 @@ namespace BigGame.Action
                         SingleObject.GetSingle().BG.ListGoods[i].map = new Rectangle(x, y, w, h);
                         SingleObject.GetSingle().BG.ListGoods[i].Draw(g);
                     }
-                    else{
+                    else if (SingleObject.GetSingle().BG.ListGoods[i] is GoldenBag)
+                    {
                         SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
-                    }           
+                        SingleObject.GetSingle().BG.TP.Vector = true;
+                    }
+                    else
+                    {
+                        SingleObject.GetSingle().BG.ListGoods.RemoveAt(i);
+                    }
                 }
                 else
                 {
