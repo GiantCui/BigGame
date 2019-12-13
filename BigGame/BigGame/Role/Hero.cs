@@ -24,6 +24,7 @@ namespace BigGame.Role.HERO
         public Rectangle map { get; set; }   //记录地图坐标
         public int index = 0;   //存储数组标志,0是静态，1是走路,2是打枪
         public bool finsh = false; //记录是否死亡
+        public bool Vector = false; //记录是否死亡
         public Hero(int x, int y, int width, int height, string name)
               : base(x, y, width, height)
         {

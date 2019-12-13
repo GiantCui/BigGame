@@ -84,6 +84,7 @@ namespace BigGame.Role
                                     SingleObject.GetSingle().BG.ListMonster.RemoveAt(i);
                                     SingleObject.GetSingle().BG.ListGoods.Add(FactoryGoods.createGoods(x, y + 250, "GoldenBag"));
                                     SoundPlayer.Eat_GoldBag();
+                                    SingleObject.GetSingle().BG.TP.Vector = true;
                                 }
                                 else
                                 {
