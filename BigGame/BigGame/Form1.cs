@@ -87,6 +87,7 @@ namespace BigGame
             else
             {
                 Level.InitialGame_1(this);
+                Level.InitialGame_2();
             }
         }
 
@@ -95,7 +96,7 @@ namespace BigGame
             if (SingleObject.GetSingle().BG.TP.finsh)
             {
                 timer1.Stop();
-                comm.Wait_500();
+                comm.Wait(500);
                 GameOver gameOver = new GameOver();
                 this.Hide();
                 gameOver.ShowDialog(this);
@@ -107,12 +108,7 @@ namespace BigGame
             if (SingleObject.GetSingle().BG.TP.Vector)
             {
                 timer1.Stop();
-                long start = comm.Time();
-                long end = start + 500;
-                while (start < end)
-                {
-                    start = comm.Time();
-                }
+                comm.Wait(500);
                 Congraduation c = new Congraduation();
                 this.Hide();
                 c.ShowDialog(this);

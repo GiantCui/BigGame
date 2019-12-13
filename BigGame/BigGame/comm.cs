@@ -25,5 +25,15 @@ namespace BigGame
                 start = comm.Time();
             }
         }
+
+        public static void Wait(int n)
+        {
+            long start = comm.Time();
+            long end = start + n;
+            while (start < end)
+            {
+                start = comm.Time();
+            }
+        }
     }
 }

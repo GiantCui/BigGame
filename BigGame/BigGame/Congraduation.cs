@@ -14,23 +14,20 @@ namespace BigGame
     {
         public Congraduation()
         {
-            InitializeComponent();
-
+            InitializeComponent();          
         }
 
         private void Congraduation_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
+            
         }
 
         public void time_close()
         {
-            long start = comm.Time();
-            long end = start + 2000;
-            while (start < end)
-            {
-                start = comm.Time();
-            }
+            timer1.Stop();
+            print_score();
+            comm.Wait(2000);
             this.Hide();
             this.Close();
         }
@@ -38,6 +35,12 @@ namespace BigGame
         private void Timer1_Tick_1(object sender, EventArgs e)
         {
             time_close();
+        }
+
+        private void print_score()
+        {
+            label1.Text = SingleObject.GetSingle().BG.TP.score.ToString();
+            label1.Location = new Point((int)(this.Width/2 + 150), (int)(this.Height/2 + 30));
         }
     }
 }
