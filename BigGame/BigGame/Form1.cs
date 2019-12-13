@@ -79,6 +79,23 @@ namespace BigGame
                 this.Close();
                 
             }
+            if (SingleObject.GetSingle().BG.TP.Vector)
+            {
+                timer1.Stop();
+                long start = comm.Time();
+                long end = start + 500;
+                while (start < end)
+                {
+                    start = comm.Time();
+                }
+                Congraduation c = new Congraduation();
+                this.Hide();
+                c.ShowDialog(this);
+                Start f = new Start();
+                this.Hide();
+                f.ShowDialog(this);
+                this.Close();
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

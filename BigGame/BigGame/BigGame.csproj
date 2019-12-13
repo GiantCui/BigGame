@@ -76,6 +76,12 @@
   <ItemGroup>
     <Compile Include="Action\Hero_GetGoods.cs" />
     <Compile Include="comm.cs" />
+    <Compile Include="Congraduation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Congraduation.Designer.cs">
+      <DependentUpon>Congraduation.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameOver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     <Compile Include="UI\Life.cs" />
     <Compile Include="UI\Listing.cs" />
     <Compile Include="Weapon\Weapon.cs" />
+    <EmbeddedResource Include="Congraduation.resx">
+      <DependentUpon>Congraduation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
