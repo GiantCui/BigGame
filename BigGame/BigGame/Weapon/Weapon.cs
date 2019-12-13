@@ -69,7 +69,10 @@ namespace BigGame.Role
                     {
                         if (this.GetRectangle().IntersectsWith(SingleObject.GetSingle().BG.ListMonster[i].GetRectangle()))
                         {
-                            SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
+                            if (SingleObject.GetSingle().BG.ListWeapon.Count > 0)
+                            {
+                                SingleObject.GetSingle().BG.ListWeapon.RemoveAt(0);//移除武器
+                            }
                             int x = SingleObject.GetSingle().BG.ListMonster[i].X;
                             int y = SingleObject.GetSingle().BG.ListMonster[i].y;
                             if(SingleObject.GetSingle().BG.ListMonster[i] is Boss)

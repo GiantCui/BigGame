@@ -15,5 +15,15 @@ namespace BigGame
             TimeSpan ts = DateTime.Now - dtl;
             return (long)ts.TotalMilliseconds;
         }
+
+        public static void Wait_500()
+        {
+            long start = comm.Time();
+            long end = start + 500;
+            while (start < end)
+            {
+                start = comm.Time();
+            }
+        }
     }
 }
