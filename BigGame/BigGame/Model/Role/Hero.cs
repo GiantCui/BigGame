@@ -32,7 +32,6 @@ namespace BigGame.Role.HERO
         }
 
         public string Name { get;  set; }
-     //   public Image[][] Img { get => img; set => img = value; }
 
         public abstract void key_ctrl(KeyEventArgs e);
 

@@ -152,8 +152,7 @@ namespace BigGame.Role.HERO
                 this.Y = this.Y - 100;
             }
             if (A_down && this.X > map.X - 30 && b_left > 250)
-            {
-                //index = 1;
+            {              
                 if (face != 1)
                 {
                     overturn();
@@ -162,18 +161,14 @@ namespace BigGame.Role.HERO
                 this.X = this.X - speed;
             }
             if (D_down && this.X < map.Width - 100 && b_right > 250)
-            {
-                //index = 1;
+            {              
                 if (face != 0)
                 {
                     overturn();
                     face = 0;
                 }
-                this.X = this.X + speed;
-                
-            }
-            
-            
+                this.X = this.X + speed;          
+            }                     
         }
 
         public void overturn()
@@ -211,13 +206,9 @@ namespace BigGame.Role.HERO
                 if (anm_frame >= img[index].Length)
                 {
                     anm_frame = 0;
-                }
-                if (this.Y < map.Height - 120)
-                {
-
-                }
+                }             
                 float yVelocity = 0;
-                float jumpSpeed = 15.0f;
+                float jumpSpeed = 15.0f;    //重力加速度
                 float gravity = 0.98f;
                 yVelocity = jumpSpeed;
                 yVelocity -= (1 / 2) * (gravity * (comm.Time() - last_frame_time));
@@ -233,8 +224,7 @@ namespace BigGame.Role.HERO
                 }
                 if (anm_frame >= img[index].Length)
                 {
-                    anm_frame = img[index].Length - 1;
-                    //Thread.Sleep(1000);
+                    anm_frame = img[index].Length - 1;                  
                     finsh = true;
                 }
             }

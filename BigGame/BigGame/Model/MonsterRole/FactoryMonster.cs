@@ -12,21 +12,20 @@ namespace BigGame.FactoryMonster
         public static Monster createMonster(int x,int y,string monsterType) //需要怪物的坐标和怪物的类型
         {
             Monster monster;
-            if (monsterType == "fly")
+            switch (monsterType)
             {
-                monster = new MonsterFly(x, y, 100, 100, "崔开金怪怪", 100);
-            }
-            else if (monsterType == "Boss")
-            {
-                monster = new Boss(x, y, 400, 400, "陈晓蝶", 100);
-            }
-            else if (monsterType == "Mini")
-            {
-                monster = new MonsterMini(x, 565, 100, 100, "", 100);
-            }
-            else
-            {
-                monster = new MonsterWalk(x, y, 100, 100, "宝琴怪", 100);
+                case "fly":
+                    monster = new MonsterFly(x, y, 100, 100, "崔开金怪怪", 100);
+                    break;
+                case "Boss":
+                    monster = new Boss(x, y, 400, 400, "陈晓蝶", 100);
+                    break;
+                case "Mini":
+                    monster = new MonsterMini(x, 565, 100, 100, "", 100); ;
+                    break;
+                default:
+                    monster = new MonsterWalk(x, y, 100, 100, "宝琴怪", 100);
+                    break;
             }
             return monster;
         }
