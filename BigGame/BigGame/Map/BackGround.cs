@@ -16,9 +16,9 @@ namespace BigGame.Map
     [Serializable]  //可序列化
     public class BackGround:GameObject
     {
-        public Bitmap BGImage { get; set; }
-        public Bitmap BGunder { get; set; }
-        private bool j_tag = false;
+        public Bitmap bGImage;
+        public Bitmap bGunder;
+        public bool j_tag = false;
         public int speed { get; set; }
         public Hero TP { get; set; }
         private Hero_GetGoods goldList;
@@ -29,6 +29,8 @@ namespace BigGame.Map
         public Rectangle Camera { get; set; }
         public Hero_GetGoods GoldList { get => goldList; set => goldList = value; }
         public bool J_tag { get => j_tag; set => j_tag = value; }
+        public Bitmap BGImage { get => bGImage; set => bGImage = value; }
+        public Bitmap BGunder { get => bGunder; set => bGunder = value; }
 
         public BackGround(int x, int y, int speed) : base(x, y, 2937, 618)
         {
@@ -51,7 +53,7 @@ namespace BigGame.Map
                 this.X = 0;
             }
             //人物遇到地图右边界
-            else if(TP.X > BGImage.Width - (Camera.Width / 2))
+            else if(TP.X > this.BGImage.Width - (Camera.Width / 2))
             {
                 this.X = Camera.Width - BGImage.Width;
             }
@@ -64,7 +66,7 @@ namespace BigGame.Map
             GoldList.Draw(g);
 
             //更新角色存储的地图信息
-            TP.map = new Rectangle(this.X, this.Y, BGImage.Width, BGImage.Height);
+            TP.map = new Rectangle(this.X, this.Y, this.BGImage.Width, this.BGImage.Height);
             TP.BackGd = this;
             TP.Draw(g);
             for(int i = 0; i < ListMonster.Count; i++)
