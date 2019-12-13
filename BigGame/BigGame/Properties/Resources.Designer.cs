@@ -190,6 +190,16 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap all {
+            get {
+                object obj = ResourceManager.GetObject("all", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap apple {
             get {
                 object obj = ResourceManager.GetObject("apple", resourceCulture);
@@ -532,6 +542,16 @@ namespace BigGame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap html {
+            get {
+                object obj = ResourceManager.GetObject("html", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap Layer_1 {
             get {
                 object obj = ResourceManager.GetObject("Layer_1", resourceCulture);
@@ -635,6 +655,16 @@ namespace BigGame.Properties {
         internal static System.IO.UnmanagedMemoryStream microwave_oven_close_1 {
             get {
                 return ResourceManager.GetStream("microwave_oven_close_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap moeny {
+            get {
+                object obj = ResourceManager.GetObject("moeny", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
